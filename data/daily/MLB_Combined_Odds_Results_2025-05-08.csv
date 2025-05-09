@@ -1,0 +1,10 @@
+game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result,home_1,away_1,home_2,away_2,home_3,away_3,home_4,away_4,home_5,away_5,home_6,away_6,home_7,away_7,home_8,away_8,home_9,away_9
+163838,2025-05-08,2025-05-08 13:10:00,Minnesota Twins,Baltimore Orioles,1.59,2.50,8.0,1.91,1.91,5,2,Finished,Minnesota Twins,Under,1,0,0,1,0,1,0,0,0,0,1,0,0,0,3,0,,0
+163841,2025-05-08,2025-05-08 13:35:00,Boston Red Sox,Texas Rangers,1.62,2.40,9.0,1.80,2.00,5,0,Finished,Boston Red Sox,Under,0,0,2,0,0,0,0,0,1,0,1,0,1,0,0,0,,0
+163843,2025-05-08,2025-05-08 14:10:00,Kansas City Royals,Chicago White Sox,1.40,3.10,8.0,1.91,1.91,10,0,Finished,Kansas City Royals,Over,1,0,0,0,1,0,0,0,2,0,2,0,0,0,4,0,,0
+163842,2025-05-08,2025-05-08 15:10:00,Colorado Rockies,Detroit Tigers,2.40,1.62,9.5,1.91,1.91,2,10,Finished,Detroit Tigers,Over,0,2,0,5,0,2,0,0,1,0,0,0,0,1,0,0,1.0,0
+163813,2025-05-08,2025-05-08 18:10:00,Colorado Rockies,Detroit Tigers,2.60,1.56,9.5,1.91,1.91,1,11,Finished,Detroit Tigers,Over,0,0,1,0,0,6,0,0,0,0,0,0,0,2,0,3,0.0,0
+163844,2025-05-08,2025-05-08 19:05:00,Tampa Bay Rays,Philadelphia Phillies,2.40,1.62,8.5,1.80,2.00,6,7,Finished,Philadelphia Phillies,Over,1,1,0,0,1,0,0,0,0,0,0,0,3,0,0,3,0.0,1
+163840,2025-05-08,2025-05-08 19:15:00,Atlanta Braves,Cincinnati Reds,1.50,2.75,8.0,1.91,1.91,5,4,Finished,Atlanta Braves,Over,1,0,0,0,0,0,0,0,1,1,0,0,0,1,0,0,2.0,2
+163845,2025-05-08,2025-05-08 21:38:00,Los Angeles Angels,Toronto Blue Jays,2.15,1.74,8.0,1.91,1.91,5,8,Finished,Toronto Blue Jays,Over,2,0,2,0,0,2,0,0,0,1,0,4,1,0,0,1,0.0,0
+163839,2025-05-08,2025-05-08 21:40:00,Arizona Diamondbacks,Los Angeles Dodgers,2.40,1.62,8.5,1.80,2.00,5,3,Finished,Arizona Diamondbacks,Under,0,0,0,0,0,0,4,0,1,0,0,0,0,0,0,2,,1
