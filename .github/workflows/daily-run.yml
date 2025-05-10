@@ -34,6 +34,7 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
+          git pull origin main || true
           git add data/daily/*.csv data/master/*.parquet
           git commit -m "📈 Daily data update" || echo "No changes to commit"
-          git push
+          git push origin main || echo "🔁 Push skipped (no new commits or conflict)"
