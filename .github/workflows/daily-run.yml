@@ -2,8 +2,8 @@ name: Daily MLB Data Pipeline
 
 on:
   schedule:
-    - cron: '0 8 * * *'  # Runs at 4am ET (08:00 UTC)
-  workflow_dispatch:     # Allows manual runs
+    - cron: "08 4 * * *"  # Runs daily at 4:08am UTC (12:08am ET)
+  workflow_dispatch:  # Allow manual runs too
 
 jobs:
   run-notebooks:
@@ -16,14 +16,24 @@ jobs:
       - name: 🐍 Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.11'
+          python-version: "3.11"
 
-      - name: 📦 Install dependencies
+      - name: 🧪 Install dependencies
         run: |
-          pip install -r requirements.txt
-          pip install jupyter pandas openpyxl pyarrow
+          pip install pandas openpyxl pyarrow jupyter nbconvert
 
-      - name: 🧠 Run daily transform + append to master
+      - name: 📅 Run daily game + odds pull
         run: |
-          cd $GITHUB_WORKSPACE
+          jupyter nbconvert --to notebook --execute notebooks/pull_and_enrich_daily.ipynb --output executed_pull_and_enrich.ipynb
+
+      - name: 🧠 Run transform and append to master
+        run: |
           jupyter nbconvert --to notebook --execute notebooks/transform_and_append_to_master.ipynb --output executed_transform_append.ipynb
+
+      - name: 📤 Commit updated files
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add data/daily/*.csv data/master/*.parquet
+          git commit -m "📈 Daily data update" || echo "No changes to commit"
+          git push
