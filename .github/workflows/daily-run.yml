@@ -24,7 +24,7 @@ jobs:
 
       - name: 📅 Run daily game + odds pull
         run: |
-          jupyter nbconvert --to notebook --execute notebooks/pull_and_enrich_daily.ipynb --output executed_pull_and_enrich.ipynb
+          jupyter nbconvert --to notebook --execute notebooks/daily_pull_and_enrich.ipynb --output executed_pull_and_enrich.ipynb
 
       - name: 🧠 Run transform and append to master
         run: |
