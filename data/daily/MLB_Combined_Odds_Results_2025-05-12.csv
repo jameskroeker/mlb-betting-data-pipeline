@@ -1,0 +1,12 @@
+game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result
+163898,2025-05-12,2025-05-12 18:10:00,Cleveland Guardians,Milwaukee Brewers,2.15,1.74,8.0,1.91,1.91,,,,,
+163897,2025-05-12,2025-05-12 18:40:00,Detroit Tigers,Boston Red Sox,1.87,1.95,8.5,1.91,1.91,,,,,
+163900,2025-05-12,2025-05-12 18:45:00,Philadelphia Phillies,St.Louis Cardinals,1.56,2.60,8.0,1.91,1.91,,,,,
+163891,2025-05-12,2025-05-12 19:10:00,New York Mets,Pittsburgh Pirates,1.71,2.20,7.0,1.80,2.00,,,,,
+163894,2025-05-12,2025-05-12 19:15:00,Atlanta Braves,Washington Nationals,1.59,2.50,8.5,1.80,2.00,,,,,
+163901,2025-05-12,2025-05-12 19:40:00,Chicago Cubs,Miami Marlins,1.40,3.10,8.0,1.80,2.00,,,,,
+163899,2025-05-12,2025-05-12 20:05:00,Texas Rangers,Colorado Rockies,1.36,3.35,8.5,1.91,1.91,,,,,
+163896,2025-05-12,2025-05-12 20:10:00,Houston Astros,Kansas City Royals,1.87,1.95,8.5,2.00,1.80,,,,,
+163892,2025-05-12,2025-05-12 21:40:00,Seattle Mariners,New York Yankees,2.15,1.74,8.5,1.91,1.91,,,,,
+163893,2025-05-12,2025-05-12 21:40:00,San Diego Padres,Los Angeles Angels,1.47,2.85,7.0,1.80,2.00,,,,,
+163902,2025-05-12,2025-05-12 21:45:00,San Francisco Giants,Arizona Diamondbacks,1.87,1.95,7.5,1.80,2.00,,,,,
