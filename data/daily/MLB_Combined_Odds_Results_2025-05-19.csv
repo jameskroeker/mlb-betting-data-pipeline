@@ -1,0 +1,13 @@
+game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result
+163985,2025-05-19,2025-05-19 18:40:00,Pittsburgh Pirates,Cincinnati Reds,2.10,1.77,8.0,1.91,1.91,,,,,
+163990,2025-05-19,2025-05-19 18:40:00,Miami Marlins,Chicago Cubs,2.50,1.59,9.0,2.00,1.80,,,,,
+163988,2025-05-19,2025-05-19 18:45:00,Boston Red Sox,New York Mets,2.20,1.71,9.0,1.91,1.91,,,,,
+163984,2025-05-19,2025-05-19 19:05:00,Tampa Bay Rays,Houston Astros,1.74,2.15,9.0,1.91,1.91,,,,,
+163989,2025-05-19,2025-05-19 19:40:00,Chicago White Sox,Seattle Mariners,2.75,1.50,8.0,1.91,1.91,,,,,
+163991,2025-05-19,2025-05-19 19:40:00,Milwaukee Brewers,Baltimore Orioles,1.83,2.00,8.5,1.91,1.91,,,,,
+163992,2025-05-19,2025-05-19 19:40:00,Minnesota Twins,Cleveland Guardians,1.71,2.20,7.5,1.91,1.91,,,,,
+163993,2025-05-19,2025-05-19 19:45:00,St.Louis Cardinals,Detroit Tigers,,,,,,,,,,
+163986,2025-05-19,2025-05-19 20:40:00,Colorado Rockies,Philadelphia Phillies,3.25,1.38,10.0,1.91,1.91,,,,,
+163994,2025-05-19,2025-05-19 21:45:00,San Francisco Giants,Kansas City Royals,1.80,2.05,7.0,1.91,1.91,,,,,
+163983,2025-05-19,2025-05-19 22:05:00,Athletics,Los Angeles Angels,1.80,2.05,9.5,1.91,1.91,,,,,
+163987,2025-05-19,2025-05-19 22:10:00,Los Angeles Dodgers,Arizona Diamondbacks,1.71,2.20,9.5,1.91,1.91,,,,,
