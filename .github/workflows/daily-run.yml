@@ -2,7 +2,7 @@ name: Daily MLB Data Pipeline
 
 on:
   schedule:
-    - cron: "08 4 * * *"  # Runs daily at 4:08am UTC (12:08am ET)
+    - cron: "00 7 * * *"  # Runs daily at 7:00am UTC (3:00am ET)
   workflow_dispatch:      # Allow manual runs too
 
 jobs:
