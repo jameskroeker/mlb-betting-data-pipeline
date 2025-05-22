@@ -3,7 +3,7 @@ name: Daily MLB Data Pipeline
 on:
   schedule:
     - cron: "08 4 * * *"  # Runs daily at 4:08am UTC (12:08am ET)
-  workflow_dispatch:  # Allow manual runs too
+  workflow_dispatch:      # Allow manual runs too
 
 jobs:
   run-notebooks:
@@ -26,6 +26,10 @@ jobs:
         run: |
           jupyter nbconvert --to notebook --execute notebooks/daily_pull_and_enrich.ipynb --output executed_pull_and_enrich.ipynb
 
+      - name: 🧹 Archive files older than 7 days
+        run: |
+          python scripts/archive_old_files.py
+
       - name: 🧠 Run transform and append to master
         run: |
           jupyter nbconvert --to notebook --execute notebooks/transform_and_append_to_master.ipynb --output executed_transform_append.ipynb
@@ -34,7 +38,6 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git pull origin main || true
-          git add data/daily/*.csv data/master/*.parquet
-          git commit -m "📈 Daily data update" || echo "No changes to commit"
-          git push origin main || echo "🔁 Push skipped (no new commits or conflict)"
+          git add data/daily/*.csv data/master/*.parquet data/archive/**/*.csv
+          git commit -m "📈 Daily data update"
+          git push || echo "No changes to commit"
