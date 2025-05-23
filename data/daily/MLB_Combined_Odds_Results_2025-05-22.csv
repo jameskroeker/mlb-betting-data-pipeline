@@ -1,10 +1,10 @@
-game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result
-164030,2025-05-22,2025-05-22 12:35:00,New York Yankees,Texas Rangers,1.62,2.40,7.5,1.91,1.91,,,,,
-164025,2025-05-22,2025-05-22 13:07:00,Toronto Blue Jays,San Diego Padres,1.95,1.87,8.5,1.80,2.00,,,,,
-164032,2025-05-22,2025-05-22 15:10:00,Colorado Rockies,Philadelphia Phillies,3.45,1.34,11.0,1.91,1.91,,,,,
-164026,2025-05-22,2025-05-22 15:35:00,Athletics,Los Angeles Angels,1.62,2.40,10.0,1.91,1.91,,,,,
-164028,2025-05-22,2025-05-22 18:40:00,Pittsburgh Pirates,Milwaukee Brewers,,,,,,,,,,
-164031,2025-05-22,2025-05-22 18:40:00,Detroit Tigers,Cleveland Guardians,1.74,2.15,8.0,1.91,1.91,,,,,
-164027,2025-05-22,2025-05-22 18:45:00,Washington Nationals,Atlanta Braves,2.30,1.67,8.0,1.91,1.91,,,,,
-164033,2025-05-22,2025-05-22 18:45:00,Boston Red Sox,Baltimore Orioles,1.77,2.10,9.0,2.00,1.80,,,,,
-164029,2025-05-22,2025-05-22 20:10:00,Houston Astros,Seattle Mariners,2.15,1.74,8.0,1.80,2.00,,,,,
+game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result,home_1,away_1,home_2,away_2,home_3,away_3,home_4,away_4,home_5,away_5,home_6,away_6,home_7,away_7,home_8,away_8,home_9,away_9
+164030,2025-05-22,2025-05-22 12:35:00,New York Yankees,Texas Rangers,1.62,2.4,7.5,1.91,1.91,1.0,0.0,Finished,New York Yankees,Under,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,0.0
+164025,2025-05-22,2025-05-22 13:07:00,Toronto Blue Jays,San Diego Padres,1.95,1.87,8.5,1.8,2.0,7.0,6.0,Finished,Toronto Blue Jays,Over,0.0,0.0,0.0,2.0,2.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0
+164032,2025-05-22,2025-05-22 15:10:00,Colorado Rockies,Philadelphia Phillies,3.45,1.34,11.0,1.91,1.91,0.0,2.0,Finished,Philadelphia Phillies,Under,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+164026,2025-05-22,2025-05-22 15:35:00,Athletics,Los Angeles Angels,1.62,2.4,10.0,1.91,1.91,5.0,10.0,Finished,Los Angeles Angels,Over,2.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,2.0,1.0,0.0,0.0,0.0,5.0,0.0,0.0,0.0,3.0
+164028,2025-05-22,2025-05-22 18:40:00,Pittsburgh Pirates,Milwaukee Brewers,,,,,,5.0,8.0,Finished,Milwaukee Brewers,Under,1.0,3.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,3.0,2.0,0.0
+164031,2025-05-22,2025-05-22 18:40:00,Detroit Tigers,Cleveland Guardians,1.74,2.15,8.0,1.91,1.91,0.0,7.0,Finished,Cleveland Guardians,Under,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,4.0
+164027,2025-05-22,2025-05-22 18:45:00,Washington Nationals,Atlanta Braves,2.3,1.67,8.0,1.91,1.91,8.0,7.0,Finished,Washington Nationals,Over,1.0,2.0,4.0,0.0,0.0,0.0,2.0,3.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0
+164033,2025-05-22,2025-05-22 18:45:00,Boston Red Sox,Baltimore Orioles,1.77,2.1,9.0,2.0,1.8,,,,,,,,,,,,,,,,,,,,,,,
+164029,2025-05-22,2025-05-22 20:10:00,Houston Astros,Seattle Mariners,2.15,1.74,8.0,1.8,2.0,9.0,2.0,Finished,Houston Astros,Over,0.0,1.0,0.0,1.0,2.0,0.0,3.0,0.0,1.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,,0.0
