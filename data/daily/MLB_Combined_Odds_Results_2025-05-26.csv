@@ -1,13 +1,13 @@
-game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result
-164086,2025-05-26,2025-05-26 13:10:00,Detroit Tigers,San Francisco Giants,1.91,1.91,8.5,2.00,1.80,,,,,
-164079,2025-05-26,2025-05-26 14:10:00,Milwaukee Brewers,Boston Red Sox,2.40,1.62,7.5,1.91,1.91,,,,,
-164081,2025-05-26,2025-05-26 14:20:00,Chicago Cubs,Colorado Rockies,1.29,3.80,8.0,1.91,1.91,,,,,
-164089,2025-05-26,2025-05-26 15:05:00,Baltimore Orioles,St. Louis Cardinals,1.91,1.91,9.5,1.91,1.91,,,,,
-164082,2025-05-26,2025-05-26 16:05:00,Texas Rangers,Toronto Blue Jays,1.62,2.40,7.0,1.80,2.00,,,,,
-164083,2025-05-26,2025-05-26 16:10:00,Kansas City Royals,Cincinnati Reds,1.83,2.00,8.0,1.91,1.91,,,,,
-164084,2025-05-26,2025-05-26 16:10:00,New York Mets,Chicago White Sox,1.33,3.50,8.5,1.91,1.91,,,,,
-164088,2025-05-26,2025-05-26 18:10:00,Cleveland Guardians,Los Angeles Dodgers,2.50,1.59,8.0,1.91,1.91,,,,,
-164080,2025-05-26,2025-05-26 19:05:00,Minnesota Twins,Tampa Bay Rays,1.80,2.05,9.0,1.91,1.91,,,,,
-164087,2025-05-26,2025-05-26 20:10:00,Arizona Diamondbacks,Pittsburgh Pirates,1.57,2.55,9.0,1.80,2.00,,,,,
-164085,2025-05-26,2025-05-26 20:40:00,San Diego Padres,Miami Marlins,,,,,,,,,,
-164090,2025-05-26,2025-05-26 21:38:00,Los Angeles Angels,New York Yankees,2.40,1.62,9.0,1.73,2.10,,,,,
+game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result,home_1,away_1,home_2,away_2,home_3,away_3,home_4,away_4,home_5,away_5,home_6,away_6,home_7,away_7,home_8,away_8,home_9,away_9
+164086,2025-05-26,2025-05-26 13:10:00,Detroit Tigers,San Francisco Giants,1.91,1.91,8.5,2.0,1.8,3,1,Finished,Detroit Tigers,Under,0,0,0,0,0,0,1,0,2,0,0,1,0,0,0,0,,0
+164079,2025-05-26,2025-05-26 14:10:00,Milwaukee Brewers,Boston Red Sox,2.4,1.62,7.5,1.91,1.91,3,2,Finished,Milwaukee Brewers,Under,1,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,,1
+164081,2025-05-26,2025-05-26 14:20:00,Chicago Cubs,Colorado Rockies,1.29,3.8,8.0,1.91,1.91,3,1,Finished,Chicago Cubs,Under,1,0,0,0,0,0,0,0,1,1,0,0,1,0,0,0,,0
+164089,2025-05-26,2025-05-26 15:05:00,Baltimore Orioles,St. Louis Cardinals,1.91,1.91,9.5,1.91,1.91,5,2,Finished,Baltimore Orioles,Under,1,0,0,0,1,0,3,0,0,2,0,0,0,0,0,0,,0
+164082,2025-05-26,2025-05-26 16:05:00,Texas Rangers,Toronto Blue Jays,1.62,2.4,7.0,1.8,2.0,1,2,Finished,Toronto Blue Jays,Under,0,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0.0,0
+164083,2025-05-26,2025-05-26 16:10:00,Kansas City Royals,Cincinnati Reds,1.83,2.0,8.0,1.91,1.91,4,7,Finished,Cincinnati Reds,Over,0,1,0,0,0,3,0,0,0,2,0,0,3,0,0,1,1.0,0
+164084,2025-05-26,2025-05-26 16:10:00,New York Mets,Chicago White Sox,1.33,3.5,8.5,1.91,1.91,2,1,Finished,New York Mets,Under,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,1.0,0
+164088,2025-05-26,2025-05-26 18:10:00,Cleveland Guardians,Los Angeles Dodgers,2.5,1.59,8.0,1.91,1.91,2,7,Finished,Los Angeles Dodgers,Over,0,1,0,1,1,0,0,0,0,2,1,2,0,0,0,0,0.0,1
+164080,2025-05-26,2025-05-26 19:05:00,Minnesota Twins,Tampa Bay Rays,1.8,2.05,9.0,1.91,1.91,7,2,Finished,Minnesota Twins,Under,0,0,0,0,0,0,0,0,0,0,3,0,0,2,4,0,,0
+164087,2025-05-26,2025-05-26 20:10:00,Arizona Diamondbacks,Pittsburgh Pirates,1.57,2.55,9.0,1.8,2.0,5,0,Finished,Arizona Diamondbacks,Under,0,0,2,0,1,0,0,0,2,0,0,0,0,0,0,0,,0
+164085,2025-05-26,2025-05-26 20:40:00,San Diego Padres,Miami Marlins,,,,,,4,3,Finished,San Diego Padres,Under,0,2,0,1,0,0,2,0,0,0,0,0,0,0,1,0,0.0,0
+164090,2025-05-26,2025-05-26 21:38:00,Los Angeles Angels,New York Yankees,2.4,1.62,9.0,1.73,2.1,1,5,Finished,New York Yankees,Under,1,0,0,0,0,0,0,4,0,0,0,0,0,0,0,1,0.0,0
