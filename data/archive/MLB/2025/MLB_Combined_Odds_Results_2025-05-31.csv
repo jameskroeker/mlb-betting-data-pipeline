@@ -1,0 +1,16 @@
+game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result,home_1,away_1,home_2,away_2,home_3,away_3,home_4,away_4,home_5,away_5,home_6,away_6,home_7,away_7,home_8,away_8,home_9,away_9
+164140,2025-05-31,2025-05-31 14:20:00,Chicago Cubs,Cincinnati Reds,1.62,2.4,7.5,1.91,1.91,2,0,Finished,Chicago Cubs,Under,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,,0
+164141,2025-05-31,2025-05-31 15:07:00,Toronto Blue Jays,Athletics,1.62,2.4,9.0,2.0,1.8,8,7,Finished,Toronto Blue Jays,Over,4,3,1,2,1,0,0,0,1,0,1,0,0,0,0,0,,2
+164144,2025-05-31,2025-05-31 16:05:00,Baltimore Orioles,Chicago White Sox,1.53,2.7,9.0,1.8,2.0,4,2,Finished,Baltimore Orioles,Under,1,0,0,0,0,0,1,0,2,1,0,0,0,1,0,0,,0
+164152,2025-05-31,2025-05-31 16:05:00,Texas Rangers,St. Louis Cardinals,2.25,1.69,8.0,1.91,1.91,0,2,Finished,St. Louis Cardinals,Under,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0.0,0
+164153,2025-05-31,2025-05-31 16:05:00,Philadelphia Phillies,Milwaukee Brewers,1.56,2.6,8.0,1.91,1.91,7,17,Finished,Milwaukee Brewers,Over,0,4,0,0,0,0,1,8,0,0,1,5,0,0,0,0,5.0,0
+164143,2025-05-31,2025-05-31 16:10:00,Atlanta Braves,Boston Red Sox,1.62,2.4,8.5,1.8,2.0,5,0,Finished,Atlanta Braves,Under,1,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,,0
+164145,2025-05-31,2025-05-31 16:10:00,Cleveland Guardians,Los Angeles Angels,1.56,2.6,8.0,1.91,1.91,7,5,Finished,Cleveland Guardians,Over,0,0,0,0,0,2,2,2,1,1,1,0,3,0,0,0,,0
+164146,2025-05-31,2025-05-31 16:10:00,Houston Astros,Tampa Bay Rays,1.83,2.0,8.5,1.91,1.91,3,16,Finished,Tampa Bay Rays,Over,1,0,0,0,2,3,0,1,0,0,0,1,0,6,0,3,0.0,2
+164147,2025-05-31,2025-05-31 16:10:00,Kansas City Royals,Detroit Tigers,2.55,1.57,7.5,1.91,1.91,1,0,Finished,Kansas City Royals,Under,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,,0
+164149,2025-05-31,2025-05-31 16:10:00,New York Mets,Colorado Rockies,1.24,4.4,8.0,1.91,1.91,8,2,Finished,New York Mets,Over,4,1,0,0,0,0,3,0,0,0,0,0,0,1,1,0,,0
+164154,2025-05-31,2025-05-31 16:10:00,Miami Marlins,San Francisco Giants,2.5,1.59,8.0,2.0,1.8,1,0,Finished,Miami Marlins,Under,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,,0
+164148,2025-05-31,2025-05-31 19:15:00,Los Angeles Dodgers,New York Yankees,1.8,2.05,9.5,1.91,1.91,18,2,Finished,Los Angeles Dodgers,Over,4,0,6,0,0,0,0,1,4,0,0,0,1,0,3,1,,0
+164151,2025-05-31,2025-05-31 19:15:00,Seattle Mariners,Minnesota Twins,1.91,1.91,7.0,1.8,2.0,5,4,Finished,Seattle Mariners,Over,0,0,0,3,2,0,0,0,0,0,0,0,2,0,0,0,0.0,1
+164150,2025-05-31,2025-05-31 21:40:00,San Diego Padres,Pittsburgh Pirates,1.47,2.85,7.5,1.91,1.91,0,5,Finished,Pittsburgh Pirates,Under,0,1,0,0,0,0,0,1,0,1,0,0,0,2,0,0,0.0,0
+164142,2025-05-31,2025-05-31 22:10:00,Arizona Diamondbacks,Washington Nationals,1.53,2.7,9.0,1.91,1.91,7,11,Finished,Washington Nationals,Over,0,10,0,1,0,0,2,0,0,0,5,0,0,0,0,0,0.0,0
