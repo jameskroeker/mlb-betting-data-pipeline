@@ -1,17 +1,17 @@
 game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result,home_1,away_1,home_2,away_2,home_3,away_3,home_4,away_4,home_5,away_5,home_6,away_6,home_7,away_7,home_8,away_8,home_9,away_9
-164241,2025-06-07,2025-06-07 13:10:00,Detroit Tigers,Chicago Cubs,1.95,1.87,8.5,1.91,1.91,,,,,,,,,,,,,,,,,,,,,,,
-164225,2025-06-07,2025-06-07 14:10:00,Cincinnati Reds,Arizona Diamondbacks,1.95,1.87,9.0,1.80,2.00,3.0,3.0,Finished,Draw,Under,0.0,0.0,0.0,0.0,2.0,3.0,0.0,0.0,0.0,0.0,1.0,0.0,,0.0,,,,
-164234,2025-06-07,2025-06-07 14:10:00,Minnesota Twins,Toronto Blue Jays,1.91,1.91,8.0,1.80,2.00,,,,,,,,,,,,,,,,,,,,,,,
-164238,2025-06-07,2025-06-07 14:15:00,St. Louis Cardinals,Los Angeles Dodgers,2.65,1.54,8.0,1.91,1.91,,,,,,,,,,,,,,,,,,,,,,,
-164235,2025-06-07,2025-06-07 16:05:00,Pittsburgh Pirates,Philadelphia Phillies,2.55,1.57,8.0,1.80,2.00,,,,,,,,,,,,,,,,,,,,,,,
-164236,2025-06-07,2025-06-07 16:05:00,Washington Nationals,Texas Rangers,2.50,1.59,8.0,1.91,1.91,,,,,,,,,,,,,,,,,,,,,,,
-164239,2025-06-07,2025-06-07 16:05:00,San Francisco Giants,Atlanta Braves,1.57,2.55,7.5,2.00,1.80,,,,,,,,,,,,,,,,,,,,,,,
-164237,2025-06-07,2025-06-07 16:10:00,Tampa Bay Rays,Miami Marlins,1.67,2.30,8.5,1.80,2.00,,,,,,,,,,,,,,,,,,,,,,,
-164243,2025-06-07,2025-06-07 16:10:00,Cleveland Guardians,Houston Astros,2.15,1.74,7.0,1.80,2.00,,,,,,,,,,,,,,,,,,,,,,,
-164244,2025-06-07,2025-06-07 16:10:00,Cincinnati Reds,Arizona Diamondbacks,2.00,1.83,9.5,1.91,1.91,,,,,,,,,,,,,,,,,,,,,,,
-164245,2025-06-07,2025-06-07 16:10:00,Chicago White Sox,Kansas City Royals,2.30,1.67,8.0,1.80,2.00,,,,,,,,,,,,,,,,,,,,,,,
-164246,2025-06-07,2025-06-07 19:35:00,Milwaukee Brewers,San Diego Padres,1.87,1.95,8.5,1.91,1.91,,,,,,,,,,,,,,,,,,,,,,,
-164247,2025-06-07,2025-06-07 19:35:00,New York Yankees,Boston Red Sox,1.91,1.91,8.0,1.91,1.91,,,,,,,,,,,,,,,,,,,,,,,
-164248,2025-06-07,2025-06-07 21:38:00,Los Angeles Angels,Seattle Mariners,2.40,1.62,8.5,1.80,2.00,,,,,,,,,,,,,,,,,,,,,,,
-164242,2025-06-07,2025-06-07 21:40:00,Colorado Rockies,New York Mets,3.30,1.37,11.0,1.91,1.91,,,,,,,,,,,,,,,,,,,,,,,
-164240,2025-06-07,2025-06-07 22:05:00,Athletics,Baltimore Orioles,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+164241,2025-06-07,2025-06-07 13:10:00,Detroit Tigers,Chicago Cubs,1.95,1.87,8.5,1.91,1.91,1,6,Finished,Chicago Cubs,Under,0,1,0,0,0,0,0,0,1,2,0,0,0,2,0,1,0.0,0
+164225,2025-06-07,2025-06-07 14:10:00,Cincinnati Reds,Arizona Diamondbacks,1.95,1.87,9.0,1.8,2.0,4,3,Finished,Cincinnati Reds,Under,0,0,0,0,2,3,0,0,0,0,1,0,0,0,0,0,0.0,0
+164234,2025-06-07,2025-06-07 14:10:00,Minnesota Twins,Toronto Blue Jays,1.91,1.91,8.0,1.8,2.0,4,5,Finished,Toronto Blue Jays,Over,0,1,0,1,0,0,2,0,0,0,1,0,0,0,0,2,1.0,1
+164238,2025-06-07,2025-06-07 14:15:00,St. Louis Cardinals,Los Angeles Dodgers,2.65,1.54,8.0,1.91,1.91,2,1,Finished,St. Louis Cardinals,Under,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1.0,1
+164235,2025-06-07,2025-06-07 16:05:00,Pittsburgh Pirates,Philadelphia Phillies,2.55,1.57,8.0,1.8,2.0,2,1,Finished,Pittsburgh Pirates,Under,1,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,,0
+164236,2025-06-07,2025-06-07 16:05:00,Washington Nationals,Texas Rangers,2.5,1.59,8.0,1.91,1.91,0,5,Finished,Texas Rangers,Under,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0.0,0
+164239,2025-06-07,2025-06-07 16:05:00,San Francisco Giants,Atlanta Braves,1.57,2.55,7.5,2.0,1.8,3,2,Finished,San Francisco Giants,Under,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0,0,2.0,0
+164237,2025-06-07,2025-06-07 16:10:00,Tampa Bay Rays,Miami Marlins,1.67,2.3,8.5,1.8,2.0,10,11,Finished,Miami Marlins,Over,0,0,4,0,0,4,2,0,0,6,3,0,1,0,0,0,0.0,0
+164243,2025-06-07,2025-06-07 16:10:00,Cleveland Guardians,Houston Astros,2.15,1.74,7.0,1.8,2.0,3,5,Finished,Houston Astros,Over,0,0,0,0,0,0,0,0,0,1,1,2,2,0,0,0,0.0,0
+164244,2025-06-07,2025-06-07 16:10:00,Cincinnati Reds,Arizona Diamondbacks,2.0,1.83,9.5,1.91,1.91,13,1,Finished,Cincinnati Reds,Over,5,0,0,1,0,0,8,0,0,0,0,0,0,0,0,0,,0
+164245,2025-06-07,2025-06-07 16:10:00,Chicago White Sox,Kansas City Royals,2.3,1.67,8.0,1.8,2.0,4,1,Finished,Chicago White Sox,Under,0,0,2,1,1,0,0,0,0,0,0,0,0,0,1,0,,0
+164246,2025-06-07,2025-06-07 19:35:00,Milwaukee Brewers,San Diego Padres,1.87,1.95,8.5,1.91,1.91,4,3,Finished,Milwaukee Brewers,Under,0,0,0,0,0,0,0,1,0,0,0,0,1,0,2,0,1.0,2
+164247,2025-06-07,2025-06-07 19:35:00,New York Yankees,Boston Red Sox,1.91,1.91,8.0,1.91,1.91,7,10,Finished,Boston Red Sox,Over,0,0,3,1,0,5,2,2,0,0,0,0,0,0,2,0,0.0,2
+164248,2025-06-07,2025-06-07 21:38:00,Los Angeles Angels,Seattle Mariners,2.4,1.62,8.5,1.8,2.0,8,6,Finished,Los Angeles Angels,Over,0,3,2,1,2,0,1,0,1,0,1,1,1,0,0,0,,1
+164242,2025-06-07,2025-06-07 21:40:00,Colorado Rockies,New York Mets,3.3,1.37,11.0,1.91,1.91,1,8,Finished,New York Mets,Under,0,0,0,0,0,1,1,0,0,2,0,1,0,3,0,1,0.0,0
+164240,2025-06-07,2025-06-07 22:05:00,Athletics,Baltimore Orioles,,,,,,4,7,Finished,Baltimore Orioles,Under,4,1,0,0,0,0,0,2,0,1,0,2,0,1,0,0,0.0,0
