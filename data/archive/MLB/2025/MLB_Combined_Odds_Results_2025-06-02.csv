@@ -1,0 +1,8 @@
+game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result,home_1,away_1,home_2,away_2,home_3,away_3,home_4,away_4,home_5,away_5,home_6,away_6,home_7,away_7,home_8,away_8,home_9,away_9
+164175,2025-06-02,2025-06-02 18:40:00,Miami Marlins,Colorado Rockies,1.53,2.7,8.0,1.91,1.91,4,6,Finished,Colorado Rockies,Over,3,1,1,0,0,1,0,1,0,2,0,0,0,0,0,0,0,1
+164172,2025-06-02,2025-06-02 19:10:00,Cincinnati Reds,Milwaukee Brewers,1.83,2.0,9.0,1.8,2.0,2,3,Finished,Milwaukee Brewers,Under,2,0,0,2,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+164173,2025-06-02,2025-06-02 19:10:00,Boston Red Sox,Los Angeles Angels,1.67,2.3,9.5,1.91,1.91,6,7,Finished,Los Angeles Angels,Over,0,6,0,0,1,0,0,0,4,0,0,1,0,0,1,0,0,0
+164174,2025-06-02,2025-06-02 19:40:00,Chicago White Sox,Detroit Tigers,2.8,1.48,8.0,1.91,1.91,1,13,Finished,Detroit Tigers,Over,0,3,0,2,0,0,0,3,0,0,1,2,0,0,0,3,0,0
+164176,2025-06-02,2025-06-02 21:45:00,San Francisco Giants,San Diego Padres,1.57,2.55,7.0,1.8,2.0,0,1,Finished,San Diego Padres,Under,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+164170,2025-06-02,2025-06-02 22:05:00,Athletics,Minnesota Twins,2.4,1.62,9.0,1.8,2.0,4,10,Finished,Minnesota Twins,Over,0,0,0,6,1,0,3,0,0,0,0,2,0,0,0,1,0,1
+164171,2025-06-02,2025-06-02 22:10:00,Los Angeles Dodgers,New York Mets,1.67,2.3,9.0,1.91,1.91,3,4,Finished,New York Mets,Under,0,1,0,0,0,0,0,0,0,1,0,0,1,0,0,0,1,0
