@@ -131,7 +131,7 @@ else:
             print(season_counts)
             print("\n--- Daily Data Appending to Master Complete ---")
 
-        except pd.errors.EmptyDataError:
+    except pd.errors.EmptyDataError:
             print(f"⚠️ Daily CSV for {process_date_str} is empty. No finished games to append.")
-        except Exception as e:
+    except Exception as e:
             print(f"❌ An error occurred during daily data ingestion to master: {e}")
