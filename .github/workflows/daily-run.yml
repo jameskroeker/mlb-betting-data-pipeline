@@ -1,43 +1,55 @@
+# .github/workflows/daily-run.yml
+
 name: Daily MLB Data Pipeline
 
 on:
   schedule:
-    - cron: "00 7 * * *"  # Runs daily at 7:00am UTC (3:00am ET)
-  workflow_dispatch:      # Allow manual runs too
+    # Runs daily at 7:00am UTC (3:00am ET)
+    - cron: "00 7 * * *"
+  workflow_dispatch: # Allows manual trigger from GitHub UI
 
 jobs:
-  run-notebooks:
+  update-data: # Changed job name for clarity
     runs-on: ubuntu-latest
+
+    permissions: # Explicitly grant write permissions for the GITHUB_TOKEN
+      contents: write # Required by git-auto-commit-action to push changes
 
     steps:
       - name: 📥 Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4 # Updated to v4 for compatibility
+        with:
+          fetch-depth: 0 # Important for git-auto-commit-action if it needs full history
 
       - name: 🐍 Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5 # Updated to v5 for compatibility
         with:
-          python-version: "3.11"
+          python-version: "3.11" # Using your preferred Python version
 
       - name: 🧪 Install dependencies
         run: |
-          pip install pandas openpyxl pyarrow jupyter nbconvert
+          python -m pip install --upgrade pip
+          # Added 'requests' and 'pytz' as they are used by the new Python scripts
+          pip install pandas requests pytz pyarrow
 
-      - name: 📅 Run daily game + odds pull
-        run: |
-          jupyter nbconvert --to notebook --execute notebooks/daily_pull_and_enrich.ipynb --output executed_pull_and_enrich.ipynb
-
-      - name: 🧹 Archive files older than 7 days
-        run: |
-          python scripts/archive_old_files.py
+      - name: 📅 Run daily game + odds pull & enrich
+        run: python scripts/daily_pull_and_enrich.py
+        env:
+          API_SPORTS_KEY: ${{ secrets.API_SPORTS_KEY }} # Pass API Key securely from secrets
 
       - name: 🧠 Run transform and append to master
-        run: |
-          jupyter nbconvert --to notebook --execute notebooks/transform_and_append_to_master.ipynb --output executed_transform_append.ipynb
+        run: python scripts/update_master_data.py
 
-      - name: 📤 Commit updated files
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add data/daily/*.csv data/master/*.parquet data/archive/**/*.csv
-          git commit -m "📈 Daily data update"
-          git push || echo "No changes to commit"
+      - name: 🧹 Archive files older than 7 days
+        run: python scripts/archive_old_files.py
+        # Assuming archive_old_files.py is in the scripts/ directory.
+        # If it's elsewhere, adjust the path (e.g., 'python your_folder/archive_old_files.py')
+
+      - name: 📤 Commit and Push Updated Files
+        # Using a dedicated action for auto-committing, more robust than manual git commands
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Automated daily data update"
+          branch: main # Or your default branch name (e.g., 'master')
+          # You can specify exact files if you don't want to commit all changes:
+          # file_pattern: data/daily/*.csv data/master/*.parquet data/archive/**/*.csv
