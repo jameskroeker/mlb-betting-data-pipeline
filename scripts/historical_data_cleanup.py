@@ -1,4 +1,4 @@
- # scripts/historical_data_cleanup.py
+# scripts/historical_data_cleanup.py
 
 import pandas as pd
 import numpy as np
@@ -24,7 +24,6 @@ try:
     print("\n--- Standardizing column names and types ---")
 
     # Rename existing columns to match expected schema if they differ
-    # For example, if you have 'game_date_et' but our scripts expect 'game_date'
     if 'game_date_et' in df_master.columns and 'game_date' not in df_master.columns:
         df_master.rename(columns={'game_date_et': 'game_date'}, inplace=True)
         print("Renamed 'game_date_et' to 'game_date'.")
@@ -55,34 +54,46 @@ try:
         print("Warning: 'game_id' not found for numeric conversion.")
 
 
-    # --- Step 2: Infer 'status' and 'winner' for older data if missing ---
+    # --- Step 2: Infer 'status' and 'winner' columns (more robust creation) ---
     print("\n--- Inferring 'status' and 'winner' columns ---")
 
-    # If 'status' column is missing or has NaNs for finished games
-    if 'status' not in df_master.columns or df_master['status'].isnull().any():
-        df_master['status'] = df_master['status'].fillna(
-            np.where(df_master['home_score'].notna() & df_master['away_score'].notna(), 'Finished', 'Scheduled')
-        )
-        print("Filled missing 'status' values based on scores.")
-    df_master['status'] = df_master['status'].astype(str) # Ensure it's string type
+    # Handle 'status' column: Create if missing, then infer/fill
+    if 'status' not in df_master.columns:
+        print("Adding new 'status' column (defaulting to 'Scheduled').")
+        df_master['status'] = 'Scheduled' # Initialize as 'Scheduled'
+    else:
+        print("Existing 'status' column found.")
 
-    # If 'winner' column is missing or has NaNs for finished games
-    if 'winner' not in df_master.columns or df_master['winner'].isnull().any():
-        # Ensure scores are numeric for comparison
-        df_master['home_score'] = pd.to_numeric(df_master['home_score'], errors='coerce')
-        df_master['away_score'] = pd.to_numeric(df_master['away_score'], errors='coerce')
+    # Now fill/update 'status' based on scores for games that have them
+    df_master['status'] = np.where(
+        df_master['home_score'].notna() & df_master['away_score'].notna(),
+        'Finished',
+        df_master['status'] # Keep existing status if no scores, or 'Scheduled' if newly created
+    )
+    df_master['status'] = df_master['status'].astype(str) # Ensure string type
+    print("Updated 'status' values based on scores.")
 
-        # Only infer winner for games that are marked 'Finished' and have scores
-        finished_games_mask = (df_master['status'] == 'Finished') & \
-                              df_master['home_score'].notna() & \
-                              df_master['away_score'].notna()
+    # Handle 'winner' column: Create if missing, then infer/fill
+    if 'winner' not in df_master.columns:
+        print("Adding new 'winner' column (defaulting to None).")
+        df_master['winner'] = None # Initialize as None
+    else:
+        print("Existing 'winner' column found.")
 
-        # Infer winner
-        df_master.loc[finished_games_mask & (df_master['home_score'] > df_master['away_score']), 'winner'] = df_master['home_team']
-        df_master.loc[finished_games_mask & (df_master['away_score'] > df_master['home_score']), 'winner'] = df_master['away_team']
-        # If scores are equal, winner remains NaN or None for ties if desired, or can be 'Tie'
-        print("Inferred missing 'winner' values based on scores for finished games.")
+    # Ensure scores are numeric for comparison (already done above, but safe to re-ensure)
+    df_master['home_score'] = pd.to_numeric(df_master['home_score'], errors='coerce')
+    df_master['away_score'] = pd.to_numeric(df_master['away_score'], errors='coerce')
+
+    # Only infer winner for games that are marked 'Finished' and have scores, AND winner is currently missing
+    finished_and_winner_missing_mask = (df_master['status'] == 'Finished') & \
+                                       df_master['home_score'].notna() & \
+                                       df_master['away_score'].notna() & \
+                                       df_master['winner'].isnull() # Only fill if winner is not already set
+
+    df_master.loc[finished_and_winner_missing_mask & (df_master['home_score'] > df_master['away_score']), 'winner'] = df_master['home_team']
+    df_master.loc[finished_and_winner_missing_mask & (df_master['away_score'] > df_master['home_score']), 'winner'] = df_master['away_team']
     df_master['winner'] = df_master['winner'].astype(str).replace('nan', None) # Ensure string type, convert np.nan to None
+    print("Inferred 'winner' values based on scores for finished games where missing.")
 
 
     # --- Step 3: Remove Redundant/Old Manually Created Columns ---
@@ -90,7 +101,11 @@ try:
     old_feature_cols = [
         'Wins', 'Losses', 'Win_Pct', 'team_streak', 'Win_Streak', 'Loss_Streak',
         'run_diff', 'won_game', 'hit_over', # These are redundant with what feature_engineering will create
-        'team', 'team_abbr', 'opponent', 'opponent_abbr', 'is_home' # These indicate a 'long' format, not our 'wide' game-centric format
+        # These columns indicate a 'long' (team-centric) format that conflicts with our 'wide' (game-centric) format:
+        'team', 'team_abbr', 'opponent', 'opponent_abbr', 'is_home',
+        'team_odds', 'opponent_odds', 'is_home_odds', 'Run_Line', 'Spread_Price',
+        'Opp_Spread_Price', 'Total', 'Over_Price', 'Under_Price', 'h2h_own',
+        'h2h_opp', 'team_abbr_odds', 'opponent_abbr_odds', 'Games_Played' # Removed some odds fields that conflict with wide format as well
     ]
     cols_to_drop = [col for col in old_feature_cols if col in df_master.columns]
 
@@ -112,15 +127,21 @@ try:
     print("\n--- Final Deduplication and Sorting ---")
 
     # Create a robust deduplication key for game-level data
-    df_master['dedup_key'] = df_master['game_id'].astype(str) + '_' + \
-                             df_master['game_date'].dt.strftime('%Y-%m-%d').astype(str) + '_' + \
-                             df_master['home_team'].astype(str) + '_' + \
-                             df_master['away_team'].astype(str)
+    # Ensure all components of the key are handled properly
+    df_master['game_id_str'] = df_master['game_id'].astype(str)
+    df_master['game_date_str'] = df_master['game_date'].dt.strftime('%Y-%m-%d').astype(str)
+    df_master['home_team_str'] = df_master['home_team'].astype(str)
+    df_master['away_team_str'] = df_master['away_team'].astype(str)
+
+    df_master['dedup_key'] = df_master['game_id_str'] + '_' + \
+                             df_master['game_date_str'] + '_' + \
+                             df_master['home_team_str'] + '_' + \
+                             df_master['away_team_str']
 
     rows_before_dedup = len(df_master)
     df_master.drop_duplicates(subset=['dedup_key'], keep='first', inplace=True)
     rows_after_dedup = len(df_master)
-    df_master.drop(columns=['dedup_key'], inplace=True) # Remove the temporary key
+    df_master.drop(columns=['dedup_key', 'game_id_str', 'game_date_str', 'home_team_str', 'away_team_str'], inplace=True) # Remove temporary keys
 
     print(f"Removed {rows_before_dedup - rows_after_dedup} duplicate rows after cleanup.")
 
