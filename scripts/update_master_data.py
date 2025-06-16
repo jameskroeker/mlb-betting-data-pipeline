@@ -53,7 +53,7 @@ else:
                 else:
                     print(f"Warning: Numeric column '{col}' not found in daily data for conversion.")
 
-            object_cols = ['home_team', 'away_team', 'status', 'winner', 'total_result']
+            object_cols = ['home_team', 'away_team', 'status', 'winner', 'sport_title'] # Added 'sport_title'
             for col in object_cols:
                 if col in df_finished_games.columns:
                     df_finished_games[col] = df_finished_games[col].astype(str)
@@ -61,8 +61,10 @@ else:
                 else:
                     print(f"Warning: Object column '{col}' not found in daily data for conversion.")
 
-            if 'season' not in df_finished_games.columns:
+            if 'season' not in df_finished_games.columns and 'game_date' in df_finished_games.columns:
                 df_finished_games['season'] = df_finished_games['game_date'].dt.year
+            elif 'season' not in df_finished_games.columns:
+                 print("Warning: 'season' column could not be derived as 'game_date' is missing.")
 
 
             print("\nFinished Daily DataFrame dtypes after conversion:")
@@ -95,7 +97,7 @@ else:
                 elif col in ['game_date', 'start_time_et'] and not df_master.empty:
                     # Special handling for datetime columns if they become the first of their type
                     # Ensure timezone-aware if master is timezone-aware
-                    if df_master['game_date'].dt.tz is not None:
+                    if 'game_date' in df_master.columns and df_master['game_date'].dt.tz is not None:
                         df_finished_games[col] = df_finished_games[col].dt.tz_convert(eastern)
 
 
@@ -103,7 +105,6 @@ else:
 
             # --- Deduplication ---
             # Use a robust key that identifies a unique game record
-            # Adjust if your master_template.parquet has other unique identifiers like 'team_abbr'
             combined_df['dedup_key'] = combined_df['game_id'].astype(str) + '_' + \
                                        combined_df['game_date'].dt.strftime('%Y-%m-%d').astype(str) + '_' + \
                                        combined_df['home_team'].astype(str) + '_' + \
@@ -118,7 +119,6 @@ else:
             print(f"New total rows in combined DataFrame: {len(combined_df)}")
 
             print("Sorting final DataFrame...")
-            # Sorting helps ensure consistent output order and can aid in debugging
             combined_df = combined_df.sort_values(by=['season', 'game_date', 'game_id', 'home_team']).reset_index(drop=True)
             print("Sorting complete.")
 
@@ -127,11 +127,14 @@ else:
             print(f"Final master file rows: {len(combined_df)}")
 
             print("\n--- Final Row Counts per Season in Master File ---")
-            season_counts = combined_df['season'].value_counts().sort_index()
-            print(season_counts)
+            if 'season' in combined_df.columns:
+                season_counts = combined_df['season'].value_counts().sort_index()
+                print(season_counts)
+            else:
+                print("Season column not available for final counts.")
             print("\n--- Daily Data Appending to Master Complete ---")
 
     except pd.errors.EmptyDataError:
-            print(f"⚠️ Daily CSV for {process_date_str} is empty. No finished games to append.")
+        print(f"⚠️ Daily CSV for {process_date_str} is empty. No finished games to append.")
     except Exception as e:
-            print(f"❌ An error occurred during daily data ingestion to master: {e}")
+        print(f"❌ An error occurred during daily data ingestion to master: {e}")
