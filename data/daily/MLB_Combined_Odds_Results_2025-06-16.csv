@@ -1,8 +1,8 @@
 game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result,home_1,away_1,home_2,away_2,home_3,away_3,home_4,away_4,home_5,away_5,home_6,away_6,home_7,away_7,home_8,away_8,home_9,away_9
-164361,2025-06-16,2025-06-16 18:40:00,Miami Marlins,Philadelphia Phillies,2.10,1.77,8.5,1.91,1.91,,,,,,,,,,,,,,,,,,,,,,,
-164356,2025-06-16,2025-06-16 18:45:00,Washington Nationals,Colorado Rockies,1.50,2.75,9.0,2.00,1.80,,,,,,,,,,,,,,,,,,,,,,,
-164362,2025-06-16,2025-06-16 19:05:00,New York Yankees,Los Angeles Angels,1.50,2.75,8.5,1.80,2.00,,,,,,,,,,,,,,,,,,,,,,,
-164357,2025-06-16,2025-06-16 19:35:00,Tampa Bay Rays,Baltimore Orioles,1.80,2.05,9.0,1.91,1.91,,,,,,,,,,,,,,,,,,,,,,,
-164358,2025-06-16,2025-06-16 21:40:00,Seattle Mariners,Boston Red Sox,1.57,2.55,7.5,2.00,1.80,,,,,,,,,,,,,,,,,,,,,,,
-164359,2025-06-16,2025-06-16 22:05:00,Athletics,Houston Astros,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-164360,2025-06-16,2025-06-16 22:10:00,Los Angeles Dodgers,San Diego Padres,1.69,2.25,8.5,1.80,2.00,,,,,,,,,,,,,,,,,,,,,,,
+164361,2025-06-16,2025-06-16 18:40:00,Miami Marlins,Philadelphia Phillies,2.1,1.77,8.5,1.91,1.91,2,5,Finished,Philadelphia Phillies,Under,0,1,1,0,0,0,0,1,0,0,0,0,0,1,1,0,0.0,2
+164356,2025-06-16,2025-06-16 18:45:00,Washington Nationals,Colorado Rockies,1.5,2.75,9.0,2.0,1.8,4,6,Finished,Colorado Rockies,Over,0,2,0,0,0,0,1,0,3,1,0,0,0,0,0,0,0.0,3
+164362,2025-06-16,2025-06-16 19:05:00,New York Yankees,Los Angeles Angels,1.5,2.75,8.5,1.8,2.0,0,1,Finished,Los Angeles Angels,Under,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0
+164357,2025-06-16,2025-06-16 19:35:00,Tampa Bay Rays,Baltimore Orioles,1.8,2.05,9.0,1.91,1.91,7,1,Finished,Tampa Bay Rays,Under,1,0,1,0,1,0,2,1,2,0,0,0,0,0,0,0,,0
+164358,2025-06-16,2025-06-16 21:40:00,Seattle Mariners,Boston Red Sox,1.57,2.55,7.5,2.0,1.8,0,2,Finished,Boston Red Sox,Under,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0.0,0
+164359,2025-06-16,2025-06-16 22:05:00,Athletics,Houston Astros,,,,,,3,1,Finished,Athletics,Under,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,2.0,0
+164360,2025-06-16,2025-06-16 22:10:00,Los Angeles Dodgers,San Diego Padres,1.69,2.25,8.5,1.8,2.0,6,3,Finished,Los Angeles Dodgers,Over,0,1,0,0,1,0,5,1,0,0,0,1,0,0,0,0,,0
