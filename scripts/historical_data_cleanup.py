@@ -15,7 +15,7 @@ if not os.path.exists(MASTER_FILE):
     print(f"❌ Error: Master file not found at {MASTER_FILE}. Cannot perform cleanup.")
     exit()
 
-try: # <--- Main try block starts here
+try:
     df_master = pd.read_parquet(MASTER_FILE)
     print(f"✅ Master file loaded successfully for cleanup. Rows: {len(df_master)}")
     print("Original master file columns:", df_master.columns.tolist())
@@ -53,10 +53,9 @@ try: # <--- Main try block starts here
         }, inplace=True)
 
         # Identify common columns for merging (game identifiers).
+        # Based on user feedback, game_id is the primary unique identifier for a game.
+        # Including game_date_for_merge as a secondary key for robustness, as it's derived consistently.
         merge_keys = ['game_id', 'game_date_for_merge']
-        for col in ['start_time_et', 'merge_key', 'game_id_odds', 'commence_time']:
-            if col in df_master.columns and col not in merge_keys:
-                merge_keys.append(col)
 
         print(f"Merge keys used: {merge_keys}")
 
@@ -154,7 +153,7 @@ try: # <--- Main try block starts here
 
         print(f"✅ Converted to wide format. New rows: {len(df_master)}")
         print("Columns after wide format conversion:", df_master.columns.tolist())
-    else: # <--- This else corresponds to the 'if 'is_home' in df_master.columns' above
+    else:
         print("\n--- Data already in wide format (home_team/away_team) or 'is_home' not found. Skipping wide format conversion. ---")
 
 
@@ -274,7 +273,7 @@ try: # <--- Main try block starts here
 
     print(f"Removed {rows_before_dedup - rows_after_dedup} duplicate rows after cleanup.")
 
-    sort_cols = ['season', 'game_date'] # <--- Corrected string literal here
+    sort_cols = ['season', 'game_date']
     if 'game_id' in df_master.columns:
         sort_cols.append('game_id')
     sort_cols.extend(['home_team', 'away_team'])
@@ -288,5 +287,5 @@ try: # <--- Main try block starts here
     print("Updated master file columns:", df_master.columns.tolist())
     print("\n--- Historical Data Cleanup Script Complete ---")
 
-except Exception as e: # <--- Main except block ends here
+except Exception as e:
     print(f"❌ An error occurred during historical data cleanup: {e}")
