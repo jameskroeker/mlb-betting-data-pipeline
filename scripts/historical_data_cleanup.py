@@ -48,8 +48,8 @@ try:
             'team_abbr': 'away_team_abbr',
             'opponent': 'home_team_from_away_perspective', # Temporarily rename
             'opponent_abbr': 'home_team_abbr_from_away_perspective',
-            'home_score': 'away_score_actual', # This is the actual score for the away team
-            'away_score': 'home_score_opponent_perspective', # This is the opponent's score from away team's row
+            'home_score': 'away_score_actual', # This is the actual score for the away team (the 'home_score' of the away team's row)
+            'away_score': 'home_score_opponent_perspective', # This is the opponent's score from away team's row (the 'away_score' of the away team's row)
         }, inplace=True)
 
         # Identify common columns for merging (game identifiers).
@@ -80,11 +80,11 @@ try:
         else:
             raise KeyError("home_score_actual column not found in df_master_wide after merge. Cannot reconcile scores.")
 
-        if 'away_score_actual_away_perspective' in df_master_wide.columns:
-            df_master_wide['away_score'] = pd.to_numeric(df_master_wide['away_score_actual_away_perspective'], errors='coerce')
+        # --- FIX APPLIED HERE: Changed 'away_score_actual_away_perspective' to 'away_score_actual' ---
+        if 'away_score_actual' in df_master_wide.columns:
+            df_master_wide['away_score'] = pd.to_numeric(df_master_wide['away_score_actual'], errors='coerce')
         else:
-            # THIS IS THE ERROR LOCATION. The debugging print above should clarify why this is missing.
-            raise KeyError("away_score_actual_away_perspective column not found in df_master_wide after merge. Cannot reconcile scores.")
+            raise KeyError("away_score_actual column not found in df_master_wide after merge. Cannot reconcile scores.")
 
 
         # Select the desired columns for the new wide format DataFrame.
@@ -94,50 +94,68 @@ try:
             'start_time_et',
             'home_team', 'away_team',
             'home_score', 'away_score',
-            'sport_title',
+            'sport_title', # This column might not be present, but if it is, we want it.
             'season',
             'commence_time'
         ]
 
         # Add inning scores, ensuring they are from the correct home/away perspective
         for i in range(1, 10):
-            if f'home_{i}' in df_master_wide.columns:
-                final_wide_columns.append(f'home_{i}')
-            if f'away_{i}_away_perspective' in df_master_wide.columns:
+            if f'home_{i}_home_perspective' in df_master_wide.columns: # Use the suffixed version from home rows
+                final_wide_columns.append(f'home_{i}_home_perspective')
+            if f'away_{i}_away_perspective' in df_master_wide.columns: # Use the suffixed version from away rows
                 final_wide_columns.append(f'away_{i}_away_perspective')
 
-        # Add all relevant odds and other truly game-level info
+        # Add all relevant odds and other truly game-level info. Prioritize home perspective if both exist.
         for col in ['Run_Line', 'Spread_Price', 'Opp_Spread_Price', 'Total', 'Over_Price', 'Under_Price',
                     'h2h_own', 'h2h_opp']:
-            if col in df_master_wide.columns and col not in final_wide_columns:
+            if f"{col}_home_perspective" in df_master_wide.columns and f"{col}_home_perspective" not in final_wide_columns:
+                final_wide_columns.append(f"{col}_home_perspective")
+            elif col in df_master_wide.columns and col not in final_wide_columns: # Fallback if not suffixed (unlikely for shared names)
                 final_wide_columns.append(col)
-            elif f"{col}_home_perspective" in df_master_wide.columns and f"{col}_home_perspective" not in final_wide_columns:
-                 final_wide_columns.append(f"{col}_home_perspective")
 
 
-        final_wide_columns = list(dict.fromkeys(final_wide_columns))
+        final_wide_columns = list(dict.fromkeys(final_wide_columns)) # Remove potential duplicates
         # Ensure we only select columns that actually exist in df_master_wide
         df_master = df_master_wide[[col for col in final_wide_columns if col in df_master_wide.columns]].copy()
 
         # Rename inning score columns back to just 'home_1', 'away_1' etc.
+        # And rename other suffixed columns that are meant to be direct
         for i in range(1, 10):
+            if f'home_{i}_home_perspective' in df_master.columns:
+                df_master.rename(columns={f'home_{i}_home_perspective': f'home_{i}'}, inplace=True)
             if f'away_{i}_away_perspective' in df_master.columns:
                 df_master.rename(columns={f'away_{i}_away_perspective': f'away_{i}'}, inplace=True)
+
+        # Rename primary odds columns back to non-suffixed version
+        for col in ['Run_Line', 'Spread_Price', 'Opp_Spread_Price', 'Total', 'Over_Price', 'Under_Price',
+                    'h2h_own', 'h2h_opp']:
+            if f"{col}_home_perspective" in df_master.columns:
+                df_master.rename(columns={f"{col}_home_perspective": col}, inplace=True)
 
 
         # Clean up game_date and season (post-wide conversion)
         if 'game_date_et' in df_master.columns and 'game_date' not in df_master.columns:
             df_master.rename(columns={'game_date_et': 'game_date'}, inplace=True)
             print("Renamed 'game_date_et' to 'game_date'.")
-        elif 'game_date' in df_master.columns:
+        elif 'game_date_et_home_perspective' in df_master.columns and 'game_date' not in df_master.columns:
+            df_master.rename(columns={'game_date_et_home_perspective': 'game_date'}, inplace=True)
+            print("Renamed 'game_date_et_home_perspective' to 'game_date'.")
+
+        if 'game_date' in df_master.columns:
             df_master['game_date'] = pd.to_datetime(df_master['game_date'], errors='coerce').dt.date
+
 
         if 'season' not in df_master.columns and 'game_date' in df_master.columns:
             df_master['season'] = pd.to_datetime(df_master['game_date'], errors='coerce').dt.year
             print("Derived 'season' from 'game_date'.")
+        elif 'season_home_perspective' in df_master.columns: # If season came with suffix
+            df_master.rename(columns={'season_home_perspective': 'season'}, inplace=True)
+            df_master['season'] = pd.to_numeric(df_master['season'], errors='coerce').fillna(pd.to_datetime(df_master['game_date'], errors='coerce').dt.year)
+            print("Renamed and cleaned 'season_home_perspective'.")
         elif 'season' in df_master.columns and 'game_date' in df_master.columns and df_master['season'].isnull().any():
-            df_master['season'] = pd.to_datetime(df_master['game_date'], errors='coerce').dt.year.fillna(df_master['season'])
-            print("Filled missing 'season' values from 'game_date'.")
+             df_master['season'] = pd.to_datetime(df_master['game_date'], errors='coerce').dt.year.fillna(df_master['season'])
+             print("Filled missing 'season' values from 'game_date'.")
 
 
         # Drop temporary merge column
@@ -220,24 +238,51 @@ try:
     old_feature_cols = [
         'Wins', 'Losses', 'Win_Pct', 'team_streak', 'Win_Streak', 'Loss_Streak',
         'run_diff', 'won_game', 'hit_over',
-        'team', 'team_abbr', 'opponent', 'opponent_abbr', 'is_home',
-        'game_id_odds', 'team_odds', 'opponent_odds', 'is_home_odds',
+        'team', 'team_abbr', 'opponent', 'opponent_abbr', 'is_home', # Base long format columns
+        'game_id_odds', 'team_odds', 'opponent_odds', 'is_home_odds', # Base odds columns from long format
         'team_abbr_odds', 'opponent_abbr_odds', 'Games_Played',
-        'merge_key',
+        'merge_key', # Temporary merge key
+        # Temporary columns created during the merge/rename process
         'away_team_from_home_perspective', 'away_team_abbr_from_home_perspective',
-        'home_score_actual', 'away_score_opponent_perspective',
+        'home_score_actual', 'away_score_opponent_perspective', # Keep away_score_opponent_perspective as it's just the old away score of home team
         'home_team_from_away_perspective', 'home_team_abbr_from_away_perspective',
-        'away_score_actual', 'home_score_opponent_perspective',
-        # Any other suffixed columns from the merge that weren't explicitly handled or needed
-        *[col for col in df_master.columns if col.endswith('_home_perspective') or col.endswith('_away_perspective')]
+        'away_score_actual', 'home_score_opponent_perspective', # Keep home_score_opponent_perspective as it's just the old home score of away team
+        # Suffixed versions of original columns that are now redundant or replaced
+        *[col for col in df_master.columns if col.endswith('_home_perspective') and col not in ['game_date_et_home_perspective', 'season_home_perspective']], # Exclude ones renamed
+        *[col for col in df_master.columns if col.endswith('_away_perspective') and col not in [f'away_{i}_away_perspective' for i in range(1,10)]], # Exclude ones renamed
+
     ]
-    cols_to_drop = [col for col in old_feature_cols if col in df_master.columns]
+    # Dynamically build the list of suffixed columns to drop, excluding ones we need or have explicitly handled
+    # The previous logic was a bit too broad and could try to drop things that weren't suffixed
+    suffixed_cols_to_drop = []
+    for col in df_master.columns:
+        if col.endswith('_home_perspective') and col not in ['game_date_et_home_perspective', 'season_home_perspective'] and not col.startswith('home_'): # avoid dropping new home team fields
+            suffixed_cols_to_drop.append(col)
+        elif col.endswith('_away_perspective') and not col.startswith('away_') : # avoid dropping new away team fields
+            suffixed_cols_to_drop.append(col)
+
+
+    cols_to_drop = list(set([col for col in old_feature_cols if col in df_master.columns] + suffixed_cols_to_drop))
+
+    # Remove the actual score columns from cols_to_drop if they are now the source for home_score/away_score
+    if 'home_score_actual' in cols_to_drop and 'home_score' in df_master.columns:
+        cols_to_drop.remove('home_score_actual')
+    if 'away_score_actual' in cols_to_drop and 'away_score' in df_master.columns:
+        cols_to_drop.remove('away_score_actual')
+
 
     if cols_to_drop:
-        df_master.drop(columns=cols_to_drop, inplace=True)
+        df_master.drop(columns=cols_to_drop, inplace=True, errors='ignore') # Use errors='ignore' for robustness
         print(f"Dropped redundant columns: {cols_to_drop}")
     else:
         print("No old feature columns found to drop (or they were already removed).")
+
+    # Final check for columns that might have been renamed and are now original
+    # For example, if 'Run_Line_home_perspective' became 'Run_Line', remove 'Run_Line_away_perspective' if it exists
+    for col in ['Run_Line', 'Spread_Price', 'Opp_Spread_Price', 'Total', 'Over_Price', 'Under_Price', 'h2h_own', 'h2h_opp']:
+        if col in df_master.columns and f"{col}_away_perspective" in df_master.columns:
+            df_master.drop(columns=[f"{col}_away_perspective"], inplace=True, errors='ignore')
+            print(f"Dropped redundant away perspective for {col}")
 
 
     if 'game_date' in df_master.columns and 'season' not in df_master.columns:
