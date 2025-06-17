@@ -1,291 +1,209 @@
-# scripts/historical_data_cleanup.py
-
 import pandas as pd
 import numpy as np
 import os
-import pytz
+from datetime import datetime
 
-# === Config ===
-MASTER_FILE = "data/master/master_template.parquet"
-eastern = pytz.timezone("US/Eastern")
+# --- Configuration ---
+MASTER_DIR = "data/master/"
+MASTER_FILE_NAME = "master_template.parquet"
+MASTER_FILE_PATH = os.path.join(MASTER_DIR, MASTER_FILE_NAME)
 
-print("\n--- Starting Historical Data Cleanup Script ---")
+# --- Helper Functions (if any, as per previous discussions) ---
+# (No additional helper functions were explicitly defined for this script's core logic)
 
-if not os.path.exists(MASTER_FILE):
-    print(f"❌ Error: Master file not found at {MASTER_FILE}. Cannot perform cleanup.")
-    exit()
+# --- Main Cleanup Function ---
+def historical_data_cleanup():
+    print(f"--- Running Historical Data Cleanup ---")
 
-try:
-    df_master = pd.read_parquet(MASTER_FILE)
-    print(f"✅ Master file loaded successfully for cleanup. Rows: {len(df_master)}")
-    print("Original master file columns:", df_master.columns.tolist())
+    # 1. Load the master file
+    if not os.path.exists(MASTER_FILE_PATH):
+        print(f"❌ Error: Master file not found at {MASTER_FILE_PATH}. Please ensure it exists.")
+        return
 
-    # --- NEW Step 0.5: Convert to Wide Format if in Long Format (HISTORICAL DATA SPECIFIC) ---
+    try:
+        df_master = pd.read_parquet(MASTER_FILE_PATH)
+        print(f"✅ Master file loaded successfully for cleanup. Rows: {len(df_master)}")
+    except Exception as e:
+        print(f"❌ Error loading master file: {e}")
+        return
+
+    # Check if conversion to wide format is needed
+    # The 'home_team' column implies wide format (or an intermediate state)
+    # The 'is_home' column implies long format
     if 'is_home' in df_master.columns and 'home_team' not in df_master.columns:
-        print("\n--- Detected long format ('is_home' column). Converting to wide (home_team/away_team) format ---")
+        print(f"Detecting 'is_home' column but no 'home_team'. Proceeding with long to wide conversion.")
 
-        # Ensure game_id and date columns are suitable for merging
-        df_master['game_date_for_merge'] = pd.to_datetime(df_master['game_date_et'], errors='coerce', utc=True).dt.date
+        # Ensure 'game_date_et' is in a proper format for consistent merging
+        # Convert to datetime, coerce errors to NaT, then get just the date part
+        # Using utc=True where possible for consistency, then stripping tz
+        if 'game_date_et' in df_master.columns:
+            df_master['game_date_for_merge'] = pd.to_datetime(df_master['game_date_et'], errors='coerce', utc=True)
+            df_master['game_date_for_merge'] = df_master['game_date_for_merge'].dt.date
+        else:
+            print("❌ Error: 'game_date_et' column not found, cannot create 'game_date_for_merge'. Aborting conversion.")
+            return
 
-
-        # Separate home and away team rows for merging
+        # Separate home and away rows
+        # Use .copy() to avoid SettingWithCopyWarning
         df_home_rows = df_master[df_master['is_home'] == True].copy()
         df_away_rows = df_master[df_master['is_home'] == False].copy()
 
-        # Rename columns in home rows to be the 'home_' perspective
-        df_home_rows.rename(columns={
-            'team': 'home_team',
-            'team_abbr': 'home_team_abbr',
-            'opponent': 'away_team_from_home_perspective',
-            'opponent_abbr': 'away_team_abbr_from_home_perspective',
-            'home_score': 'home_score_actual',
-            'away_score': 'away_score_opponent_perspective',
-        }, inplace=True)
+        # Rename columns to avoid conflicts after merge
+        # These are columns that exist in both home and away rows but need distinct names post-merge
+        columns_to_rename = [
+            'team', 'team_abbr', 'opponent', 'opponent_abbr', 'Wins', 'Losses', 'Win_Pct',
+            'team_streak', 'Win_Streak', 'Loss_Streak', 'home_score', 'away_score',
+            'home_1', 'away_1', 'home_2', 'away_2', 'home_3', 'away_3', 'home_4', 'away_4',
+            'home_5', 'away_5', 'home_6', 'away_6', 'home_7', 'away_7', 'home_8', 'away_8',
+            'home_9', 'away_9', 'team_odds', 'opponent_odds', 'is_home_odds',
+            'Run_Line', 'Spread_Price', 'Opp_Spread_Price', 'Total', 'Over_Price', 'Under_Price',
+            'h2h_own', 'h2h_opp', 'team_abbr_odds', 'opponent_abbr_odds',
+            'run_diff', 'won_game', 'hit_over', 'is_true_duplicate', 'Games_Played'
+        ]
 
-        # Rename columns in away rows to be the 'away_' perspective
-        df_away_rows.rename(columns={
-            'team': 'away_team',
-            'team_abbr': 'away_team_abbr',
-            'opponent': 'home_team_from_away_perspective',
-            'opponent_abbr': 'home_team_abbr_from_away_perspective',
-            'home_score': 'away_score_actual',
-            'away_score': 'home_score_opponent_perspective',
-        }, inplace=True)
+        # Filter out merge_keys and game_id_odds from columns_to_rename if they happen to be there
+        # This is a precaution as merge_keys are handled directly by the merge `on` parameter
+        columns_to_rename_filtered = [col for col in columns_to_rename if col not in ['game_id', 'game_date_for_merge', 'game_id_odds', 'commence_time']]
+
+
+        # Apply renaming
+        df_home_rows = df_home_rows.rename(columns={col: f'home_{col}' for col in columns_to_rename_filtered})
+        df_away_rows = df_away_rows.rename(columns={col: f'away_{col}' for col in columns_to_rename_filtered})
 
         # Identify common columns for merging (game identifiers).
-        # Based on user feedback, game_id is the primary unique identifier for a game.
+        # Based on user feedback and inspection, game_id is the primary unique identifier for a game.
         # Including game_date_for_merge as a secondary key for robustness, as it's derived consistently.
         merge_keys = ['game_id', 'game_date_for_merge']
 
-        print(f"Merge keys used: {merge_keys}")
+        print(f"Merge keys used for conversion: {merge_keys}")
 
+        # Perform the merge to get wide format
+        # Use an inner merge to ensure only games with both home and away entries are kept
+        # Using suffix for columns that might still conflict despite explicit renames
         df_master_wide = pd.merge(
             df_home_rows,
             df_away_rows,
             on=merge_keys,
-            suffixes=('_home_perspective', '_away_perspective'),
-            how='inner'
+            how='inner',
+            suffixes=('_home', '_away') # This adds _home/_away suffix if any column names still conflict
         )
 
-        print("\n--- df_master_wide columns after merge (DEBUG) ---")
-        print(df_master_wide.columns.tolist())
-        print("--- End df_master_wide columns (DEBUG) ---\n")
+        # Drop the original 'is_home' columns if they somehow survived and are not needed
+        if 'is_home_home' in df_master_wide.columns:
+            df_master_wide.drop(columns=['is_home_home'], inplace=True)
+        if 'is_home_away' in df_master_wide.columns:
+            df_master_wide.drop(columns=['is_home_away'], inplace=True)
 
-        # Reconcile scores
-        if 'home_score_actual' in df_master_wide.columns:
-            df_master_wide['home_score'] = pd.to_numeric(df_master_wide['home_score_actual'], errors='coerce')
+        # Handle potentially redundant game_date columns after merge if suffixes were applied
+        # Prioritize the cleaner one or rename as needed.
+        # Assuming original 'game_date_et' (now 'home_game_date_et' and 'away_game_date_et')
+        # And original 'game_date' (now 'home_game_date' and 'away_game_date')
+        # We can drop the _away version for these.
+        for col in ['game_date_et', 'start_time_et', 'game_date', 'game_id_odds', 'commence_time', 'season']:
+            if f'{col}_away' in df_master_wide.columns:
+                df_master_wide.drop(columns=[f'{col}_away'], inplace=True)
+                if f'{col}_home' in df_master_wide.columns:
+                    df_master_wide.rename(columns={f'{col}_home': col}, inplace=True)
+            elif f'{col}_home' in df_master_wide.columns and col not in df_master_wide.columns:
+                 df_master_wide.rename(columns={f'{col}_home': col}, inplace=True)
+
+
+        # Final deduplication step after conversion and merge
+        # This is a critical safeguard for any lingering duplicates from the source or merge anomalies
+        # Create a robust deduplication key based on unique game identifiers in the wide format
+        dedup_key = ['game_id', 'game_date', 'home_team', 'away_team']
+        # Convert game_date to date string for dedup key robustness if it's not already
+        if 'game_date' in df_master_wide.columns:
+             df_master_wide['game_date_str_dedup'] = pd.to_datetime(df_master_wide['game_date'], errors='coerce').dt.strftime('%Y-%m-%d')
+             dedup_key = ['game_id', 'game_date_str_dedup', 'home_team', 'away_team']
         else:
-            raise KeyError("home_score_actual column not found in df_master_wide after merge. Cannot reconcile scores.")
+            print("Warning: 'game_date' not found for robust deduplication key.")
 
-        if 'away_score_actual' in df_master_wide.columns:
-            df_master_wide['away_score'] = pd.to_numeric(df_master_wide['away_score_actual'], errors='coerce')
-        else:
-            raise KeyError("away_score_actual column not found in df_master_wide after merge. Cannot reconcile scores.")
+        initial_wide_rows = len(df_master_wide)
+        df_master_wide.drop_duplicates(subset=dedup_key, keep='first', inplace=True)
+        rows_after_dedup = len(df_master_wide)
 
+        if initial_wide_rows > rows_after_dedup:
+            print(f"Dropped {initial_wide_rows - rows_after_dedup} duplicates after wide conversion.")
 
-        # Select the desired columns for the new wide format DataFrame.
-        final_wide_columns = [
-            'game_id',
-            'game_date_et_home_perspective',
-            'start_time_et',
-            'home_team', 'away_team',
-            'home_score', 'away_score',
-            'sport_title',
-            'season_home_perspective',
-            'commence_time'
-        ]
-
-        # Add inning scores, ensuring they are from the correct home/away perspective
-        for i in range(1, 10):
-            if f'home_{i}_home_perspective' in df_master_wide.columns:
-                final_wide_columns.append(f'home_{i}_home_perspective')
-            if f'away_{i}_away_perspective' in df_master_wide.columns:
-                final_wide_columns.append(f'away_{i}_away_perspective')
-
-        # Add all relevant odds and other truly game-level info. Prioritize home perspective if both exist.
-        for col in ['Run_Line', 'Spread_Price', 'Opp_Spread_Price', 'Total', 'Over_Price', 'Under_Price',
-                    'h2h_own', 'h2h_opp']:
-            if f"{col}_home_perspective" in df_master_wide.columns and f"{col}_home_perspective" not in final_wide_columns:
-                final_wide_columns.append(f"{col}_home_perspective")
-            elif col in df_master_wide.columns and col not in final_wide_columns:
-                final_wide_columns.append(col)
-
-
-        final_wide_columns = list(dict.fromkeys(final_wide_columns))
-        df_master = df_master_wide[[col for col in final_wide_columns if col in df_master_wide.columns]].copy()
-
-
-        # RENAMES FOR game_date and season immediately after selection
-        if 'game_date_et_home_perspective' in df_master.columns:
-            df_master.rename(columns={'game_date_et_home_perspective': 'game_date'}, inplace=True)
-            print("Renamed 'game_date_et_home_perspective' to 'game_date'.")
-
-        if 'season_home_perspective' in df_master.columns:
-            df_master.rename(columns={'season_home_perspective': 'season'}, inplace=True)
-            print("Renamed 'season_home_perspective' to 'season'.")
-        # Handle cases where season might still be missing after rename/conversion
-        if 'season' not in df_master.columns and 'game_date' in df_master.columns:
-            df_master['season'] = pd.to_datetime(df_master['game_date'], errors='coerce').dt.year
-            print("Derived 'season' from 'game_date' after wide conversion.")
-        elif 'season' in df_master.columns and 'game_date' in df_master.columns and df_master['season'].isnull().any():
-            df_master['season'] = pd.to_datetime(df_master['game_date'], errors='coerce').dt.year.fillna(df_master['season'])
-            print("Filled missing 'season' values from 'game_date' after wide conversion.")
-
-
-        # Rename inning score columns back to just 'home_1', 'away_1' etc.
-        for i in range(1, 10):
-            if f'home_{i}_home_perspective' in df_master.columns:
-                df_master.rename(columns={f'home_{i}_home_perspective': f'home_{i}'}, inplace=True)
-            if f'away_{i}_away_perspective' in df_master.columns:
-                df_master.rename(columns={f'away_{i}_away_perspective': f'away_{i}'}, inplace=True)
-
-        # Rename primary odds columns back to non-suffixed version
-        for col in ['Run_Line', 'Spread_Price', 'Opp_Spread_Price', 'Total', 'Over_Price', 'Under_Price',
-                    'h2h_own', 'h2h_opp']:
-            if f"{col}_home_perspective" in df_master.columns:
-                df_master.rename(columns={f"{col}_home_perspective": col}, inplace=True)
-
-
-        # Drop temporary merge column
-        if 'game_date_for_merge' in df_master.columns:
-            df_master.drop(columns=['game_date_for_merge'], inplace=True)
-
-
+        df_master = df_master_wide # Update df_master to the wide format
         print(f"✅ Converted to wide format. New rows: {len(df_master)}")
-        print("Columns after wide format conversion:", df_master.columns.tolist())
+
     else:
-        print("\n--- Data already in wide format (home_team/away_team) or 'is_home' not found. Skipping wide format conversion. ---")
+        print("Master file appears to be in wide format already or does not need conversion.")
 
+    # 2. General Data Cleaning and Type Conversion (applies to both long and wide format)
+    # This section can be expanded based on specific needs
 
-    # --- Step 1: Standardize Critical Column Names and Types ---
-    print("\n--- Standardizing column names and types ---")
-    for col in ['game_date', 'start_time_et', 'commence_time']:
-        if col in df_master.columns:
-            df_master[col] = pd.to_datetime(df_master[col], errors='coerce', utc=True)
-            df_master[col] = df_master[col].dt.tz_convert(eastern)
-            print(f"Ensured '{col}' is timezone-aware datetime in Eastern Time.")
-        else:
-            print(f"Warning: '{col}' not found for standardization.")
-
-    for col in ['home_score', 'away_score']:
-        if col in df_master.columns:
-            df_master[col] = pd.to_numeric(df_master[col], errors='coerce')
-            print(f"Converted '{col}' to numeric.")
-        else:
-            print(f"Warning: '{col}' not found for numeric conversion.")
-
+    # Ensure 'game_id' is consistent (e.g., integer type)
     if 'game_id' in df_master.columns:
-        df_master['game_id'] = pd.to_numeric(df_master['game_id'], errors='coerce').astype('Int64')
-        print("Converted 'game_id' to nullable integer.")
-    else:
-        print("Warning: 'game_id' not found for numeric conversion.")
+        df_master['game_id'] = pd.to_numeric(df_master['game_id'], errors='coerce').astype('Int64') # Use Int64 for nullable integer
 
+    # Convert date/time columns to datetime objects
+    for col in ['game_date_et', 'start_time_et', 'game_date', 'commence_time']:
+        if col in df_master.columns:
+            df_master[col] = pd.to_datetime(df_master[col], errors='coerce')
 
-    # --- Step 2: Infer 'status' and 'winner' columns ---
-    print("\n--- Inferring 'status' and 'winner' columns ---")
-
-    if 'status' not in df_master.columns:
-        print("Adding new 'status' column (defaulting to 'Scheduled').")
-        df_master['status'] = 'Scheduled'
-    else:
-        print("Existing 'status' column found.")
-
-    df_master['status'] = np.where(
-        df_master['home_score'].notna() & df_master['away_score'].notna(),
-        'Finished',
-        df_master['status']
-    )
-    df_master['status'] = df_master['status'].astype(str)
-    print("Updated 'status' values based on scores.")
-
-    if 'winner' not in df_master.columns:
-        print("Adding new 'winner' column (defaulting to None).")
-        df_master['winner'] = None
-    else:
-        print("Existing 'winner' column found.")
-
-    df_master['home_score'] = pd.to_numeric(df_master['home_score'], errors='coerce')
-    df_master['away_score'] = pd.to_numeric(df_master['away_score'], errors='coerce')
-
-    finished_and_winner_missing_mask = (df_master['status'] == 'Finished') & \
-                                       df_master['home_score'].notna() & \
-                                       df_master['away_score'].notna() & \
-                                       df_master['winner'].isnull()
-
-    if 'home_team' in df_master.columns and 'away_team' in df_master.columns:
-        df_master.loc[finished_and_winner_missing_mask & (df_master['home_score'] > df_master['away_score']), 'winner'] = df_master['home_team']
-        df_master.loc[finished_and_winner_missing_mask & (df_master['away_score'] > df_master['home_score']), 'winner'] = df_master['away_team']
-        df_master['winner'] = df_master['winner'].astype(str).replace('nan', None)
-        print("Inferred 'winner' values based on scores for finished games where missing.")
-    else:
-        print("Warning: 'home_team' or 'away_team' columns not found after wide conversion. Cannot infer winner.")
-
-
-    # --- Step 3: Remove Redundant/Old Manually Created Columns ---
-    print("\n--- Removing old, manually created W/L/Streak columns ---")
-    old_feature_cols_to_remove = [
-        'Wins', 'Losses', 'Win_Pct', 'team_streak', 'Win_Streak', 'Loss_Streak',
-        'run_diff', 'won_game', 'hit_over', 'Games_Played',
-        'team', 'team_abbr', 'opponent', 'opponent_abbr', 'is_home',
-        'game_id_odds', 'team_odds', 'opponent_odds', 'is_home_odds',
-        'team_abbr_odds', 'opponent_abbr_odds', 'merge_key',
-        'away_team_from_home_perspective', 'away_team_abbr_from_home_perspective',
-        'home_score_actual', 'away_score_opponent_perspective',
-        'home_team_from_away_perspective', 'home_team_abbr_from_away_perspective',
-        'away_score_actual', 'home_score_opponent_perspective',
-        *[col for col in df_master.columns if col.endswith('_home_perspective') and col not in ['game_date', 'season'] and not col.startswith('home_')],
-        *[col for col in df_master.columns if col.endswith('_away_perspective') and not col.startswith('away_')],
-        'game_date_et_away_perspective', 'game_date_home_perspective', 'game_date_away_perspective',
-        'season_away_perspective'
+    # Convert numerical columns to appropriate types (e.g., float, Int64)
+    numerical_cols = [
+        'home_Wins', 'home_Losses', 'home_Win_Pct', 'home_score', 'away_score',
+        'away_Wins', 'away_Losses', 'away_Win_Pct',
+        'home_1', 'away_1', 'home_2', 'away_2', 'home_3', 'away_3', 'home_4', 'away_4',
+        'home_5', 'away_5', 'home_6', 'away_6', 'home_7', 'away_7', 'home_8', 'away_8',
+        'home_9', 'away_9',
+        'Run_Line', 'Spread_Price', 'Opp_Spread_Price', 'Total', 'Over_Price', 'Under_Price',
+        'h2h_own', 'h2h_opp', 'run_diff', 'season', 'Games_Played'
     ]
-
-    cols_to_drop = [col for col in old_feature_cols_to_remove if col in df_master.columns]
-
-    if cols_to_drop:
-        df_master.drop(columns=cols_to_drop, inplace=True, errors='ignore')
-        print(f"Dropped redundant columns: {cols_to_drop}")
-    else:
-        print("No old feature columns found to drop (or they were already removed).")
-
-    for col in ['Run_Line', 'Spread_Price', 'Opp_Spread_Price', 'Total', 'Over_Price', 'Under_Price', 'h2h_own', 'h2h_opp']:
-        if col in df_master.columns and f"{col}_away_perspective" in df_master.columns:
-            df_master.drop(columns=[f"{col}_away_perspective"], inplace=True, errors='ignore')
-            print(f"Dropped redundant away perspective for {col}")
+    # Adjust for renamed columns after wide conversion
+    if 'home_team' in df_master.columns and 'is_home' not in df_master.columns: # If already wide format
+        numerical_cols_wide = []
+        for col in numerical_cols:
+            if col.startswith('home_') or col.startswith('away_'):
+                numerical_cols_wide.append(col)
+            elif col in ['Run_Line', 'Spread_Price', 'Opp_Spread_Price', 'Total', 'Over_Price', 'Under_Price',
+                         'h2h_own', 'h2h_opp', 'run_diff', 'season', 'Games_Played']:
+                 numerical_cols_wide.append(col)
+        numerical_cols = numerical_cols_wide # Use the wide-format specific list
 
 
-    # --- Step 4: Final Deduplication and Sorting ---
-    print("\n--- Final Deduplication and Sorting ---")
+    for col in numerical_cols:
+        if col in df_master.columns:
+            # Attempt to convert to float first, then to Int64 if no decimals and not NaN
+            # This handles potential missing values (NaN) gracefully
+            df_master[col] = pd.to_numeric(df_master[col], errors='coerce')
+            # For columns that should logically be integers (scores, wins, losses, season)
+            if col in ['home_score', 'away_score', 'home_Wins', 'home_Losses', 'away_Wins', 'away_Losses', 'season', 'Games_Played']:
+                df_master[col] = df_master[col].astype('Int64', errors='ignore') # Use Int64 for nullable integer
 
-    if 'game_id' in df_master.columns and df_master['game_id'].notna().any():
-        df_master['dedup_key'] = df_master['game_id'].astype(str) + '_' + \
-                                 pd.to_datetime(df_master['game_date'], errors='coerce').dt.strftime('%Y-%m-%d').astype(str) + '_' + \
-                                 df_master['home_team'].astype(str) + '_' + \
-                                 df_master['away_team'].astype(str)
-    else:
-         df_master['dedup_key'] = pd.to_datetime(df_master['game_date'], errors='coerce').dt.strftime('%Y-%m-%d').astype(str) + '_' + \
-                                 df_master['home_team'].astype(str) + '_' + \
-                                 df_master['away_team'].astype(str)
+    # Ensure boolean columns are actual booleans
+    for col in ['is_true_duplicate', 'won_game', 'hit_over']:
+        if f'home_{col}' in df_master.columns and f'away_{col}' in df_master.columns:
+             # If both exist, we need to decide which one to keep or how to combine
+             # For won_game/hit_over, they relate to a team's performance, so home_won_game and away_won_game makes sense
+             pass # Don't convert these here if they're split
 
-    rows_before_dedup = len(df_master)
-    df_master.drop_duplicates(subset=['dedup_key'], keep='first', inplace=True)
-    rows_after_dedup = len(df_master)
-    df_master.drop(columns=['dedup_key'], inplace=True)
+        elif col in df_master.columns: # If the original unsplit column exists
+             df_master[col] = df_master[col].astype(bool, errors='ignore') # Convert to boolean
 
-    print(f"Removed {rows_before_dedup - rows_after_dedup} duplicate rows after cleanup.")
+    # Drop any temporary columns created for merging/deduplication
+    if 'game_date_for_merge' in df_master.columns:
+        df_master.drop(columns=['game_date_for_merge'], inplace=True)
+    if 'game_date_str_dedup' in df_master.columns:
+        df_master.drop(columns=['game_date_str_dedup'], inplace=True)
 
-    sort_cols = ['season', 'game_date']
-    if 'game_id' in df_master.columns:
-        sort_cols.append('game_id')
-    sort_cols.extend(['home_team', 'away_team'])
 
-    df_master = df_master.sort_values(by=sort_cols).reset_index(drop=True)
-    print("Master file sorted after cleanup.")
+    # 3. Save the cleaned and converted master file
+    try:
+        # Save without index to avoid creating an extra 'index' column in the parquet file
+        df_master.to_parquet(MASTER_FILE_PATH, index=False)
+        print(f"✅ Cleaned and converted master file saved successfully to {MASTER_FILE_PATH}. Final rows: {len(df_master)}")
+    except Exception as e:
+        print(f"❌ Error saving master file: {e}")
 
-    print(f"\nSaving cleaned master file to: {MASTER_FILE}")
-    df_master.to_parquet(MASTER_FILE, index=False)
-    print(f"✅ Cleaned master file saved. New total rows: {len(df_master)}")
-    print("Updated master file columns:", df_master.columns.tolist())
-    print("\n--- Historical Data Cleanup Script Complete ---")
+    print(f"--- Historical Data Cleanup Complete ---")
 
-except Exception as e:
-    print(f"❌ An error occurred during historical data cleanup: {e}")
+# --- Execute the cleanup ---
+if __name__ == "__main__":
+    # Ensure the master directory exists
+    os.makedirs(MASTER_DIR, exist_ok=True)
+    historical_data_cleanup()
