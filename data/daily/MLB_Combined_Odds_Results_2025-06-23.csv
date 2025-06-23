@@ -1,0 +1,10 @@
+game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result,home_1,away_1,home_2,away_2,home_3,away_3,home_4,away_4,home_5,away_5,home_6,away_6,home_7,away_7,home_8,away_8,home_9,away_9
+164456,2025-06-23,2025-06-23 18:35:00,Baltimore Orioles,Texas Rangers,1.73,2.10,9.5,1.91,1.91,,,,,,,,,,,,,,,,,,,,,,,
+164453,2025-06-23,2025-06-23 19:10:00,New York Mets,Atlanta Braves,2.10,1.73,8.5,1.91,1.91,,,,,,,,,,,,,,,,,,,,,,,
+164454,2025-06-23,2025-06-23 19:10:00,Cincinnati Reds,New York Yankees,2.00,1.80,9.5,1.80,2.00,,,,,,,,,,,,,,,,,,,,,,,
+164455,2025-06-23,2025-06-23 19:40:00,Chicago White Sox,Arizona Diamondbacks,2.10,1.73,8.5,1.80,2.00,,,,,,,,,,,,,,,,,,,,,,,
+164457,2025-06-23,2025-06-23 19:40:00,Milwaukee Brewers,Pittsburgh Pirates,1.50,2.60,8.5,1.91,1.91,,,,,,,,,,,,,,,,,,,,,,,
+164458,2025-06-23,2025-06-23 19:40:00,Minnesota Twins,Seattle Mariners,2.00,1.80,8.0,1.80,2.00,,,,,,,,,,,,,,,,,,,,,,,
+164459,2025-06-23,2025-06-23 19:45:00,St. Louis Cardinals,Chicago Cubs,1.91,1.91,9.0,1.91,1.91,,,,,,,,,,,,,,,,,,,,,,,
+164460,2025-06-23,2025-06-23 21:38:00,Los Angeles Angels,Boston Red Sox,2.00,1.80,9.0,1.91,1.91,,,,,,,,,,,,,,,,,,,,,,,
+164452,2025-06-23,2025-06-23 21:40:00,San Diego Padres,Washington Nationals,,,,,,,,,,,,,,,,,,,,,,,,,,,,
