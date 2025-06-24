@@ -5,8 +5,9 @@ import pytz
 import numpy as np
 
 # === Config ===
-MASTER_FILE = "data/master/master.parquet"  # Set to your actual master file path
-DAILY_DATA_DIR = "data/daily/" # Set to your actual daily data directory
+MASTER_FILE = "data/master/master_template.parquet" # Updated to your specified master file name
+DAILY_DATA_DIR = "data/daily/"
+eastern = pytz.timezone("US/Eastern")
 
 # Ensure the master directory exists
 os.makedirs(os.path.dirname(MASTER_FILE), exist_ok=True)
