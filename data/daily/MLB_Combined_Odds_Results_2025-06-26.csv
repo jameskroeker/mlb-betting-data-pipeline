@@ -1,10 +1,10 @@
 game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result,home_1,away_1,home_2,away_2,home_3,away_3,home_4,away_4,home_5,away_5,home_6,away_6,home_7,away_7,home_8,away_8,home_9,away_9
-164491,2025-06-26,2025-06-26 13:10:00,Minnesota Twins,Seattle Mariners,1.80,2.00,8.5,1.80,2.00,,,,,,,,,,,,,,,,,,,,,,,
-164495,2025-06-26,2025-06-26 13:10:00,Detroit Tigers,Athletics,1.62,2.30,8.5,1.80,2.00,,,,,,,,,,,,,,,,,,,,,,,
-164499,2025-06-26,2025-06-26 13:10:00,Cleveland Guardians,Toronto Blue Jays,1.91,1.91,8.0,1.91,1.91,,,,,,,,,,,,,,,,,,,,,,,
-164496,2025-06-26,2025-06-26 14:10:00,Houston Astros,Philadelphia Phillies,1.67,2.20,7.0,1.80,2.00,,,,,,,,,,,,,,,,,,,,,,,
-164497,2025-06-26,2025-06-26 14:10:00,Kansas City Royals,Tampa Bay Rays,2.10,1.73,9.5,1.73,2.10,,,,,,,,,,,,,,,,,,,,,,,
-164492,2025-06-26,2025-06-26 14:15:00,St. Louis Cardinals,Chicago Cubs,2.20,1.67,9.0,1.91,1.91,,,,,,,,,,,,,,,,,,,,,,,
-164494,2025-06-26,2025-06-26 15:10:00,Colorado Rockies,Los Angeles Dodgers,3.30,1.33,11.5,1.80,2.00,,,,,,,,,,,,,,,,,,,,,,,
-164493,2025-06-26,2025-06-26 15:45:00,San Francisco Giants,Miami Marlins,1.53,2.50,8.0,2.00,1.80,,,,,,,,,,,,,,,,,,,,,,,
-164498,2025-06-26,2025-06-26 19:10:00,New York Mets,Atlanta Braves,1.91,1.91,8.5,1.80,2.00,,,,,,,,,,,,,,,,,,,,,,,
+164491,2025-06-26,2025-06-26 13:10:00,Minnesota Twins,Seattle Mariners,1.8,2.0,8.5,1.8,2.0,10,1,Finished,Minnesota Twins,Over,0,0,0,0,0,0,0,0,2,0,8,0,0,0,0,0,,1
+164495,2025-06-26,2025-06-26 13:10:00,Detroit Tigers,Athletics,1.62,2.3,8.5,1.8,2.0,8,0,Finished,Detroit Tigers,Under,0,0,1,0,2,0,0,0,0,0,0,0,2,0,3,0,,0
+164499,2025-06-26,2025-06-26 13:10:00,Cleveland Guardians,Toronto Blue Jays,1.91,1.91,8.0,1.91,1.91,0,6,Finished,Toronto Blue Jays,Under,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0.0,3
+164496,2025-06-26,2025-06-26 14:10:00,Houston Astros,Philadelphia Phillies,1.67,2.2,7.0,1.8,2.0,2,1,Finished,Houston Astros,Under,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,,0
+164497,2025-06-26,2025-06-26 14:10:00,Kansas City Royals,Tampa Bay Rays,2.1,1.73,9.5,1.73,2.1,0,4,Finished,Tampa Bay Rays,Under,0,0,0,0,0,0,0,2,0,0,0,2,0,0,0,0,0.0,0
+164492,2025-06-26,2025-06-26 14:15:00,St. Louis Cardinals,Chicago Cubs,2.2,1.67,9.0,1.91,1.91,0,3,Finished,Chicago Cubs,Under,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,1,0.0,0
+164494,2025-06-26,2025-06-26 15:10:00,Colorado Rockies,Los Angeles Dodgers,3.3,1.33,11.5,1.8,2.0,1,3,Finished,Los Angeles Dodgers,Under,0,0,1,0,0,1,0,0,0,0,0,1,0,1,0,0,0.0,0
+164493,2025-06-26,2025-06-26 15:45:00,San Francisco Giants,Miami Marlins,1.53,2.5,8.0,2.0,1.8,5,12,Finished,Miami Marlins,Over,0,3,0,0,2,2,3,0,0,3,0,0,0,0,0,4,0.0,0
+164498,2025-06-26,2025-06-26 19:10:00,New York Mets,Atlanta Braves,1.91,1.91,8.5,1.8,2.0,4,0,Finished,New York Mets,Under,0,0,0,0,0,0,1,0,1,0,0,0,2,0,0,0,,0
