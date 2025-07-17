@@ -1,0 +1,2 @@
+game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result,home_1,away_1,home_2,away_2,home_3,away_3,home_4,away_4,home_5,away_5,home_6,away_6,home_7,away_7,home_8,away_8,home_9,away_9
+12345,2025-07-16,19:05 ET,Team A,Team B,-150,130,8.5,-110,-110,5,3,Finished,Home,Over,0,1,2,0,1,1,0,0,1,0,0,0,1,0,0,1,0,0
