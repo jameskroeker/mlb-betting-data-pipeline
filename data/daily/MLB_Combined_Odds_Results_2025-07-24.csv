@@ -1,6 +1,6 @@
 game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result,home_1,away_1,home_2,away_2,home_3,away_3,home_4,away_4,home_5,away_5,home_6,away_6,home_7,away_7,home_8,away_8,home_9,away_9
-164825,2025-07-24,2025-07-24 13:10:00,Cleveland Guardians,Baltimore Orioles,1.80,2.00,,,,,,,,,,,,,,,,,,,,,,,,,,
-164826,2025-07-24,2025-07-24 18:40:00,Detroit Tigers,Toronto Blue Jays,1.73,2.10,,,,,,,,,,,,,,,,,,,,,,,,,,
-164827,2025-07-24,2025-07-24 19:45:00,St. Louis Cardinals,San Diego Padres,1.73,2.10,,,,,,,,,,,,,,,,,,,,,,,,,,
-164824,2025-07-24,2025-07-24 20:10:00,Houston Astros,Athletics,1.73,2.10,,,,,,,,,,,,,,,,,,,,,,,,,,
-164828,2025-07-24,2025-07-24 21:38:00,Los Angeles Angels,Seattle Mariners,1.80,2.00,,,,,,,,,,,,,,,,,,,,,,,,,,
+164825,2025-07-24,2025-07-24 13:10:00,Cleveland Guardians,Baltimore Orioles,1.8,2.0,,,,3,4,Finished,Baltimore Orioles,Under,0,3,0,0,2,0,0,0,1,0,0,0,0,1,0,0,0.0,0
+164826,2025-07-24,2025-07-24 18:40:00,Detroit Tigers,Toronto Blue Jays,1.73,2.1,,,,4,11,Finished,Toronto Blue Jays,Under,1,0,0,0,0,0,0,0,0,0,0,5,0,4,0,2,3.0,0
+164827,2025-07-24,2025-07-24 19:45:00,St. Louis Cardinals,San Diego Padres,1.73,2.1,,,,9,7,Finished,St. Louis Cardinals,Under,1,2,6,0,0,3,1,0,0,2,1,0,0,0,0,0,,0
+164824,2025-07-24,2025-07-24 20:10:00,Houston Astros,Athletics,1.73,2.1,,,,2,5,Finished,Athletics,Under,0,0,0,1,0,0,0,2,0,1,0,1,2,0,0,0,0.0,0
+164828,2025-07-24,2025-07-24 21:38:00,Los Angeles Angels,Seattle Mariners,1.8,2.0,,,,2,4,Finished,Seattle Mariners,Under,1,0,0,0,0,0,0,0,0,3,0,0,1,0,0,1,0.0,0
