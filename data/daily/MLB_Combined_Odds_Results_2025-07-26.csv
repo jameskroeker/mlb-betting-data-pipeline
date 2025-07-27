@@ -1,17 +1,17 @@
 game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result,home_1,away_1,home_2,away_2,home_3,away_3,home_4,away_4,home_5,away_5,home_6,away_6,home_7,away_7,home_8,away_8,home_9,away_9
-164851,2025-07-26,2025-07-26 13:05:00,New York Yankees,Philadelphia Phillies,2.00,1.80,,,,,,,,,,,,,,,,,,,,,,,,,,
-164835,2025-07-26,2025-07-26 14:40:00,Kansas City Royals,Cleveland Guardians,1.80,2.00,,,,,,,,,,,,,,,,,,,,,,,,,,
-164848,2025-07-26,2025-07-26 18:10:00,Detroit Tigers,Toronto Blue Jays,1.50,2.60,,,,,,,,,,,,,,,,,,,,,,,,,,
-164847,2025-07-26,2025-07-26 18:40:00,Cincinnati Reds,Tampa Bay Rays,1.80,2.00,,,,,,,,,,,,,,,,,,,,,,,,,,
-164852,2025-07-26,2025-07-26 18:40:00,Pittsburgh Pirates,Arizona Diamondbacks,2.10,1.73,,,,,,,,,,,,,,,,,,,,,,,,,,
-164844,2025-07-26,2025-07-26 19:05:00,Baltimore Orioles,Colorado Rockies,1.36,3.10,,,,,,,,,,,,,,,,,,,,,,,,,,
-164854,2025-07-26,2025-07-26 19:05:00,Texas Rangers,Atlanta Braves,1.80,2.00,,,,,,,,,,,,,,,,,,,,,,,,,,
-164846,2025-07-26,2025-07-26 19:10:00,Chicago White Sox,Chicago Cubs,2.60,1.50,,,,,,,,,,,,,,,,,,,,,,,,,,
-164849,2025-07-26,2025-07-26 19:10:00,Houston Astros,Athletics,1.50,2.60,,,,,,,,,,,,,,,,,,,,,,,,,,
-164855,2025-07-26,2025-07-26 19:10:00,Milwaukee Brewers,Miami Marlins,1.57,2.38,,,,,,,,,,,,,,,,,,,,,,,,,,
-164856,2025-07-26,2025-07-26 19:10:00,Minnesota Twins,Washington Nationals,1.40,2.90,,,,,,,,,,,,,,,,,,,,,,,,,,
-164845,2025-07-26,2025-07-26 19:15:00,Boston Red Sox,Los Angeles Dodgers,1.67,2.20,,,,,,,,,,,,,,,,,,,,,,,,,,
-164850,2025-07-26,2025-07-26 19:15:00,Kansas City Royals,Cleveland Guardians,1.73,2.10,,,,,,,,,,,,,,,,,,,,,,,,,,
-164857,2025-07-26,2025-07-26 19:15:00,St. Louis Cardinals,San Diego Padres,1.62,2.30,,,,,,,,,,,,,,,,,,,,,,,,,,
-164853,2025-07-26,2025-07-26 21:05:00,San Francisco Giants,New York Mets,1.91,1.91,,,,,,,,,,,,,,,,,,,,,,,,,,
-164858,2025-07-26,2025-07-26 21:38:00,Los Angeles Angels,Seattle Mariners,2.20,1.67,,,,,,,,,,,,,,,,,,,,,,,,,,
+164851,2025-07-26,2025-07-26 13:05:00,New York Yankees,Philadelphia Phillies,2.0,1.8,,,,4,9,Finished,Philadelphia Phillies,Under,0,1,0,0,0,1,1,2,0,0,0,1,2,4,1,0,0.0,0
+164835,2025-07-26,2025-07-26 14:40:00,Kansas City Royals,Cleveland Guardians,1.8,2.0,,,,5,3,Finished,Kansas City Royals,Under,0,0,0,0,0,0,2,0,0,1,0,0,0,1,0,0,0.0,0
+164848,2025-07-26,2025-07-26 18:10:00,Detroit Tigers,Toronto Blue Jays,1.5,2.6,,,,1,6,Finished,Toronto Blue Jays,Under,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,1.0,4
+164847,2025-07-26,2025-07-26 18:40:00,Cincinnati Reds,Tampa Bay Rays,1.8,2.0,,,,6,2,Finished,Cincinnati Reds,Under,0,0,0,0,0,0,0,0,0,0,2,1,2,1,2,0,,0
+164852,2025-07-26,2025-07-26 18:40:00,Pittsburgh Pirates,Arizona Diamondbacks,2.1,1.73,,,,2,0,Finished,Pittsburgh Pirates,Under,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,,0
+164844,2025-07-26,2025-07-26 19:05:00,Baltimore Orioles,Colorado Rockies,1.36,3.1,,,,18,0,Finished,Baltimore Orioles,Under,1,0,2,0,0,0,3,0,0,0,2,0,9,0,1,0,,0
+164854,2025-07-26,2025-07-26 19:05:00,Texas Rangers,Atlanta Braves,1.8,2.0,,,,6,5,Finished,Texas Rangers,Under,0,1,2,1,2,0,0,1,0,0,0,1,0,0,0,0,1.0,1
+164846,2025-07-26,2025-07-26 19:10:00,Chicago White Sox,Chicago Cubs,2.6,1.5,,,,1,6,Finished,Chicago Cubs,Under,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,3,1.0,0
+164849,2025-07-26,2025-07-26 19:10:00,Houston Astros,Athletics,1.5,2.6,,,,1,5,Finished,Athletics,Under,0,1,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0.0,3
+164855,2025-07-26,2025-07-26 19:10:00,Milwaukee Brewers,Miami Marlins,1.57,2.38,,,,4,7,Finished,Miami Marlins,Under,0,0,1,0,0,1,2,1,0,3,0,2,0,0,0,0,1.0,0
+164856,2025-07-26,2025-07-26 19:10:00,Minnesota Twins,Washington Nationals,1.4,2.9,,,,3,9,Finished,Washington Nationals,Under,0,0,0,0,0,1,0,1,0,3,2,0,0,1,1,3,0.0,0
+164845,2025-07-26,2025-07-26 19:15:00,Boston Red Sox,Los Angeles Dodgers,1.67,2.2,,,,4,2,Finished,Boston Red Sox,Under,0,2,3,0,0,0,0,0,1,0,0,0,0,0,0,0,,0
+164850,2025-07-26,2025-07-26 19:15:00,Kansas City Royals,Cleveland Guardians,1.73,2.1,,,,4,6,Finished,Cleveland Guardians,Under,0,3,2,0,0,1,0,2,2,0,0,0,0,0,0,0,0.0,0
+164857,2025-07-26,2025-07-26 19:15:00,St. Louis Cardinals,San Diego Padres,1.62,2.3,,,,1,3,Finished,San Diego Padres,Under,0,0,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0.0,1
+164853,2025-07-26,2025-07-26 21:05:00,San Francisco Giants,New York Mets,1.91,1.91,,,,1,2,Finished,New York Mets,Under,0,0,0,0,0,0,1,0,0,0,0,2,0,0,0,0,0.0,0
+164858,2025-07-26,2025-07-26 21:38:00,Los Angeles Angels,Seattle Mariners,2.2,1.67,,,,2,7,Finished,Seattle Mariners,Under,0,0,1,0,0,1,0,1,1,0,0,4,0,0,0,1,0.0,0
