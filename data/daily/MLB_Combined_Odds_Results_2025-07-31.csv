@@ -1,4 +1,4 @@
 game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result,home_1,away_1,home_2,away_2,home_3,away_3,home_4,away_4,home_5,away_5,home_6,away_6,home_7,away_7,home_8,away_8,home_9,away_9
-164919,2025-07-31,2025-07-31 13:05:00,New York Yankees,Tampa Bay Rays,1.80,2.00,,,,,,,,,,,,,,,,,,,,,,,,,,
-164930,2025-07-31,2025-07-31 19:10:00,Cincinnati Reds,Atlanta Braves,1.62,2.30,,,,,,,,,,,,,,,,,,,,,,,,,,
-164920,2025-07-31,2025-07-31 21:40:00,Seattle Mariners,Texas Rangers,1.62,2.30,,,,,,,,,,,,,,,,,,,,,,,,,,
+164919,2025-07-31,2025-07-31 13:05:00,New York Yankees,Tampa Bay Rays,1.8,2.0,,,,7,4,Finished,New York Yankees,Under,3,0,3,0,1,0,0,4,0,0,0,0,0,0,0,0,0.0,0
+164930,2025-07-31,2025-07-31 19:10:00,Cincinnati Reds,Atlanta Braves,1.62,2.3,,,,11,12,Finished,Atlanta Braves,Under,0,0,1,0,2,0,0,1,0,0,0,2,0,0,8,8,0.0,0
+164920,2025-07-31,2025-07-31 21:40:00,Seattle Mariners,Texas Rangers,1.62,2.3,,,,6,0,Finished,Seattle Mariners,Under,0,0,0,0,0,0,1,0,2,0,3,0,0,0,0,0,,0
