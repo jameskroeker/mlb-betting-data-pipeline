@@ -1,16 +1,16 @@
 game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result,home_1,away_1,home_2,away_2,home_3,away_3,home_4,away_4,home_5,away_5,home_6,away_6,home_7,away_7,home_8,away_8,home_9,away_9
-165084,2025-08-13,2025-08-13 14:10:00,Milwaukee Brewers,Pittsburgh Pirates,1.44,2.75,,,,,,,,,,,,,,,,,,,,,,,,,,
-165088,2025-08-13,2025-08-13 14:10:00,Chicago White Sox,Detroit Tigers,2.00,1.80,,,,,,,,,,,,,,,,,,,,,,,,,,
-165092,2025-08-13,2025-08-13 14:10:00,Kansas City Royals,Washington Nationals,1.53,2.50,,,,,,,,,,,,,,,,,,,,,,,,,,
-165085,2025-08-13,2025-08-13 14:15:00,St. Louis Cardinals,Colorado Rockies,1.44,2.75,,,,,,,,,,,,,,,,,,,,,,,,,,
-165095,2025-08-13,2025-08-13 14:35:00,Texas Rangers,Arizona Diamondbacks,1.67,2.20,,,,,,,,,,,,,,,,,,,,,,,,,,
-165086,2025-08-13,2025-08-13 15:45:00,San Francisco Giants,San Diego Padres,2.30,1.62,,,,,,,,,,,,,,,,,,,,,,,,,,
-165089,2025-08-13,2025-08-13 17:10:00,Cincinnati Reds,Philadelphia Phillies,2.20,1.67,,,,,,,,,,,,,,,,,,,,,,,,,,
-165087,2025-08-13,2025-08-13 18:35:00,Baltimore Orioles,Seattle Mariners,2.20,1.67,,,,,,,,,,,,,,,,,,,,,,,,,,
-165090,2025-08-13,2025-08-13 18:40:00,Cleveland Guardians,Miami Marlins,1.80,2.00,,,,,,,,,,,,,,,,,,,,,,,,,,
-165096,2025-08-13,2025-08-13 19:05:00,New York Yankees,Minnesota Twins,1.67,2.20,,,,,,,,,,,,,,,,,,,,,,,,,,
-165097,2025-08-13,2025-08-13 19:07:00,Toronto Blue Jays,Chicago Cubs,1.73,2.10,,,,,,,,,,,,,,,,,,,,,,,,,,
-165091,2025-08-13,2025-08-13 19:10:00,Houston Astros,Boston Red Sox,1.57,2.38,,,,,,,,,,,,,,,,,,,,,,,,,,
-165093,2025-08-13,2025-08-13 19:10:00,New York Mets,Atlanta Braves,1.50,2.60,,,,,,,,,,,,,,,,,,,,,,,,,,
-165098,2025-08-13,2025-08-13 21:38:00,Los Angeles Angels,Los Angeles Dodgers,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-165094,2025-08-13,2025-08-13 22:05:00,Athletics,Tampa Bay Rays,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+165084,2025-08-13,2025-08-13 14:10:00,Milwaukee Brewers,Pittsburgh Pirates,1.44,2.75,,,,12,5,Finished,Milwaukee Brewers,Under,0,0,0,0,2,0,4,0,0,3,2,2,4,0,0,0,,0
+165088,2025-08-13,2025-08-13 14:10:00,Chicago White Sox,Detroit Tigers,2.0,1.8,,,,0,1,Finished,Detroit Tigers,Under,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0.0,0
+165092,2025-08-13,2025-08-13 14:10:00,Kansas City Royals,Washington Nationals,1.53,2.5,,,,7,8,Finished,Washington Nationals,Under,2,5,1,0,0,1,3,1,0,0,0,0,0,0,1,0,0.0,1
+165085,2025-08-13,2025-08-13 14:15:00,St. Louis Cardinals,Colorado Rockies,1.44,2.75,,,,5,6,Finished,Colorado Rockies,Under,0,0,2,0,0,0,1,1,2,1,0,1,0,1,0,0,0.0,2
+165095,2025-08-13,2025-08-13 14:35:00,Texas Rangers,Arizona Diamondbacks,1.67,2.2,,,,4,6,Finished,Arizona Diamondbacks,Under,1,0,0,0,0,1,2,0,0,1,0,0,0,0,1,0,0.0,4
+165086,2025-08-13,2025-08-13 15:45:00,San Francisco Giants,San Diego Padres,2.3,1.62,,,,1,11,Finished,San Diego Padres,Under,0,0,0,7,0,0,0,0,0,3,0,0,1,1,0,0,0.0,0
+165089,2025-08-13,2025-08-13 17:10:00,Cincinnati Reds,Philadelphia Phillies,2.2,1.67,,,,8,0,Finished,Cincinnati Reds,Under,0,0,0,0,0,0,1,0,0,0,3,0,4,0,0,0,,0
+165087,2025-08-13,2025-08-13 18:35:00,Baltimore Orioles,Seattle Mariners,2.2,1.67,,,,4,3,Finished,Baltimore Orioles,Under,0,0,0,0,0,0,0,0,0,0,0,0,3,1,0,0,1.0,2
+165090,2025-08-13,2025-08-13 18:40:00,Cleveland Guardians,Miami Marlins,1.8,2.0,,,,4,13,Finished,Miami Marlins,Under,1,4,0,0,0,0,3,0,0,2,0,5,0,2,0,0,0.0,0
+165096,2025-08-13,2025-08-13 19:05:00,New York Yankees,Minnesota Twins,1.67,2.2,,,,1,4,Finished,Minnesota Twins,Under,0,0,0,0,1,0,0,1,0,0,0,3,0,0,0,0,0.0,0
+165097,2025-08-13,2025-08-13 19:07:00,Toronto Blue Jays,Chicago Cubs,1.73,2.1,,,,1,4,Finished,Chicago Cubs,Under,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,2,0.0,0
+165091,2025-08-13,2025-08-13 19:10:00,Houston Astros,Boston Red Sox,1.57,2.38,,,,4,1,Finished,Houston Astros,Under,2,0,0,1,0,0,0,0,0,0,2,0,0,0,0,0,,0
+165093,2025-08-13,2025-08-13 19:10:00,New York Mets,Atlanta Braves,1.5,2.6,,,,6,11,Finished,Atlanta Braves,Under,3,0,3,0,0,0,0,9,0,0,0,2,0,0,0,0,0.0,0
+165098,2025-08-13,2025-08-13 21:38:00,Los Angeles Angels,Los Angeles Dodgers,,,,,,6,5,Finished,Los Angeles Angels,Under,0,3,2,0,0,0,0,2,2,0,0,0,0,0,2,0,,0
+165094,2025-08-13,2025-08-13 22:05:00,Athletics,Tampa Bay Rays,,,,,,2,8,Finished,Tampa Bay Rays,Under,0,4,0,2,1,0,0,0,1,0,0,0,0,0,0,0,0.0,2
