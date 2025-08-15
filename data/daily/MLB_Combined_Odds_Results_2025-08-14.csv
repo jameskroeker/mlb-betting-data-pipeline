@@ -1,8 +1,8 @@
 game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result,home_1,away_1,home_2,away_2,home_3,away_3,home_4,away_4,home_5,away_5,home_6,away_6,home_7,away_7,home_8,away_8,home_9,away_9
-165102,2025-08-14,2025-08-14 13:05:00,Baltimore Orioles,Seattle Mariners,2.10,1.73,,,,,,,,,,,,,,,,,,,,,,,,,,
-165099,2025-08-14,2025-08-14 15:07:00,Toronto Blue Jays,Chicago Cubs,1.91,1.91,,,,,,,,,,,,,,,,,,,,,,,,,,
-165104,2025-08-14,2025-08-14 18:40:00,Cleveland Guardians,Miami Marlins,1.73,2.10,,,,,,,,,,,,,,,,,,,,,,,,,,
-165101,2025-08-14,2025-08-14 18:45:00,Washington Nationals,Philadelphia Phillies,2.75,1.44,,,,,,,,,,,,,,,,,,,,,,,,,,
-165100,2025-08-14,2025-08-14 19:10:00,New York Mets,Atlanta Braves,1.50,2.60,,,,,,,,,,,,,,,,,,,,,,,,,,
-165105,2025-08-14,2025-08-14 19:40:00,Minnesota Twins,Detroit Tigers,2.75,1.44,,,,,,,,,,,,,,,,,,,,,,,,,,
-165103,2025-08-14,2025-08-14 20:40:00,Colorado Rockies,Arizona Diamondbacks,2.38,1.57,,,,,,,,,,,,,,,,,,,,,,,,,,
+165102,2025-08-14,2025-08-14 13:05:00,Baltimore Orioles,Seattle Mariners,2.1,1.73,,,,5,3,Finished,Baltimore Orioles,Under,0,0,0,0,0,0,3,0,2,0,0,2,0,0,0,0,,1
+165099,2025-08-14,2025-08-14 15:07:00,Toronto Blue Jays,Chicago Cubs,1.91,1.91,,,,2,1,Finished,Toronto Blue Jays,Under,0,0,0,0,0,0,0,0,0,0,0,1,2,0,0,0,,0
+165104,2025-08-14,2025-08-14 18:40:00,Cleveland Guardians,Miami Marlins,1.73,2.1,,,,9,4,Finished,Cleveland Guardians,Under,3,3,0,0,0,0,0,1,2,0,0,0,4,0,0,0,,0
+165101,2025-08-14,2025-08-14 18:45:00,Washington Nationals,Philadelphia Phillies,2.75,1.44,,,,3,2,Finished,Washington Nationals,Under,0,0,0,0,0,1,1,0,0,1,0,0,2,0,0,0,,0
+165100,2025-08-14,2025-08-14 19:10:00,New York Mets,Atlanta Braves,1.5,2.6,,,,3,4,Finished,Atlanta Braves,Under,0,0,0,0,1,0,0,1,0,0,2,1,0,0,0,2,0.0,0
+165105,2025-08-14,2025-08-14 19:40:00,Minnesota Twins,Detroit Tigers,2.75,1.44,,,,3,4,Finished,Detroit Tigers,Under,0,0,0,0,3,0,0,2,0,0,0,1,0,0,0,0,0.0,0
+165103,2025-08-14,2025-08-14 20:40:00,Colorado Rockies,Arizona Diamondbacks,2.38,1.57,,,,2,8,Finished,Arizona Diamondbacks,Under,0,3,0,2,0,0,0,2,1,0,0,0,0,1,0,0,1.0,0
