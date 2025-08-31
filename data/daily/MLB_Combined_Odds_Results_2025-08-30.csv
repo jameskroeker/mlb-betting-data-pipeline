@@ -1,16 +1,16 @@
 game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result,home_1,away_1,home_2,away_2,home_3,away_3,home_4,away_4,home_5,away_5,home_6,away_6,home_7,away_7,home_8,away_8,home_9,away_9
-165311,2025-08-30,2025-08-30 15:07:00,Toronto Blue Jays,Milwaukee Brewers,1.67,2.20,,,,,,,,,,,,,,,,,,,,,,,,,,
-165313,2025-08-30,2025-08-30 16:05:00,Washington Nationals,Tampa Bay Rays,2.20,1.67,,,,,,,,,,,,,,,,,,,,,,,,,,
-165316,2025-08-30,2025-08-30 16:10:00,New York Mets,Miami Marlins,1.53,2.50,,,,,,,,,,,,,,,,,,,,,,,,,,
-165323,2025-08-30,2025-08-30 16:10:00,Boston Red Sox,Pittsburgh Pirates,1.53,2.50,,,,,,,,,,,,,,,,,,,,,,,,,,
-165324,2025-08-30,2025-08-30 18:05:00,Philadelphia Phillies,Atlanta Braves,1.67,2.20,,,,,,,,,,,,,,,,,,,,,,,,,,
-165321,2025-08-30,2025-08-30 18:40:00,Cincinnati Reds,St. Louis Cardinals,1.67,2.20,,,,,,,,,,,,,,,,,,,,,,,,,,
-165317,2025-08-30,2025-08-30 19:10:00,Houston Astros,Los Angeles Angels,1.62,2.30,,,,,,,,,,,,,,,,,,,,,,,,,,
-165322,2025-08-30,2025-08-30 19:10:00,Chicago White Sox,New York Yankees,2.75,1.44,,,,,,,,,,,,,,,,,,,,,,,,,,
-165325,2025-08-30,2025-08-30 19:10:00,Minnesota Twins,San Diego Padres,2.38,1.57,,,,,,,,,,,,,,,,,,,,,,,,,,
-165314,2025-08-30,2025-08-30 19:15:00,San Francisco Giants,Baltimore Orioles,2.00,1.80,,,,,,,,,,,,,,,,,,,,,,,,,,
-165318,2025-08-30,2025-08-30 19:15:00,Kansas City Royals,Detroit Tigers,2.00,1.80,,,,,,,,,,,,,,,,,,,,,,,,,,
-165320,2025-08-30,2025-08-30 19:15:00,Cleveland Guardians,Seattle Mariners,2.30,1.62,,,,,,,,,,,,,,,,,,,,,,,,,,
-165319,2025-08-30,2025-08-30 20:10:00,Colorado Rockies,Chicago Cubs,2.60,1.50,,,,,,,,,,,,,,,,,,,,,,,,,,
-165312,2025-08-30,2025-08-30 21:10:00,Los Angeles Dodgers,Arizona Diamondbacks,1.44,2.75,,,,,,,,,,,,,,,,,,,,,,,,,,
-165315,2025-08-30,2025-08-30 22:05:00,Athletics,Texas Rangers,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+165311,2025-08-30,2025-08-30 15:07:00,Toronto Blue Jays,Milwaukee Brewers,1.67,2.2,,,,1,4,Finished,Milwaukee Brewers,Under,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0.0,3
+165313,2025-08-30,2025-08-30 16:05:00,Washington Nationals,Tampa Bay Rays,2.2,1.67,,,,1,4,Finished,Tampa Bay Rays,Under,0,3,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0.0,0
+165316,2025-08-30,2025-08-30 16:10:00,New York Mets,Miami Marlins,1.53,2.5,,,,8,11,Finished,Miami Marlins,Under,1,5,1,0,3,3,1,0,0,0,2,0,0,1,0,0,0.0,2
+165323,2025-08-30,2025-08-30 16:10:00,Boston Red Sox,Pittsburgh Pirates,1.53,2.5,,,,3,10,Finished,Pittsburgh Pirates,Under,0,1,0,0,1,0,1,0,0,3,1,5,0,0,0,0,0.0,1
+165324,2025-08-30,2025-08-30 18:05:00,Philadelphia Phillies,Atlanta Braves,1.67,2.2,,,,3,2,Finished,Philadelphia Phillies,Under,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,0.0,0
+165321,2025-08-30,2025-08-30 18:40:00,Cincinnati Reds,St. Louis Cardinals,1.67,2.2,,,,2,4,Finished,St. Louis Cardinals,Under,1,0,0,0,0,0,0,2,0,0,0,0,1,1,0,1,0.0,0
+165317,2025-08-30,2025-08-30 19:10:00,Houston Astros,Los Angeles Angels,1.62,2.3,,,,1,4,Finished,Los Angeles Angels,Under,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0.0,3
+165322,2025-08-30,2025-08-30 19:10:00,Chicago White Sox,New York Yankees,2.75,1.44,,,,3,5,Finished,New York Yankees,Under,0,0,0,0,0,0,0,1,1,0,0,0,1,1,0,0,0.0,0
+165325,2025-08-30,2025-08-30 19:10:00,Minnesota Twins,San Diego Padres,2.38,1.57,,,,3,12,Finished,San Diego Padres,Under,0,0,0,0,1,0,0,0,2,1,0,2,0,7,0,2,0.0,0
+165314,2025-08-30,2025-08-30 19:15:00,San Francisco Giants,Baltimore Orioles,2.0,1.8,,,,1,11,Finished,Baltimore Orioles,Under,1,0,0,0,0,4,0,3,0,0,0,0,0,1,0,3,0.0,0
+165318,2025-08-30,2025-08-30 19:15:00,Kansas City Royals,Detroit Tigers,2.0,1.8,,,,3,1,Finished,Kansas City Royals,Under,0,0,0,0,0,1,1,0,0,0,0,0,0,0,2,0,,0
+165320,2025-08-30,2025-08-30 19:15:00,Cleveland Guardians,Seattle Mariners,2.3,1.62,,,,4,3,Finished,Cleveland Guardians,Under,0,0,0,0,0,0,1,0,0,0,2,0,1,1,0,2,,0
+165319,2025-08-30,2025-08-30 20:10:00,Colorado Rockies,Chicago Cubs,2.6,1.5,,,,3,4,Finished,Chicago Cubs,Under,0,1,1,0,0,0,0,0,0,2,2,1,0,0,0,0,0.0,0
+165312,2025-08-30,2025-08-30 21:10:00,Los Angeles Dodgers,Arizona Diamondbacks,1.44,2.75,,,,1,6,Finished,Arizona Diamondbacks,Under,0,0,0,0,0,0,0,0,0,0,0,0,1,3,0,0,0.0,3
+165315,2025-08-30,2025-08-30 22:05:00,Athletics,Texas Rangers,,,,,,3,9,Finished,Texas Rangers,Under,0,0,0,3,2,1,0,0,0,1,0,0,1,2,0,0,0.0,2
