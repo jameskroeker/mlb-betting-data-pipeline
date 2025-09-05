@@ -1,7 +1,7 @@
 game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result,home_1,away_1,home_2,away_2,home_3,away_3,home_4,away_4,home_5,away_5,home_6,away_6,home_7,away_7,home_8,away_8,home_9,away_9
-165387,2025-09-04,2025-09-04 16:10:00,Milwaukee Brewers,Philadelphia Phillies,1.80,2.00,,,,,,,,,,,,,,,,,,,,,,,,,,
-165385,2025-09-04,2025-09-04 18:40:00,Pittsburgh Pirates,Los Angeles Dodgers,2.00,1.80,,,,,,,,,,,,,,,,,,,,,,,,,,
-165386,2025-09-04,2025-09-04 19:35:00,Tampa Bay Rays,Cleveland Guardians,1.67,2.20,,,,,,,,,,,,,,,,,,,,,,,,,,
-165383,2025-09-04,2025-09-04 19:40:00,Houston Astros,New York Yankees,2.10,1.73,,,,,,,,,,,,,,,,,,,,,,,,,,
-165384,2025-09-04,2025-09-04 19:40:00,Kansas City Royals,Los Angeles Angels,1.62,2.30,,,,,,,,,,,,,,,,,,,,,,,,,,
-165388,2025-09-04,2025-09-04 19:40:00,Minnesota Twins,Chicago White Sox,1.67,2.20,,,,,,,,,,,,,,,,,,,,,,,,,,
+165387,2025-09-04,2025-09-04 16:10:00,Milwaukee Brewers,Philadelphia Phillies,1.8,2.0,,,,0,2,Finished,Philadelphia Phillies,Under,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0.0,1
+165385,2025-09-04,2025-09-04 18:40:00,Pittsburgh Pirates,Los Angeles Dodgers,2.0,1.8,,,,5,3,Finished,Pittsburgh Pirates,Under,0,0,0,0,1,0,0,0,4,0,0,0,0,0,0,0,,3
+165386,2025-09-04,2025-09-04 19:35:00,Tampa Bay Rays,Cleveland Guardians,1.67,2.2,,,,4,2,Finished,Tampa Bay Rays,Under,1,0,0,0,0,0,1,0,0,0,2,0,0,0,0,0,,2
+165383,2025-09-04,2025-09-04 19:40:00,Houston Astros,New York Yankees,2.1,1.73,,,,4,8,Finished,New York Yankees,Under,0,0,0,1,1,0,0,0,0,3,1,0,1,0,0,4,1.0,0
+165384,2025-09-04,2025-09-04 19:40:00,Kansas City Royals,Los Angeles Angels,1.62,2.3,,,,4,3,Finished,Kansas City Royals,Under,0,3,1,0,0,0,1,0,0,0,0,0,1,0,1,0,,0
+165388,2025-09-04,2025-09-04 19:40:00,Minnesota Twins,Chicago White Sox,1.67,2.2,,,,8,11,Finished,Chicago White Sox,Under,0,0,0,0,0,3,5,0,1,1,1,0,0,5,0,0,1.0,2
