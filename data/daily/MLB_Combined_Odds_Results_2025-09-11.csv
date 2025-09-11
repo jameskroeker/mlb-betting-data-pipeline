@@ -1,0 +1,10 @@
+game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result,home_1,away_1,home_2,away_2,home_3,away_3,home_4,away_4,home_5,away_5,home_6,away_6,home_7,away_7,home_8,away_8,home_9,away_9
+173211,2025-09-11,2025-09-11 13:05:00,Baltimore Orioles,Pittsburgh Pirates,1.67,2.20,,,,,,,,,,,,,,,,,,,,,,,,,,
+173212,2025-09-11,2025-09-11 14:10:00,Chicago White Sox,Tampa Bay Rays,2.20,1.67,,,,,,,,,,,,,,,,,,,,,,,,,,
+173213,2025-09-11,2025-09-11 15:07:00,Toronto Blue Jays,Houston Astros,1.62,2.30,,,,,,,,,,,,,,,,,,,,,,,,,,
+173214,2025-09-11,2025-09-11 18:40:00,Miami Marlins,Washington Nationals,1.73,2.10,,,,,,,,,,,,,,,,,,,,,,,,,,
+173215,2025-09-11,2025-09-11 19:05:00,New York Yankees,Detroit Tigers,1.57,2.38,,,,,,,,,,,,,,,,,,,,,,,,,,
+173216,2025-09-11,2025-09-11 19:15:00,Cleveland Guardians,Kansas City Royals,1.67,2.20,,,,,,,,,,,,,,,,,,,,,,,,,,
+173217,2025-09-11,2025-09-11 19:15:00,Philadelphia Phillies,New York Mets,1.67,2.20,,,,,,,,,,,,,,,,,,,,,,,,,,
+173218,2025-09-11,2025-09-11 21:40:00,San Diego Padres,Colorado Rockies,1.40,2.90,,,,,,,,,,,,,,,,,,,,,,,,,,
+173219,2025-09-11,2025-09-11 21:40:00,Seattle Mariners,Los Angeles Angels,,,,,,,,,,,,,,,,,,,,,,,,,,,,

@@ -1,16 +1,16 @@
 game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result,home_1,away_1,home_2,away_2,home_3,away_3,home_4,away_4,home_5,away_5,home_6,away_6,home_7,away_7,home_8,away_8,home_9,away_9
-172957,2025-09-10,2025-09-10 14:35:00,Texas Rangers,Milwaukee Brewers,2.10,1.73,,,,,,,,,,,,,,,,,,,,,,,,,,
-172958,2025-09-10,2025-09-10 15:35:00,Athletics,Boston Red Sox,2.10,1.73,,,,,,,,,,,,,,,,,,,,,,,,,,
-172959,2025-09-10,2025-09-10 15:45:00,San Francisco Giants,Arizona Diamondbacks,1.91,1.91,,,,,,,,,,,,,,,,,,,,,,,,,,
-172960,2025-09-10,2025-09-10 16:07:00,Los Angeles Angels,Minnesota Twins,1.73,2.10,,,,,,,,,,,,,,,,,,,,,,,,,,
-172961,2025-09-10,2025-09-10 18:35:00,Baltimore Orioles,Pittsburgh Pirates,2.20,1.67,,,,,,,,,,,,,,,,,,,,,,,,,,
-172962,2025-09-10,2025-09-10 18:40:00,Cleveland Guardians,Kansas City Royals,1.80,2.00,,,,,,,,,,,,,,,,,,,,,,,,,,
-172963,2025-09-10,2025-09-10 18:40:00,Miami Marlins,Washington Nationals,1.62,2.30,,,,,,,,,,,,,,,,,,,,,,,,,,
-172964,2025-09-10,2025-09-10 18:45:00,Philadelphia Phillies,New York Mets,1.57,2.38,,,,,,,,,,,,,,,,,,,,,,,,,,
-172965,2025-09-10,2025-09-10 19:05:00,New York Yankees,Detroit Tigers,1.57,2.38,,,,,,,,,,,,,,,,,,,,,,,,,,
-172966,2025-09-10,2025-09-10 19:07:00,Toronto Blue Jays,Houston Astros,1.73,2.10,,,,,,,,,,,,,,,,,,,,,,,,,,
-172967,2025-09-10,2025-09-10 19:15:00,Atlanta Braves,Chicago Cubs,1.62,2.30,,,,,,,,,,,,,,,,,,,,,,,,,,
-172968,2025-09-10,2025-09-10 19:40:00,Chicago White Sox,Tampa Bay Rays,2.20,1.67,,,,,,,,,,,,,,,,,,,,,,,,,,
-173208,2025-09-10,2025-09-10 20:40:00,San Diego Padres,Cincinnati Reds,1.57,2.38,,,,,,,,,,,,,,,,,,,,,,,,,,
-173209,2025-09-10,2025-09-10 21:40:00,Seattle Mariners,St. Louis Cardinals,1.40,2.90,,,,,,,,,,,,,,,,,,,,,,,,,,
-173210,2025-09-10,2025-09-10 22:10:00,Los Angeles Dodgers,Colorado Rockies,1.29,3.60,,,,,,,,,,,,,,,,,,,,,,,,,,
+172957,2025-09-10,2025-09-10 14:35:00,Texas Rangers,Milwaukee Brewers,2.1,1.73,,,,6,3,Finished,Texas Rangers,Under,0,2,1,0,2,0,0,0,2,0,0,1,0,0,1,0,,0
+172958,2025-09-10,2025-09-10 15:35:00,Athletics,Boston Red Sox,2.1,1.73,,,,5,4,Finished,Athletics,Under,1,0,1,1,0,1,0,1,2,0,0,0,0,0,0,0,1.0,1
+172959,2025-09-10,2025-09-10 15:45:00,San Francisco Giants,Arizona Diamondbacks,1.91,1.91,,,,3,5,Finished,Arizona Diamondbacks,Under,0,1,0,3,0,0,0,0,0,0,0,1,0,0,2,0,1.0,0
+172960,2025-09-10,2025-09-10 16:07:00,Los Angeles Angels,Minnesota Twins,1.73,2.1,,,,4,3,Finished,Los Angeles Angels,Under,0,0,0,0,3,1,0,0,0,0,0,2,0,0,1,0,,0
+172961,2025-09-10,2025-09-10 18:35:00,Baltimore Orioles,Pittsburgh Pirates,2.2,1.67,,,,2,1,Finished,Baltimore Orioles,Under,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0.0,0
+172962,2025-09-10,2025-09-10 18:40:00,Cleveland Guardians,Kansas City Royals,1.8,2.0,,,,3,4,Finished,Kansas City Royals,Under,2,1,0,0,0,1,1,0,0,0,0,0,0,2,0,0,0.0,0
+172963,2025-09-10,2025-09-10 18:40:00,Miami Marlins,Washington Nationals,1.62,2.3,,,,8,3,Finished,Miami Marlins,Under,0,0,0,0,0,1,0,0,0,0,4,2,1,0,3,0,,0
+172964,2025-09-10,2025-09-10 18:45:00,Philadelphia Phillies,New York Mets,1.57,2.38,,,,11,3,Finished,Philadelphia Phillies,Under,2,0,0,0,0,0,0,1,2,0,4,0,1,0,2,1,,1
+172965,2025-09-10,2025-09-10 19:05:00,New York Yankees,Detroit Tigers,1.57,2.38,,,,1,11,Finished,Detroit Tigers,Under,0,0,0,0,0,0,0,0,0,2,0,0,0,1,1,5,0.0,3
+172966,2025-09-10,2025-09-10 19:07:00,Toronto Blue Jays,Houston Astros,1.73,2.1,,,,2,3,Finished,Houston Astros,Under,0,0,0,1,0,0,0,0,0,0,0,1,0,0,2,0,0.0,1
+172967,2025-09-10,2025-09-10 19:15:00,Atlanta Braves,Chicago Cubs,1.62,2.3,,,,2,3,Finished,Chicago Cubs,Under,0,0,0,0,1,0,0,2,1,1,0,0,0,0,0,0,0.0,0
+172968,2025-09-10,2025-09-10 19:40:00,Chicago White Sox,Tampa Bay Rays,2.2,1.67,,,,6,5,Finished,Chicago White Sox,Under,0,1,5,0,1,0,0,0,0,3,0,1,0,0,0,0,,0
+173208,2025-09-10,2025-09-10 20:40:00,San Diego Padres,Cincinnati Reds,1.57,2.38,,,,1,2,Finished,Cincinnati Reds,Under,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,2,0.0,0
+173209,2025-09-10,2025-09-10 21:40:00,Seattle Mariners,St. Louis Cardinals,1.4,2.9,,,,4,2,Finished,Seattle Mariners,Under,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0
+173210,2025-09-10,2025-09-10 22:10:00,Los Angeles Dodgers,Colorado Rockies,1.29,3.6,,,,9,0,Finished,Los Angeles Dodgers,Under,0,0,4,0,0,0,0,0,0,0,0,0,0,0,5,0,,0
