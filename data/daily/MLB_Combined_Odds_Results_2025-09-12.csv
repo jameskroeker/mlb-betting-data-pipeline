@@ -1,16 +1,16 @@
 game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result,home_1,away_1,home_2,away_2,home_3,away_3,home_4,away_4,home_5,away_5,home_6,away_6,home_7,away_7,home_8,away_8,home_9,away_9
-173220,2025-09-12,2025-09-12 14:20:00,Chicago Cubs,Tampa Bay Rays,1.57,2.38,,,,,,,,,,,,,,,,,,,,,,,,,,
-173221,2025-09-12,2025-09-12 18:45:00,Philadelphia Phillies,Kansas City Royals,1.73,2.10,,,,,,,,,,,,,,,,,,,,,,,,,,
-173222,2025-09-12,2025-09-12 18:45:00,Washington Nationals,Pittsburgh Pirates,1.91,1.91,,,,,,,,,,,,,,,,,,,,,,,,,,
-173223,2025-09-12,2025-09-12 19:07:00,Toronto Blue Jays,Baltimore Orioles,1.73,2.10,,,,,,,,,,,,,,,,,,,,,,,,,,
-173224,2025-09-12,2025-09-12 19:10:00,Boston Red Sox,New York Yankees,2.00,1.80,,,,,,,,,,,,,,,,,,,,,,,,,,
-173225,2025-09-12,2025-09-12 19:10:00,Cleveland Guardians,Chicago White Sox,1.57,2.38,,,,,,,,,,,,,,,,,,,,,,,,,,
-173226,2025-09-12,2025-09-12 19:10:00,Miami Marlins,Detroit Tigers,2.60,1.50,,,,,,,,,,,,,,,,,,,,,,,,,,
-173227,2025-09-12,2025-09-12 19:10:00,New York Mets,Texas Rangers,1.91,1.91,,,,,,,,,,,,,,,,,,,,,,,,,,
-173228,2025-09-12,2025-09-12 19:15:00,Atlanta Braves,Houston Astros,2.10,1.73,,,,,,,,,,,,,,,,,,,,,,,,,,
-173229,2025-09-12,2025-09-12 20:10:00,Milwaukee Brewers,St. Louis Cardinals,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-173230,2025-09-12,2025-09-12 20:10:00,Minnesota Twins,Arizona Diamondbacks,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-173231,2025-09-12,2025-09-12 21:40:00,San Diego Padres,Colorado Rockies,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-173232,2025-09-12,2025-09-12 22:05:00,Athletics,Cincinnati Reds,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-173233,2025-09-12,2025-09-12 22:10:00,Seattle Mariners,Los Angeles Angels,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-173234,2025-09-12,2025-09-12 22:15:00,San Francisco Giants,Los Angeles Dodgers,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+173220,2025-09-12,2025-09-12 14:20:00,Chicago Cubs,Tampa Bay Rays,1.57,2.38,,,,6,4,Finished,Chicago Cubs,Under,0,3,3,0,2,0,1,1,0,0,0,0,0,0,0,0,,0
+173221,2025-09-12,2025-09-12 18:45:00,Philadelphia Phillies,Kansas City Royals,1.73,2.1,,,,8,2,Finished,Philadelphia Phillies,Under,0,1,1,0,3,0,2,0,0,0,0,0,2,1,0,0,,0
+173222,2025-09-12,2025-09-12 18:45:00,Washington Nationals,Pittsburgh Pirates,1.91,1.91,,,,6,5,Finished,Washington Nationals,Under,0,0,0,0,0,1,0,0,0,2,2,0,4,0,0,0,,2
+173223,2025-09-12,2025-09-12 19:07:00,Toronto Blue Jays,Baltimore Orioles,1.73,2.1,,,,6,1,Finished,Toronto Blue Jays,Under,0,0,0,0,0,1,0,0,1,0,1,0,1,0,3,0,,0
+173224,2025-09-12,2025-09-12 19:10:00,Boston Red Sox,New York Yankees,2.0,1.8,,,,1,4,Finished,New York Yankees,Under,0,1,0,0,0,1,0,0,0,0,0,0,1,2,0,0,0.0,0
+173225,2025-09-12,2025-09-12 19:10:00,Cleveland Guardians,Chicago White Sox,1.57,2.38,,,,4,0,Finished,Cleveland Guardians,Under,0,0,0,0,0,0,1,0,1,0,0,0,1,0,1,0,,0
+173226,2025-09-12,2025-09-12 19:10:00,Miami Marlins,Detroit Tigers,2.6,1.5,,,,8,2,Finished,Miami Marlins,Under,1,0,2,0,0,0,2,1,0,0,3,0,0,1,0,0,,0
+173227,2025-09-12,2025-09-12 19:10:00,New York Mets,Texas Rangers,1.91,1.91,,,,3,8,Finished,Texas Rangers,Under,0,6,0,0,3,0,0,0,0,0,0,0,0,2,0,0,0.0,0
+173228,2025-09-12,2025-09-12 19:15:00,Atlanta Braves,Houston Astros,2.1,1.73,,,,3,11,Finished,Houston Astros,Under,0,0,0,0,0,2,0,2,0,6,1,1,0,0,2,0,0.0,0
+173229,2025-09-12,2025-09-12 20:10:00,Milwaukee Brewers,St. Louis Cardinals,,,,,,8,2,Finished,Milwaukee Brewers,Under,0,0,0,0,4,0,1,0,0,0,0,2,2,0,1,0,,0
+173230,2025-09-12,2025-09-12 20:10:00,Minnesota Twins,Arizona Diamondbacks,,,,,,9,8,Finished,Minnesota Twins,Under,0,1,0,0,1,0,3,0,1,1,1,0,0,2,0,0,3.0,4
+173231,2025-09-12,2025-09-12 21:40:00,San Diego Padres,Colorado Rockies,,,,,,2,4,Finished,Colorado Rockies,Under,1,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,1.0,0
+173232,2025-09-12,2025-09-12 22:05:00,Athletics,Cincinnati Reds,,,,,,3,0,Finished,Athletics,Under,1,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,,0
+173233,2025-09-12,2025-09-12 22:10:00,Seattle Mariners,Los Angeles Angels,,,,,,2,1,Finished,Seattle Mariners,Under,0,0,0,0,0,0,1,0,0,0,0,0,1,1,0,0,,0
+173234,2025-09-12,2025-09-12 22:15:00,San Francisco Giants,Los Angeles Dodgers,,,,,,5,1,Finished,San Francisco Giants,Under,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0.0,0
