@@ -137,7 +137,7 @@ def pull_games_and_odds(target_date):
     # Pull Odds for all collected games
     for game_id, game in games.items():
         try:
-            odds_url = f"https://v1.baseball.api-sports.io/odds?game={game_id}&bookmaker=22"  # Using Betway (ID 22)
+            odds_url = f"https://v1.baseball.api-sports.io/odds?game={game_id}&bookmaker=3"  # Using Betway (ID 3)
             response = requests.get(odds_url, headers=HEADERS, timeout=10)
             response.raise_for_status()
             odds_data = response.json()
