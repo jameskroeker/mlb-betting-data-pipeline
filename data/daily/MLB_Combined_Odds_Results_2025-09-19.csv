@@ -1,16 +1,16 @@
 game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result,home_1,away_1,home_2,away_2,home_3,away_3,home_4,away_4,home_5,away_5,home_6,away_6,home_7,away_7,home_8,away_8,home_9,away_9
-173326,2025-09-19,2025-09-19 18:40:00,Cincinnati Reds,Chicago Cubs,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-173327,2025-09-19,2025-09-19 18:40:00,Detroit Tigers,Atlanta Braves,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-173328,2025-09-19,2025-09-19 18:40:00,Pittsburgh Pirates,Athletics,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-173329,2025-09-19,2025-09-19 19:05:00,Baltimore Orioles,New York Yankees,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-173330,2025-09-19,2025-09-19 19:10:00,New York Mets,Washington Nationals,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-173331,2025-09-19,2025-09-19 19:35:00,Tampa Bay Rays,Boston Red Sox,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-173332,2025-09-19,2025-09-19 19:40:00,Chicago White Sox,San Diego Padres,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-173333,2025-09-19,2025-09-19 19:40:00,Kansas City Royals,Toronto Blue Jays,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-173559,2025-09-19,2025-09-19 20:05:00,Texas Rangers,Miami Marlins,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-173560,2025-09-19,2025-09-19 20:10:00,Minnesota Twins,Cleveland Guardians,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-173561,2025-09-19,2025-09-19 20:10:00,Houston Astros,Seattle Mariners,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-173562,2025-09-19,2025-09-19 20:10:00,Colorado Rockies,Los Angeles Angels,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-173563,2025-09-19,2025-09-19 20:15:00,St. Louis Cardinals,Milwaukee Brewers,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-173564,2025-09-19,2025-09-19 21:40:00,Arizona Diamondbacks,Philadelphia Phillies,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-173565,2025-09-19,2025-09-19 22:10:00,Los Angeles Dodgers,San Francisco Giants,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+173326,2025-09-19,2025-09-19 18:40:00,Cincinnati Reds,Chicago Cubs,,,,,,7,4,Finished,Cincinnati Reds,Under,1,0,0,1,1,1,1,2,1,0,3,0,0,0,0,0,,0
+173327,2025-09-19,2025-09-19 18:40:00,Detroit Tigers,Atlanta Braves,,,,,,1,10,Finished,Atlanta Braves,Under,0,3,0,3,0,0,1,0,0,0,0,0,0,0,0,2,0.0,2
+173328,2025-09-19,2025-09-19 18:40:00,Pittsburgh Pirates,Athletics,,,,,,3,4,Finished,Athletics,Under,3,0,0,0,0,0,0,1,0,3,0,0,0,0,0,0,0.0,0
+173329,2025-09-19,2025-09-19 19:05:00,Baltimore Orioles,New York Yankees,,,,,,4,2,Finished,Baltimore Orioles,Under,0,0,1,0,0,0,0,0,0,0,2,0,1,2,0,0,,0
+173330,2025-09-19,2025-09-19 19:10:00,New York Mets,Washington Nationals,,,,,,12,6,Finished,New York Mets,Under,1,0,0,0,1,4,6,0,0,2,0,0,1,0,3,0,,0
+173331,2025-09-19,2025-09-19 19:35:00,Tampa Bay Rays,Boston Red Sox,,,,,,7,11,Finished,Boston Red Sox,Under,1,0,1,1,1,1,0,0,0,0,0,0,0,2,0,7,4.0,0
+173332,2025-09-19,2025-09-19 19:40:00,Chicago White Sox,San Diego Padres,,,,,,4,3,Finished,Chicago White Sox,Under,2,0,0,0,0,1,2,1,0,0,0,1,0,0,0,0,,0
+173333,2025-09-19,2025-09-19 19:40:00,Kansas City Royals,Toronto Blue Jays,,,,,,20,1,Finished,Kansas City Royals,Under,7,1,0,0,3,0,0,0,0,0,0,0,4,0,6,0,,0
+173559,2025-09-19,2025-09-19 20:05:00,Texas Rangers,Miami Marlins,,,,,,4,6,Finished,Miami Marlins,Under,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0.0,0
+173560,2025-09-19,2025-09-19 20:10:00,Minnesota Twins,Cleveland Guardians,,,,,,2,6,Finished,Cleveland Guardians,Under,0,2,0,0,0,0,0,0,0,0,2,0,0,0,0,2,0.0,2
+173561,2025-09-19,2025-09-19 20:10:00,Houston Astros,Seattle Mariners,,,,,,0,4,Finished,Seattle Mariners,Under,0,1,0,0,0,0,0,1,0,0,0,0,0,1,0,1,0.0,0
+173562,2025-09-19,2025-09-19 20:10:00,Colorado Rockies,Los Angeles Angels,,,,,,7,6,Finished,Colorado Rockies,Under,2,0,1,3,0,0,0,0,4,3,0,0,0,0,0,0,,0
+173563,2025-09-19,2025-09-19 20:15:00,St. Louis Cardinals,Milwaukee Brewers,,,,,,7,1,Finished,St. Louis Cardinals,Under,1,0,1,0,0,1,0,0,5,0,0,0,0,0,0,0,,0
+173564,2025-09-19,2025-09-19 21:40:00,Arizona Diamondbacks,Philadelphia Phillies,,,,,,2,8,Finished,Philadelphia Phillies,Under,2,0,0,1,0,0,0,0,0,1,0,1,0,0,0,2,0.0,3
+173565,2025-09-19,2025-09-19 22:10:00,Los Angeles Dodgers,San Francisco Giants,,,,,,6,3,Finished,Los Angeles Dodgers,Under,0,1,1,0,0,1,0,0,4,0,1,0,0,1,0,0,,0
