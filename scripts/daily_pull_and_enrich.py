@@ -1,5 +1,4 @@
 # scripts/daily_pull_and_enrich.py
-# CLEANED VERSION - Uses only api-sports.io (removes the-odds-api.com code)
 
 import os
 import requests
@@ -8,16 +7,18 @@ from datetime import datetime, timedelta
 import pytz
 
 # === Config ===
-# Get API_KEY from environment variables (how GitHub Actions passes secrets)
 API_KEY = os.environ.get("API_SPORTS_KEY")
 if not API_KEY:
     raise ValueError("API_SPORTS_KEY environment variable not set. Please add it as a GitHub Secret.")
 
 HEADERS = {"x-apisports-key": API_KEY}
+
+# === CHANGED: Dynamically set season based on current year ===
+CURRENT_SEASON = datetime.now().year
+
 utc = pytz.utc
 eastern = pytz.timezone("US/Eastern")
 
-# Ensure the data/daily directory exists within the repository
 os.makedirs("data/daily", exist_ok=True)
 
 # === Team Name Normalization ===
@@ -30,11 +31,9 @@ def normalize_team_name(name):
 
 # === Utility Functions ===
 def safe_inning_scores(scores_dict):
-    """Safely retrieves inning scores from a dictionary, returning an empty dict if input is None."""
     return scores_dict.get("innings", {}) if scores_dict else {}
 
 def enrich_results_for_games(games):
-    """Enriches game data with scores, winner, and total_result for finished games."""
     print(f"Attempting to enrich {len(games)} games...")
     enriched_count = 0
     for game_id, game in games.items():
@@ -49,7 +48,6 @@ def enrich_results_for_games(games):
 
             g = data["response"][0]
 
-            # Only enrich if status is "Finished"
             if g["status"]["long"] != "Finished":
                 continue
 
@@ -85,13 +83,13 @@ def enrich_results_for_games(games):
     print(f"Finished enriching. Successfully enriched {enriched_count} games.")
 
 def pull_games_and_odds(target_date):
-    """Pulls game schedules and odds for a target date."""
     print(f"\n📅 Pulling game schedule and odds for {target_date}")
     api_dates = [target_date, (datetime.strptime(target_date, "%Y-%m-%d") + timedelta(days=1)).strftime("%Y-%m-%d")]
     games = {}
 
     for api_date in api_dates:
-        url = f"https://v1.baseball.api-sports.io/games?league=1&season=2025&date={api_date}"
+        # === CHANGED: Use CURRENT_SEASON variable instead of hardcoded 2025 ===
+        url = f"https://v1.baseball.api-sports.io/games?league=1&season={CURRENT_SEASON}&date={api_date}"
         try:
             response = requests.get(url, headers=HEADERS, timeout=10)
             response.raise_for_status()
@@ -110,7 +108,6 @@ def pull_games_and_odds(target_date):
                     if et_start.strftime("%Y-%m-%d") != target_date:
                         continue
 
-                    # Initialize all expected fields, including inning scores
                     game_data = {
                         "game_id": game_id,
                         "game_date": et_start.strftime("%Y-%m-%d"),
@@ -134,10 +131,10 @@ def pull_games_and_odds(target_date):
         except Exception as e:
             print(f"❌ An unexpected error occurred fetching games for date {api_date}: {e}")
 
-    # Pull Odds for all collected games
+    # Pull Odds
     for game_id, game in games.items():
         try:
-            odds_url = f"https://v1.baseball.api-sports.io/odds?game={game_id}&bookmaker=3"  # Using Betway (ID 3)
+            odds_url = f"https://v1.baseball.api-sports.io/odds?game={game_id}&bookmaker=3"
             response = requests.get(odds_url, headers=HEADERS, timeout=10)
             response.raise_for_status()
             odds_data = response.json()
@@ -185,13 +182,15 @@ def pull_games_and_odds(target_date):
     return games
 
 # =========================================================================
-# === MAIN EXECUTION LOGIC FOR DAILY AUTOMATION ===
+# === MAIN EXECUTION LOGIC ===
 # =========================================================================
 if __name__ == "__main__":
     today_date_str = datetime.now(eastern).strftime("%Y-%m-%d")
     yesterday_date_str = (datetime.now(eastern) - timedelta(days=1)).strftime("%Y-%m-%d")
 
     print(f"\n--- Running Daily Automated Pull for {today_date_str} and Enrich for {yesterday_date_str} ---")
+    # === CHANGED: Log the season being used so it's visible in Actions logs ===
+    print(f"🗓️  Season: {CURRENT_SEASON}")
 
     # --- Step 1: Pull & Enrich Today's Data ---
     today_games = pull_games_and_odds(today_date_str)
@@ -202,9 +201,9 @@ if __name__ == "__main__":
         pd.DataFrame(today_games.values()).to_csv(today_filename, index=False)
         print(f"\n✅ Saved today's file to: {today_filename}")
     else:
-        print(f"\n⚠️ No games found for today ({today_date_str}). Skipping save to {today_filename}.")
+        print(f"\n⚠️ No games found for today ({today_date_str}). Skipping save.")
 
-    # --- Step 2: Enrich Yesterday's File (for completed games) ---
+    # --- Step 2: Enrich Yesterday's File ---
     yesterday_filename = f"data/daily/MLB_Combined_Odds_Results_{yesterday_date_str}.csv"
     if os.path.exists(yesterday_filename):
         print(f"\n♻️ Enriching yesterday's file: {yesterday_filename}")
@@ -215,11 +214,11 @@ if __name__ == "__main__":
             enrich_results_for_games(game_map_for_enrichment)
             final_df = pd.DataFrame(game_map_for_enrichment.values())
             final_df.to_csv(yesterday_filename, index=False)
-            print(f"✅ Updated yesterday's file with enriched results: {yesterday_filename}")
+            print(f"✅ Updated yesterday's file: {yesterday_filename}")
         except pd.errors.EmptyDataError:
-            print(f"⚠️ Yesterday's file {yesterday_filename} is empty. Skipping enrichment.")
+            print(f"⚠️ Yesterday's file is empty. Skipping enrichment.")
         except Exception as e:
-            print(f"❌ Error processing or enriching yesterday's file {yesterday_filename}: {e}")
+            print(f"❌ Error enriching yesterday's file: {e}")
     else:
         print(f"\n⚠️ No file found for yesterday ({yesterday_filename}) — skipping enrichment.")
 
