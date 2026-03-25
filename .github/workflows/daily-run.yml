@@ -1,55 +1,39 @@
-# .github/workflows/daily-run.yml
-
 name: Daily MLB Data Pipeline
-
 on:
   schedule:
-    # Runs daily at 7:00am UTC (3:00am ET)
     - cron: "00 7 * * *"
-  workflow_dispatch: # Allows manual trigger from GitHub UI
-
+  workflow_dispatch:
 jobs:
-  update-data: # Changed job name for clarity
+  update-data:
     runs-on: ubuntu-latest
-
-    permissions: # Explicitly grant write permissions for the GITHUB_TOKEN
-      contents: write # Required by git-auto-commit-action to push changes
-
+    # CHANGED: Opt into Node.js 24 ahead of June 2, 2026 forced migration deadline
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    permissions:
+      contents: write
     steps:
       - name: 📥 Checkout repository
-        uses: actions/checkout@v4 # Updated to v4 for compatibility
+        uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Important for git-auto-commit-action if it needs full history
-
+          fetch-depth: 0
       - name: 🐍 Set up Python
-        uses: actions/setup-python@v5 # Updated to v5 for compatibility
+        uses: actions/setup-python@v5
         with:
-          python-version: "3.11" # Using your preferred Python version
-
+          python-version: "3.11"
       - name: 🧪 Install dependencies
         run: |
           python -m pip install --upgrade pip
-          # Added 'requests' and 'pytz' as they are used by the new Python scripts
-          pip install pandas requests pytz pyarrow
-
+          pip install pandas requests pytz pyarrow openpyxl
       - name: 📅 Run daily game + odds pull & enrich
         run: python scripts/daily_pull_and_enrich.py
         env:
-          API_SPORTS_KEY: ${{ secrets.API_SPORTS_KEY }} # Pass API Key securely from secrets
-
+          API_SPORTS_KEY: ${{ secrets.API_SPORTS_KEY }}
       - name: 🧠 Run transform and append to master
         run: python scripts/update_master_data.py
-
       - name: 🧹 Archive files older than 7 days
         run: python scripts/archive_old_files.py
-        # Assuming archive_old_files.py is in the scripts/ directory.
-        # If it's elsewhere, adjust the path (e.g., 'python your_folder/archive_old_files.py')
-
       - name: 📤 Commit and Push Updated Files
-        # Using a dedicated action for auto-committing, more robust than manual git commands
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Automated daily data update"
-          branch: main # Or your default branch name (e.g., 'master')
-          # You can specify exact files if you don't want to commit all changes:
-          # file_pattern: data/daily/*.csv data/master/*.parquet data/archive/**/*.csv
+          branch: main
