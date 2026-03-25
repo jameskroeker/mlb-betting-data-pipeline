@@ -132,9 +132,12 @@ def pull_games_and_odds(target_date):
             print(f"❌ An unexpected error occurred fetching games for date {api_date}: {e}")
 
     # Pull Odds
+    # CHANGED: Pinnacle (ID 4) replaces Betway (ID 3) — Betway has no baseball markets
+    # CHANGED: Consensus total logic — finds Over/Under pair closest to 1.909 (-110 equivalent)
+    TARGET_ODDS = 1.909
     for game_id, game in games.items():
         try:
-            odds_url = f"https://v1.baseball.api-sports.io/odds?game={game_id}&bookmaker=3"
+            odds_url = f"https://v1.baseball.api-sports.io/odds?game={game_id}&bookmaker=4"
             response = requests.get(odds_url, headers=HEADERS, timeout=10)
             response.raise_for_status()
             odds_data = response.json()
@@ -151,28 +154,43 @@ def pull_games_and_odds(target_date):
                 continue
 
             for bet in bets:
-                if bet["name"] not in {"Home/Away", "Over/Under"}:
-                    continue
-                for val in bet.get("values", []):
-                    opt = val["value"].lower()
-                    odd = val["odd"]
-                    if bet["name"] == "Home/Away":
+                if bet["name"] == "Home/Away":
+                    for val in bet.get("values", []):
+                        opt = val["value"].lower()
                         if opt == "home":
-                            game["moneyline_home"] = odd
+                            game["moneyline_home"] = val["odd"]
                         elif opt == "away":
-                            game["moneyline_away"] = odd
-                    elif bet["name"] == "Over/Under":
-                        if "over" in opt and game["over_odds"] is None:
-                            try:
-                                game["total_line"] = float(opt.split("over")[1].strip())
-                                game["over_odds"] = odd
-                            except (ValueError, IndexError):
-                                pass
-                        elif "under" in opt and game["under_odds"] is None:
-                            try:
-                                game["under_odds"] = odd
-                            except (ValueError, IndexError):
-                                pass
+                            game["moneyline_away"] = val["odd"]
+
+                elif bet["name"] == "Over/Under":
+                    # Build a dict of {line: {over: odd, under: odd}}
+                    totals_by_line = {}
+                    for val in bet.get("values", []):
+                        try:
+                            parts = val["value"].split(" ")
+                            side = parts[0].lower()   # "over" or "under"
+                            line = float(parts[1])    # e.g. 7.5
+                        except (IndexError, ValueError):
+                            continue
+                        if line not in totals_by_line:
+                            totals_by_line[line] = {}
+                        totals_by_line[line][side] = float(val["odd"])
+
+                    # Find the line where both sides are closest to -110 (1.909 decimal)
+                    best_line = None
+                    best_distance = float("inf")
+                    for line, sides in totals_by_line.items():
+                        if "over" in sides and "under" in sides:
+                            avg_dist = (abs(sides["over"] - TARGET_ODDS) + abs(sides["under"] - TARGET_ODDS)) / 2
+                            if avg_dist < best_distance:
+                                best_distance = avg_dist
+                                best_line = line
+
+                    if best_line is not None:
+                        game["total_line"] = best_line
+                        game["over_odds"] = totals_by_line[best_line].get("over")
+                        game["under_odds"] = totals_by_line[best_line].get("under")
+
         except requests.exceptions.RequestException as e:
             print(f"❌ HTTP Error fetching odds for game {game_id}: {e}")
         except Exception as e:
