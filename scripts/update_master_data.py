@@ -149,6 +149,25 @@ def create_master_row(game, team_abbr, opponent_abbr, is_home, team_stats, templ
     row['season'] = CURRENT_SEASON
     row['merge_key'] = f"{game.get('game_id', '')}_{team_abbr}"
 
+    # === CHANGED: Set team_won correctly based on perspective ===
+    try:
+        home_score = float(game.get('home_score', 0) or 0)
+        away_score = float(game.get('away_score', 0) or 0)
+        if is_home:
+            row['team_won'] = home_score > away_score
+        else:
+            row['team_won'] = away_score > home_score
+    except (ValueError, TypeError):
+        row['team_won'] = None
+
+    # === CHANGED: Null out legacy odds columns from old merge system ===
+    legacy_cols = ['is_home_odds', 'Run_Line_odds', 'Spread_Price_odds',
+                   'Opp_Spread_Price_odds', 'team_abbr_odds', 'opponent_abbr_odds',
+                   'game_id_odds', 'commence_time']
+    for col in legacy_cols:
+        if col in row.index:
+            row[col] = None
+
     return row
 
 def process_daily_update():
