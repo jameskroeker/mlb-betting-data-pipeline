@@ -6,7 +6,6 @@ on:
 jobs:
   update-data:
     runs-on: ubuntu-latest
-    # CHANGED: Opt into Node.js 24 ahead of June 2, 2026 forced migration deadline
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     permissions:
@@ -16,6 +15,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: main
       - name: 🐍 Set up Python
         uses: actions/setup-python@v5
         with:
@@ -37,3 +37,4 @@ jobs:
         with:
           commit_message: "Automated daily data update"
           branch: main
+          push_options: '--force'
