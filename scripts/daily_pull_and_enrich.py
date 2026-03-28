@@ -9,12 +9,15 @@ import pytz
 # === Config ===
 API_KEY = os.environ.get("API_SPORTS_KEY")
 if not API_KEY:
-    raise ValueError("API_SPORTS_KEY environment variable not set. Please add it as a GitHub Secret.")
+    raise ValueError("API_SPORTS_KEY environment variable not set.")
 
 HEADERS = {"x-apisports-key": API_KEY}
 
-# === CHANGED: Dynamically set season based on current year ===
+# === CHANGED: Dynamic season year ===
 CURRENT_SEASON = datetime.now().year
+
+# === Consensus odds target — decimal equivalent of -110 ===
+TARGET_ODDS = 1.909
 
 utc = pytz.utc
 eastern = pytz.timezone("US/Eastern")
@@ -29,11 +32,104 @@ TEAM_NAME_FIXES = {
 def normalize_team_name(name):
     return TEAM_NAME_FIXES.get(name, name)
 
-# === Utility Functions ===
 def safe_inning_scores(scores_dict):
     return scores_dict.get("innings", {}) if scores_dict else {}
 
+def pull_odds_for_game(game_id, game):
+    """Pull and parse Pinnacle odds for a single game. Updates game dict in place."""
+    try:
+        odds_url = f"https://v1.baseball.api-sports.io/odds?game={game_id}&bookmaker=4"
+        response = requests.get(odds_url, headers=HEADERS, timeout=10)
+        response.raise_for_status()
+        odds_data = response.json()
+
+        if not odds_data or not odds_data.get("response"):
+            return False
+
+        bookmakers_data = odds_data["response"][0].get("bookmakers")
+        if not bookmakers_data:
+            return False
+
+        bets = bookmakers_data[0].get("bets")
+        if not bets:
+            return False
+
+        for bet in bets:
+            if bet["name"] == "Home/Away":
+                for val in bet.get("values", []):
+                    opt = val["value"].lower()
+                    if opt == "home":
+                        game["moneyline_home"] = val["odd"]
+                    elif opt == "away":
+                        game["moneyline_away"] = val["odd"]
+
+            elif bet["name"] == "Over/Under":
+                totals_by_line = {}
+                for val in bet.get("values", []):
+                    try:
+                        parts = val["value"].split(" ")
+                        side = parts[0].lower()
+                        line = float(parts[1])
+                    except (IndexError, ValueError):
+                        continue
+                    if line not in totals_by_line:
+                        totals_by_line[line] = {}
+                    totals_by_line[line][side] = float(val["odd"])
+
+                best_line = None
+                best_distance = float("inf")
+                for line, sides in totals_by_line.items():
+                    if "over" in sides and "under" in sides:
+                        avg_dist = (abs(sides["over"] - TARGET_ODDS) +
+                                   abs(sides["under"] - TARGET_ODDS)) / 2
+                        if avg_dist < best_distance:
+                            best_distance = avg_dist
+                            best_line = line
+
+                if best_line is not None:
+                    game["total_line"] = best_line
+                    game["over_odds"] = totals_by_line[best_line].get("over")
+                    game["under_odds"] = totals_by_line[best_line].get("under")
+
+        return True
+
+    except requests.exceptions.RequestException as e:
+        print(f"❌ HTTP Error fetching odds for game {game_id}: {e}")
+        return False
+    except Exception as e:
+        print(f"⚠️ Error fetching odds for game {game_id}: {e}")
+        return False
+
+def re_enrich_missing_odds(games):
+    """
+    CHANGED: Re-pull odds for games where odds are still null.
+    Fixes timing issue where Pinnacle posts lines after the initial pull.
+    """
+    missing = {
+        gid: game for gid, game in games.items()
+        if game.get("moneyline_home") is None or game.get("total_line") is None
+    }
+
+    if not missing:
+        print("✅ No missing odds — all games have complete data")
+        return 0
+
+    print(f"🔄 Re-enriching odds for {len(missing)} games with missing data...")
+    fixed = 0
+    for game_id, game in missing.items():
+        if pull_odds_for_game(game_id, game):
+            print(f"  ✅ Game {game_id} ({game.get('home_team')} vs {game.get('away_team')}): "
+                  f"ML={game.get('moneyline_home')} Total={game.get('total_line')}")
+            fixed += 1
+        else:
+            print(f"  ⚠️ Game {game_id} ({game.get('home_team')} vs {game.get('away_team')}): "
+                  f"still no odds available")
+
+    print(f"🔄 Re-enrichment complete: {fixed}/{len(missing)} games fixed")
+    return fixed
+
 def enrich_results_for_games(games):
+    """Enrich game data with scores and innings for finished games."""
     print(f"Attempting to enrich {len(games)} games...")
     enriched_count = 0
     for game_id, game in games.items():
@@ -66,7 +162,13 @@ def enrich_results_for_games(games):
 
                 if game["total_line"] is not None:
                     total = game["home_score"] + game["away_score"]
-                    game["total_result"] = "Over" if total > game["total_line"] else "Under"
+                    # CHANGED: Three-way total result — Push when exact line hit
+                    if total > game["total_line"]:
+                        game["total_result"] = "Over"
+                    elif total < game["total_line"]:
+                        game["total_result"] = "Under"
+                    else:
+                        game["total_result"] = "Push"
                 else:
                     game["total_result"] = None
 
@@ -83,12 +185,13 @@ def enrich_results_for_games(games):
     print(f"Finished enriching. Successfully enriched {enriched_count} games.")
 
 def pull_games_and_odds(target_date):
+    """Pull game schedules and odds for a target date."""
     print(f"\n📅 Pulling game schedule and odds for {target_date}")
     api_dates = [target_date, (datetime.strptime(target_date, "%Y-%m-%d") + timedelta(days=1)).strftime("%Y-%m-%d")]
     games = {}
 
     for api_date in api_dates:
-        # === CHANGED: Use CURRENT_SEASON variable instead of hardcoded 2025 ===
+        # CHANGED: Dynamic season year
         url = f"https://v1.baseball.api-sports.io/games?league=1&season={CURRENT_SEASON}&date={api_date}"
         try:
             response = requests.get(url, headers=HEADERS, timeout=10)
@@ -96,7 +199,7 @@ def pull_games_and_odds(target_date):
             data = response.json()
 
             if not data or not data.get("response"):
-                print(f"⚠️ No API response for date {api_date} or empty response.")
+                print(f"⚠️ No API response for date {api_date}.")
                 continue
 
             for g in data.get("response", []):
@@ -125,78 +228,19 @@ def pull_games_and_odds(target_date):
                     games[game_id] = game_data
 
                 except Exception as e:
-                    print(f"⚠️ Error processing game metadata for date {api_date} (Game ID: {g.get('id', 'N/A')}): {e}")
+                    print(f"⚠️ Error processing game (Game ID: {g.get('id', 'N/A')}): {e}")
         except requests.exceptions.RequestException as e:
-            print(f"❌ HTTP Error fetching games for date {api_date}: {e}")
+            print(f"❌ HTTP Error fetching games for {api_date}: {e}")
         except Exception as e:
-            print(f"❌ An unexpected error occurred fetching games for date {api_date}: {e}")
+            print(f"❌ Unexpected error for {api_date}: {e}")
 
-    # Pull Odds
-    # CHANGED: Pinnacle (ID 4) replaces Betway (ID 3) — Betway has no baseball markets
-    # CHANGED: Consensus total logic — finds Over/Under pair closest to 1.909 (-110 equivalent)
-    TARGET_ODDS = 1.909
+    # Pull odds for all games using shared function
+    odds_success = 0
     for game_id, game in games.items():
-        try:
-            odds_url = f"https://v1.baseball.api-sports.io/odds?game={game_id}&bookmaker=4"
-            response = requests.get(odds_url, headers=HEADERS, timeout=10)
-            response.raise_for_status()
-            odds_data = response.json()
+        if pull_odds_for_game(game_id, game):
+            odds_success += 1
 
-            if not odds_data or not odds_data.get("response"):
-                continue
-
-            bookmakers_data = odds_data["response"][0].get("bookmakers")
-            if not bookmakers_data:
-                continue
-
-            bets = bookmakers_data[0].get("bets")
-            if not bets:
-                continue
-
-            for bet in bets:
-                if bet["name"] == "Home/Away":
-                    for val in bet.get("values", []):
-                        opt = val["value"].lower()
-                        if opt == "home":
-                            game["moneyline_home"] = val["odd"]
-                        elif opt == "away":
-                            game["moneyline_away"] = val["odd"]
-
-                elif bet["name"] == "Over/Under":
-                    # Build a dict of {line: {over: odd, under: odd}}
-                    totals_by_line = {}
-                    for val in bet.get("values", []):
-                        try:
-                            parts = val["value"].split(" ")
-                            side = parts[0].lower()   # "over" or "under"
-                            line = float(parts[1])    # e.g. 7.5
-                        except (IndexError, ValueError):
-                            continue
-                        if line not in totals_by_line:
-                            totals_by_line[line] = {}
-                        totals_by_line[line][side] = float(val["odd"])
-
-                    # Find the line where both sides are closest to -110 (1.909 decimal)
-                    best_line = None
-                    best_distance = float("inf")
-                    for line, sides in totals_by_line.items():
-                        if "over" in sides and "under" in sides:
-                            avg_dist = (abs(sides["over"] - TARGET_ODDS) + abs(sides["under"] - TARGET_ODDS)) / 2
-                            if avg_dist < best_distance:
-                                best_distance = avg_dist
-                                best_line = line
-
-                    if best_line is not None:
-                        game["total_line"] = best_line
-                        game["over_odds"] = totals_by_line[best_line].get("over")
-                        game["under_odds"] = totals_by_line[best_line].get("under")
-
-        except requests.exceptions.RequestException as e:
-            print(f"❌ HTTP Error fetching odds for game {game_id}: {e}")
-        except Exception as e:
-            print(f"⚠️ Error fetching or processing odds for game {game_id}: {e}")
-            continue
-
+    print(f"📊 Odds pulled for {odds_success}/{len(games)} games")
     return games
 
 # =========================================================================
@@ -206,38 +250,51 @@ if __name__ == "__main__":
     today_date_str = datetime.now(eastern).strftime("%Y-%m-%d")
     yesterday_date_str = (datetime.now(eastern) - timedelta(days=1)).strftime("%Y-%m-%d")
 
-    print(f"\n--- Running Daily Automated Pull for {today_date_str} and Enrich for {yesterday_date_str} ---")
-    # === CHANGED: Log the season being used so it's visible in Actions logs ===
+    print(f"\n--- Running Daily Automated Pull for {today_date_str} ---")
     print(f"🗓️  Season: {CURRENT_SEASON}")
 
-    # --- Step 1: Pull & Enrich Today's Data ---
+    # --- Step 1: Pull today's games and odds ---
     today_games = pull_games_and_odds(today_date_str)
     enrich_results_for_games(today_games)
 
     today_filename = f"data/daily/MLB_Combined_Odds_Results_{today_date_str}.csv"
     if today_games:
         pd.DataFrame(today_games.values()).to_csv(today_filename, index=False)
-        print(f"\n✅ Saved today's file to: {today_filename}")
+        print(f"\n✅ Saved today's file: {today_filename}")
     else:
         print(f"\n⚠️ No games found for today ({today_date_str}). Skipping save.")
 
-    # --- Step 2: Enrich Yesterday's File ---
+    # --- Step 2: Enrich yesterday's file with scores and missing odds ---
     yesterday_filename = f"data/daily/MLB_Combined_Odds_Results_{yesterday_date_str}.csv"
     if os.path.exists(yesterday_filename):
         print(f"\n♻️ Enriching yesterday's file: {yesterday_filename}")
         try:
             y_df = pd.read_csv(yesterday_filename, low_memory=False)
             yesterday_games_list = y_df.to_dict(orient="records")
-            game_map_for_enrichment = {g["game_id"]: g for g in yesterday_games_list if "game_id" in g}
-            enrich_results_for_games(game_map_for_enrichment)
-            final_df = pd.DataFrame(game_map_for_enrichment.values())
+            game_map = {g["game_id"]: g for g in yesterday_games_list if "game_id" in g}
+
+            # CHANGED: Re-enrich missing odds from yesterday first
+            re_enrich_missing_odds(game_map)
+
+            # Then enrich scores for finished games
+            enrich_results_for_games(game_map)
+
+            final_df = pd.DataFrame(game_map.values())
             final_df.to_csv(yesterday_filename, index=False)
             print(f"✅ Updated yesterday's file: {yesterday_filename}")
         except pd.errors.EmptyDataError:
-            print(f"⚠️ Yesterday's file is empty. Skipping enrichment.")
+            print(f"⚠️ Yesterday's file is empty. Skipping.")
         except Exception as e:
             print(f"❌ Error enriching yesterday's file: {e}")
     else:
-        print(f"\n⚠️ No file found for yesterday ({yesterday_filename}) — skipping enrichment.")
+        print(f"\n⚠️ No file found for yesterday ({yesterday_filename}) — skipping.")
+
+    # --- Step 3: CHANGED: Re-enrich today's odds if any were missing at pull time ---
+    if today_games and os.path.exists(today_filename):
+        print(f"\n🔄 Checking today's file for missing odds...")
+        fixed = re_enrich_missing_odds(today_games)
+        if fixed > 0:
+            pd.DataFrame(today_games.values()).to_csv(today_filename, index=False)
+            print(f"✅ Saved today's file with re-enriched odds: {today_filename}")
 
     print("\n--- Daily Pull and Enrichment Script Complete ---")
