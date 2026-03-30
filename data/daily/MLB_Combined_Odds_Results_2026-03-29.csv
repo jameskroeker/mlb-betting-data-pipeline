@@ -1,13 +1,13 @@
 game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result,home_1,away_1,home_2,away_2,home_3,away_3,home_4,away_4,home_5,away_5,home_6,away_6,home_7,away_7,home_8,away_8,home_9,away_9
-178050,2026-03-29,2026-03-29 13:35:00,Philadelphia Phillies,Texas Rangers,1.68,2.32,7.5,1.87,2.0,,,,,,,,,,,,,,,,,,,,,,,
-178056,2026-03-29,2026-03-29 13:35:00,Baltimore Orioles,Minnesota Twins,1.68,2.33,8.5,1.85,2.03,,,,,,,,,,,,,,,,,,,,,,,
-178057,2026-03-29,2026-03-29 13:35:00,Atlanta Braves,Kansas City Royals,1.68,2.33,8.0,1.89,1.97,,,,,,,,,,,,,,,,,,,,,,,
-178047,2026-03-29,2026-03-29 13:37:00,Toronto Blue Jays,Athletics,1.61,2.48,8.5,1.83,2.04,,,,,,,,,,,,,,,,,,,,,,,
-178046,2026-03-29,2026-03-29 13:40:00,New York Mets,Pittsburgh Pirates,1.58,2.55,7.5,1.88,1.99,,,,,,,,,,,,,,,,,,,,,,,
-178051,2026-03-29,2026-03-29 13:40:00,Miami Marlins,Colorado Rockies,1.53,2.67,8.0,1.94,1.93,,,,,,,,,,,,,,,,,,,,,,,
-178054,2026-03-29,2026-03-29 13:40:00,Cincinnati Reds,Boston Red Sox,2.22,1.74,8.0,1.88,1.98,,,,,,,,,,,,,,,,,,,,,,,
-178052,2026-03-29,2026-03-29 14:10:00,Milwaukee Brewers,Chicago White Sox,1.58,2.54,7.5,1.91,1.96,,,,,,,,,,,,,,,,,,,,,,,
-178053,2026-03-29,2026-03-29 14:10:00,Houston Astros,Los Angeles Angels,1.58,2.54,9.0,2.03,1.85,,,,,,,,,,,,,,,,,,,,,,,
-178048,2026-03-29,2026-03-29 14:15:00,St. Louis Cardinals,Tampa Bay Rays,2.02,1.89,8.0,2.0,1.87,,,,,,,,,,,,,,,,,,,,,,,
-178055,2026-03-29,2026-03-29 14:20:00,Chicago Cubs,Washington Nationals,1.41,3.11,9.5,1.95,1.92,,,,,,,,,,,,,,,,,,,,,,,
-178049,2026-03-29,2026-03-29 19:20:00,Seattle Mariners,Cleveland Guardians,1.66,2.36,7.5,1.9,1.97,,,,,,,,,,,,,,,,,,,,,,,
+178050,2026-03-29,2026-03-29 13:35:00,Philadelphia Phillies,Texas Rangers,1.68,2.32,7.5,1.87,2.0,3,8,Finished,Texas Rangers,Over,0,0,0,0,0,2,0,3,0,0,2,1,0,2,1,0,0.0,0
+178056,2026-03-29,2026-03-29 13:35:00,Baltimore Orioles,Minnesota Twins,1.68,2.33,8.5,1.85,2.03,8,6,Finished,Baltimore Orioles,Over,0,0,0,4,0,0,3,0,0,0,2,0,3,1,0,1,,0
+178057,2026-03-29,2026-03-29 13:35:00,Atlanta Braves,Kansas City Royals,1.68,2.33,8.0,1.89,1.97,1,4,Finished,Kansas City Royals,Under,0,0,0,0,0,1,0,1,0,1,0,0,0,0,1,1,0.0,0
+178047,2026-03-29,2026-03-29 13:37:00,Toronto Blue Jays,Athletics,1.61,2.48,8.5,1.83,2.04,5,2,Finished,Toronto Blue Jays,Under,1,0,0,0,2,0,1,0,1,2,0,0,0,0,0,0,,0
+178046,2026-03-29,2026-03-29 13:40:00,New York Mets,Pittsburgh Pirates,1.58,2.55,7.5,1.88,1.99,3,4,Finished,Pittsburgh Pirates,Under,0,1,1,0,0,1,0,0,1,0,0,0,0,0,0,0,0.0,0
+178051,2026-03-29,2026-03-29 13:40:00,Miami Marlins,Colorado Rockies,1.53,2.67,8.0,1.94,1.93,4,3,Finished,Miami Marlins,Under,1,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,2.0,0
+178054,2026-03-29,2026-03-29 13:40:00,Cincinnati Reds,Boston Red Sox,2.22,1.74,8.0,1.88,1.98,3,2,Finished,Cincinnati Reds,Under,0,0,0,0,0,0,0,2,0,0,3,0,0,0,0,0,,0
+178052,2026-03-29,2026-03-29 14:10:00,Milwaukee Brewers,Chicago White Sox,1.58,2.54,7.5,1.91,1.96,9,7,Finished,Milwaukee Brewers,Over,2,4,0,2,0,1,0,0,0,0,1,0,0,0,6,0,,0
+178053,2026-03-29,2026-03-29 14:10:00,Houston Astros,Los Angeles Angels,1.58,2.54,9.0,2.03,1.85,9,7,Finished,Houston Astros,Over,0,0,4,0,0,4,0,2,2,0,0,0,0,0,3,0,,1
+178048,2026-03-29,2026-03-29 14:15:00,St. Louis Cardinals,Tampa Bay Rays,2.02,1.89,8.0,2.0,1.87,7,11,Finished,Tampa Bay Rays,Over,0,0,0,3,1,0,3,3,0,0,0,0,0,0,3,3,0.0,2
+178055,2026-03-29,2026-03-29 14:20:00,Chicago Cubs,Washington Nationals,1.41,3.11,9.5,1.95,1.92,3,6,Finished,Washington Nationals,Under,0,3,0,0,0,0,2,0,0,0,0,1,0,0,1,2,0.0,0
+178049,2026-03-29,2026-03-29 19:20:00,Seattle Mariners,Cleveland Guardians,1.66,2.36,7.5,1.9,1.97,8,0,Finished,Seattle Mariners,Over,0,0,0,0,0,0,4,0,2,0,1,0,0,0,1,0,,0
