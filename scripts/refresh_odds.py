@@ -5,7 +5,7 @@
 import os
 import requests
 import pandas as pd
-from datetime import datetime
+from datetime import datetime, timedelta
 import pytz
 
 API_KEY = os.environ.get("API_SPORTS_KEY")
@@ -16,13 +16,28 @@ HEADERS = {"x-apisports-key": API_KEY}
 TARGET_ODDS = 1.909
 eastern = pytz.timezone("US/Eastern")
 
-today = datetime.now(eastern).strftime("%Y-%m-%d")
-filename = f"data/daily/MLB_Combined_Odds_Results_{today}.csv"
+# Check both today ET and yesterday ET to handle UTC/ET boundary
+now_et = datetime.now(eastern)
+candidate_dates = [
+    now_et.strftime("%Y-%m-%d"),
+    (now_et - timedelta(days=1)).strftime("%Y-%m-%d")
+]
 
-print(f"🔄 Odds refresh running for {today}")
+print(f"🔄 Odds refresh running | UTC: {datetime.utcnow().strftime('%Y-%m-%d %H:%M')} | ET: {now_et.strftime('%Y-%m-%d %H:%M')}")
 
-if not os.path.exists(filename):
-    print(f"⚠️ No file found for {today} — skipping")
+# Find the most recent daily file that exists
+filename = None
+today = None
+for date in candidate_dates:
+    candidate = f"data/daily/MLB_Combined_Odds_Results_{date}.csv"
+    if os.path.exists(candidate):
+        filename = candidate
+        today = date
+        print(f"📁 Found daily file: {candidate}")
+        break
+
+if not filename:
+    print(f"⚠️ No daily file found for {candidate_dates} — skipping")
     exit(0)
 
 df = pd.read_csv(filename)
@@ -75,7 +90,6 @@ for idx, row in missing.iterrows():
                     except (IndexError, ValueError):
                         continue
 
-                # Find line closest to -110 on both sides
                 valid = [(l, s) for l, s in totals.items() if "over" in s and "under" in s]
                 if valid:
                     best_line = min(
