@@ -2,6 +2,7 @@ name: MLB Odds Refresh
 on:
   schedule:
     - cron: "00 15 * * *"
+    - cron: "00 18 * * *"
   workflow_dispatch:
 jobs:
   refresh-odds:
