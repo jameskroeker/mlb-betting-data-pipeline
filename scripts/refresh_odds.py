@@ -73,9 +73,9 @@ for idx, row in missing.iterrows():
             if bet["name"] == "Home/Away":
                 for val in bet.get("values", []):
                     if val["value"].lower() == "home":
-                        df.at[idx, "moneyline_home"] = val["odd"]
+                        df.at[idx, "moneyline_home"] = float(val["odd"])
                     elif val["value"].lower() == "away":
-                        df.at[idx, "moneyline_away"] = val["odd"]
+                        df.at[idx, "moneyline_away"] = float(val["odd"])
 
             elif bet["name"] == "Over/Under":
                 totals = {}
