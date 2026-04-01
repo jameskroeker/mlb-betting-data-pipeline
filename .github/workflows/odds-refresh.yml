@@ -3,6 +3,7 @@ on:
   schedule:
     - cron: "00 15 * * *"
     - cron: "00 18 * * *"
+    - cron: "00 21 * * *"
   workflow_dispatch:
 jobs:
   refresh-odds:
