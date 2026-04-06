@@ -51,12 +51,41 @@ if len(missing) == 0:
 
 print(f"🔄 Found {len(missing)} games with missing odds — refreshing...")
 
+def fetch_bets(game_id, bookmaker_id):
+    """Fetch bets list from a bookmaker. Returns bets list or None."""
+    try:
+        url = f"https://v1.baseball.api-sports.io/odds?game={game_id}&bookmaker={bookmaker_id}"
+        response = requests.get(url, headers=HEADERS, timeout=10)
+        data = response.json()
+        if not data.get("response"):
+            return None
+        bookmakers = data["response"][0].get("bookmakers")
+        if not bookmakers:
+            return None
+        return bookmakers[0].get("bets")
+    except Exception as e:
+        print(f"  ⚠️ Error from bookmaker {bookmaker_id} for game {game_id}: {e}")
+        return None
+
 for idx, row in missing.iterrows():
     game_id = int(row['game_id'])
     try:
-        url = f"https://v1.baseball.api-sports.io/odds?game={game_id}&bookmaker=4"
-        response = requests.get(url, headers=HEADERS, timeout=10)
-        data = response.json()
+        # Try Pinnacle first, Marathon as fallback
+        bets = None
+        bookmaker_used = None
+        for bk_id, bk_name in [(4, 'Pinnacle'), (10, 'Marathon')]:
+            bets = fetch_bets(game_id, bk_id)
+            if bets:
+                bookmaker_used = bk_name
+                if bk_id != 4:
+                    print(f"  ⚠️ Pinnacle unavailable — using {bk_name} for game {game_id}")
+                break
+
+        if not bets:
+            print(f"  ❌ No odds from any bookmaker for game {game_id}")
+            continue
+
+        data = {"response": [{"bookmakers": [{"bets": bets}]}]}
 
         if not data.get("response"):
             print(f"  ⚠️ {row['home_team']} vs {row['away_team']}: still no odds available")
