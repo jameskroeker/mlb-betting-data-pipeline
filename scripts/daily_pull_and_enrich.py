@@ -35,24 +35,44 @@ def normalize_team_name(name):
 def safe_inning_scores(scores_dict):
     return scores_dict.get("innings", {}) if scores_dict else {}
 
-def pull_odds_for_game(game_id, game):
-    """Pull and parse Pinnacle odds for a single game. Updates game dict in place."""
+def fetch_odds_from_bookmaker(game_id, bookmaker_id):
+    """Fetch raw bets list from a specific bookmaker. Returns bets list or None."""
     try:
-        odds_url = f"https://v1.baseball.api-sports.io/odds?game={game_id}&bookmaker=4"
+        odds_url = f"https://v1.baseball.api-sports.io/odds?game={game_id}&bookmaker={bookmaker_id}"
         response = requests.get(odds_url, headers=HEADERS, timeout=10)
         response.raise_for_status()
         odds_data = response.json()
 
         if not odds_data or not odds_data.get("response"):
-            return False
-
+            return None
         bookmakers_data = odds_data["response"][0].get("bookmakers")
         if not bookmakers_data:
-            return False
-
+            return None
         bets = bookmakers_data[0].get("bets")
-        if not bets:
-            return False
+        return bets if bets else None
+    except Exception as e:
+        print(f"⚠️ Error fetching odds from bookmaker {bookmaker_id} for game {game_id}: {e}")
+        return None
+
+
+def pull_odds_for_game(game_id, game):
+    """Pull and parse odds for a single game. Tries Pinnacle (4) then Marathon (10) as fallback."""
+    # Try Pinnacle first, then Marathon as fallback
+    bets = None
+    bookmaker_used = None
+    for bk_id, bk_name in [(4, 'Pinnacle'), (10, 'Marathon')]:
+        bets = fetch_odds_from_bookmaker(game_id, bk_id)
+        if bets:
+            bookmaker_used = bk_name
+            if bk_id != 4:
+                print(f"  ⚠️ Pinnacle unavailable — using {bk_name} for game {game_id}")
+            break
+
+    if not bets:
+        print(f"  ❌ No odds available from any bookmaker for game {game_id}")
+        return False
+
+    try:
 
         for bet in bets:
             if bet["name"] == "Home/Away":
@@ -93,11 +113,9 @@ def pull_odds_for_game(game_id, game):
 
         return True
 
-    except requests.exceptions.RequestException as e:
-        print(f"❌ HTTP Error fetching odds for game {game_id}: {e}")
-        return False
     except Exception as e:
-        print(f"⚠️ Error fetching odds for game {game_id}: {e}")
+        print(f"⚠️ Error parsing odds for game {game_id}: {e}")
+        return False
         return False
 
 def re_enrich_missing_odds(games):
