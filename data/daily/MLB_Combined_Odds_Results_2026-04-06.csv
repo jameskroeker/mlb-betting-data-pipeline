@@ -1,14 +1,14 @@
 game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result,home_1,away_1,home_2,away_2,home_3,away_3,home_4,away_4,home_5,away_5,home_6,away_6,home_7,away_7,home_8,away_8,home_9,away_9
-178154,2026-04-06,2026-04-06 16:10:00,Tampa Bay Rays,Chicago Cubs,1.92,1.88,8.0,1.94,1.82,,,,,,,,,,,,,,,,,,,,,,,
-178160,2026-04-06,2026-04-06 18:10:00,Cleveland Guardians,Kansas City Royals,1.79,2.02,7.0,1.82,1.94,,,,,,,,,,,,,,,,,,,,,,,
-178150,2026-04-06,2026-04-06 18:40:00,Pittsburgh Pirates,San Diego Padres,1.78,2.04,8.5,1.89,1.89,,,,,,,,,,,,,,,,,,,,,,,
-178156,2026-04-06,2026-04-06 18:40:00,Miami Marlins,Cincinnati Reds,1.77,2.05,8.0,1.83,1.93,,,,,,,,,,,,,,,,,,,,,,,
-178151,2026-04-06,2026-04-06 18:45:00,Washington Nationals,St. Louis Cardinals,1.95,1.85,8.0,1.87,1.89,,,,,,,,,,,,,,,,,,,,,,,
-178162,2026-04-06,2026-04-06 18:45:00,Boston Red Sox,Milwaukee Brewers,1.92,1.88,8.0,1.84,1.92,,,,,,,,,,,,,,,,,,,,,,,
-178152,2026-04-06,2026-04-06 19:07:00,Toronto Blue Jays,Los Angeles Dodgers,2.19,1.68,8.5,1.81,1.98,,,,,,,,,,,,,,,,,,,,,,,
-178157,2026-04-06,2026-04-06 19:40:00,Minnesota Twins,Detroit Tigers,1.80,2.01,7.0,1.82,1.94,,,,,,,,,,,,,,,,,,,,,,,
-178161,2026-04-06,2026-04-06 19:40:00,Chicago White Sox,Baltimore Orioles,2.15,1.70,9.0,1.97,1.8,,,,,,,,,,,,,,,,,,,,,,,
-178153,2026-04-06,2026-04-06 20:05:00,Texas Rangers,Seattle Mariners,1.83,1.98,7.5,1.91,1.87,,,,,,,,,,,,,,,,,,,,,,,
-178159,2026-04-06,2026-04-06 20:40:00,Colorado Rockies,Houston Astros,2.59,1.50,10.0,1.85,1.91,,,,,,,,,,,,,,,,,,,,,,,
-178158,2026-04-06,2026-04-06 21:38:00,Los Angeles Angels,Atlanta Braves,2.28,1.63,7.5,1.87,1.91,,,,,,,,,,,,,,,,,,,,,,,
-178155,2026-04-06,2026-04-06 21:45:00,San Francisco Giants,Philadelphia Phillies,1.95,1.85,8.0,1.9,1.86,,,,,,,,,,,,,,,,,,,,,,,
+178154,2026-04-06,2026-04-06 16:10:00,Tampa Bay Rays,Chicago Cubs,1.92,1.88,8.0,1.94,1.82,6,4,Finished,Tampa Bay Rays,Over,0,0,3,2,1,0,0,0,0,0,0,1,2,0,0,0,,1
+178160,2026-04-06,2026-04-06 18:10:00,Cleveland Guardians,Kansas City Royals,1.79,2.02,7.0,1.82,1.94,2,4,Finished,Kansas City Royals,Under,0,0,0,0,1,0,0,1,0,0,0,1,0,0,1,2,0.0,0
+178150,2026-04-06,2026-04-06 18:40:00,Pittsburgh Pirates,San Diego Padres,1.78,2.04,8.5,1.89,1.89,0,5,Finished,San Diego Padres,Under,0,0,0,0,0,0,0,1,0,2,0,1,0,0,0,1,0.0,0
+178156,2026-04-06,2026-04-06 18:40:00,Miami Marlins,Cincinnati Reds,1.77,2.05,8.0,1.83,1.93,0,2,Finished,Cincinnati Reds,Under,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0.0,0
+178151,2026-04-06,2026-04-06 18:45:00,Washington Nationals,St. Louis Cardinals,1.95,1.85,8.0,1.87,1.89,9,6,Finished,Washington Nationals,Over,2,0,0,0,0,0,0,0,0,1,1,2,0,0,6,3,,0
+178162,2026-04-06,2026-04-06 18:45:00,Boston Red Sox,Milwaukee Brewers,1.92,1.88,8.0,1.84,1.92,6,8,Finished,Milwaukee Brewers,Over,1,0,0,0,2,0,2,4,0,1,0,0,0,0,0,2,1.0,1
+178152,2026-04-06,2026-04-06 19:07:00,Toronto Blue Jays,Los Angeles Dodgers,2.19,1.68,8.5,1.81,1.98,2,14,Finished,Los Angeles Dodgers,Over,1,2,0,0,0,2,0,1,0,1,0,3,0,4,0,1,1.0,0
+178157,2026-04-06,2026-04-06 19:40:00,Minnesota Twins,Detroit Tigers,1.8,2.01,7.0,1.82,1.94,7,3,Finished,Minnesota Twins,Over,0,0,0,0,3,0,2,3,0,0,0,0,0,0,2,0,,0
+178161,2026-04-06,2026-04-06 19:40:00,Chicago White Sox,Baltimore Orioles,2.15,1.7,9.0,1.97,1.8,1,2,Finished,Baltimore Orioles,Under,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,1.0,0
+178153,2026-04-06,2026-04-06 20:05:00,Texas Rangers,Seattle Mariners,1.83,1.98,7.5,1.91,1.87,2,1,Finished,Texas Rangers,Under,1,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,,0
+178159,2026-04-06,2026-04-06 20:40:00,Colorado Rockies,Houston Astros,2.59,1.5,10.0,1.85,1.91,9,7,Finished,Colorado Rockies,Over,0,2,0,0,0,0,0,1,8,0,1,1,0,1,0,2,,0
+178158,2026-04-06,2026-04-06 21:38:00,Los Angeles Angels,Atlanta Braves,2.28,1.63,7.5,1.87,1.91,6,2,Finished,Los Angeles Angels,Over,1,1,0,0,0,0,3,0,2,0,0,0,0,0,0,0,,1
+178155,2026-04-06,2026-04-06 21:45:00,San Francisco Giants,Philadelphia Phillies,1.95,1.85,8.0,1.9,1.86,4,6,Finished,Philadelphia Phillies,Over,0,0,0,0,3,0,1,0,0,2,0,0,0,4,0,0,0.0,0
