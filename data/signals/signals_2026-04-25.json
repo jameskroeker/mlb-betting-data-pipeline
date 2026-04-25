@@ -1,0 +1,52 @@
+{
+  "date": "2026-04-25",
+  "locked_at": "2026-04-25T21:57:55Z",
+  "t1_count": 5,
+  "signals": [
+    {
+      "game_id": "178411",
+      "game_date": "2026-04-25",
+      "home_team": "HOU",
+      "away_team": "NYY",
+      "signal_team": "NYY",
+      "consensus_score": -4.075,
+      "tier": 1
+    },
+    {
+      "game_id": "178415",
+      "game_date": "2026-04-25",
+      "home_team": "ATL",
+      "away_team": "PHI",
+      "signal_team": "ATL",
+      "consensus_score": 3.903,
+      "tier": 1
+    },
+    {
+      "game_id": "178414",
+      "game_date": "2026-04-25",
+      "home_team": "BAL",
+      "away_team": "BOS",
+      "signal_team": "BAL",
+      "consensus_score": 2.382,
+      "tier": 1
+    },
+    {
+      "game_id": "178404",
+      "game_date": "2026-04-25",
+      "home_team": "TBR",
+      "away_team": "MIN",
+      "signal_team": "TBR",
+      "consensus_score": 1.824,
+      "tier": 1
+    },
+    {
+      "game_id": "178412",
+      "game_date": "2026-04-25",
+      "home_team": "CIN",
+      "away_team": "DET",
+      "signal_team": "CIN",
+      "consensus_score": 1.654,
+      "tier": 1
+    }
+  ]
+}

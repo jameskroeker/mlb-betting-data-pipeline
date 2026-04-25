@@ -31,6 +31,11 @@ jobs:
         run: python scripts/refresh_odds.py
         env:
           API_SPORTS_KEY: ${{ secrets.API_SPORTS_KEY }}
+      - name: Lock today's signals (8PM ET run only)
+        run: python scripts/lock_signals.py
+        env:
+          BACKEND_URL: https://strikes-and-downs.onrender.com
+
       - name: Commit and Push
         run: |
           git config user.name "github-actions[bot]"
