@@ -17,7 +17,9 @@ if utc_hour not in (0, 1) and os.environ.get("FORCE_LOCK") != "1":
     exit(0)
 
 target_date = (now_et - timedelta(hours=4)).strftime("%Y-%m-%d")
-if os.environ.get("FORCE_LOCK") == "1":
+if os.environ.get("FORCE_DATE"):
+    target_date = os.environ.get("FORCE_DATE")
+elif os.environ.get("FORCE_LOCK") == "1":
     target_date = now_et.strftime("%Y-%m-%d")
 
 print(f"Locking signals for {target_date}")
