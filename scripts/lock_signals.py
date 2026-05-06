@@ -34,7 +34,7 @@ if os.path.exists(output_path) and os.environ.get("FORCE_LOCK") != "1":
 BACKEND_URL = os.environ.get("BACKEND_URL", "https://strikes-and-downs.onrender.com")
 
 print(f"Fetching signals from {BACKEND_URL}/api/signals/{target_date}")
-resp = requests.get(f"{BACKEND_URL}/api/signals/{target_date}", timeout=60)
+resp = requests.get(f"{BACKEND_URL}/api/signals/{target_date}", timeout=120)
 resp.raise_for_status()
 data = resp.json()
 
