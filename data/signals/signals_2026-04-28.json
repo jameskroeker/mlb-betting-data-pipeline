@@ -1,0 +1,34 @@
+{
+  "date": "2026-04-28",
+  "locked_at": "2026-05-06T03:40:35Z",
+  "t1_count": 3,
+  "signals": [
+    {
+      "game_id": "178449",
+      "game_date": "2026-04-28",
+      "home_team": "CIN",
+      "away_team": "COL",
+      "signal_team": "CIN",
+      "consensus_score": 4.277,
+      "tier": 1
+    },
+    {
+      "game_id": "178452",
+      "game_date": "2026-04-28",
+      "home_team": "ATL",
+      "away_team": "DET",
+      "signal_team": "ATL",
+      "consensus_score": 1.462,
+      "tier": 1
+    },
+    {
+      "game_id": "178453",
+      "game_date": "2026-04-28",
+      "home_team": "ATH",
+      "away_team": "KCR",
+      "signal_team": "ATH",
+      "consensus_score": 1.234,
+      "tier": 1
+    }
+  ]
+}

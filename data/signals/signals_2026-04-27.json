@@ -1,0 +1,25 @@
+{
+  "date": "2026-04-27",
+  "locked_at": "2026-05-06T03:39:54Z",
+  "t1_count": 2,
+  "signals": [
+    {
+      "game_id": "178438",
+      "game_date": "2026-04-27",
+      "home_team": "CWS",
+      "away_team": "LAA",
+      "signal_team": "CWS",
+      "consensus_score": 1.857,
+      "tier": 1
+    },
+    {
+      "game_id": "178434",
+      "game_date": "2026-04-27",
+      "home_team": "TEX",
+      "away_team": "NYY",
+      "signal_team": "NYY",
+      "consensus_score": -1.412,
+      "tier": 1
+    }
+  ]
+}

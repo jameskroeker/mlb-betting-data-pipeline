@@ -1,0 +1,34 @@
+{
+  "date": "2026-04-29",
+  "locked_at": "2026-05-06T03:41:16Z",
+  "t1_count": 3,
+  "signals": [
+    {
+      "game_id": "178464",
+      "game_date": "2026-04-29",
+      "home_team": "LAD",
+      "away_team": "MIA",
+      "signal_team": "LAD",
+      "consensus_score": 3.575,
+      "tier": 1
+    },
+    {
+      "game_id": "178465",
+      "game_date": "2026-04-29",
+      "home_team": "CIN",
+      "away_team": "COL",
+      "signal_team": "CIN",
+      "consensus_score": 3.333,
+      "tier": 1
+    },
+    {
+      "game_id": "178466",
+      "game_date": "2026-04-29",
+      "home_team": "CWS",
+      "away_team": "LAA",
+      "signal_team": "CWS",
+      "consensus_score": 1.857,
+      "tier": 1
+    }
+  ]
+}

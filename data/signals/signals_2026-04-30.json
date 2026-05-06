@@ -1,0 +1,25 @@
+{
+  "date": "2026-04-30",
+  "locked_at": "2026-05-06T03:41:47Z",
+  "t1_count": 2,
+  "signals": [
+    {
+      "game_id": "178475",
+      "game_date": "2026-04-30",
+      "home_team": "CIN",
+      "away_team": "COL",
+      "signal_team": "CIN",
+      "consensus_score": 4.277,
+      "tier": 1
+    },
+    {
+      "game_id": "178477",
+      "game_date": "2026-04-30",
+      "home_team": "ATL",
+      "away_team": "DET",
+      "signal_team": "ATL",
+      "consensus_score": 2.056,
+      "tier": 1
+    }
+  ]
+}

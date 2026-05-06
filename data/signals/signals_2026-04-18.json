@@ -1,0 +1,61 @@
+{
+  "date": "2026-04-18",
+  "locked_at": "2026-05-06T03:38:47Z",
+  "t1_count": 6,
+  "signals": [
+    {
+      "game_id": "178319",
+      "game_date": "2026-04-18",
+      "home_team": "CHC",
+      "away_team": "NYM",
+      "signal_team": "CHC",
+      "consensus_score": 3.997,
+      "tier": 1
+    },
+    {
+      "game_id": "178313",
+      "game_date": "2026-04-18",
+      "home_team": "NYY",
+      "away_team": "KCR",
+      "signal_team": "NYY",
+      "consensus_score": 2.708,
+      "tier": 1
+    },
+    {
+      "game_id": "178323",
+      "game_date": "2026-04-18",
+      "home_team": "HOU",
+      "away_team": "STL",
+      "signal_team": "STL",
+      "consensus_score": -2.168,
+      "tier": 1
+    },
+    {
+      "game_id": "178311",
+      "game_date": "2026-04-18",
+      "home_team": "PIT",
+      "away_team": "TBR",
+      "signal_team": "TBR",
+      "consensus_score": -1.562,
+      "tier": 1
+    },
+    {
+      "game_id": "178318",
+      "game_date": "2026-04-18",
+      "home_team": "CLE",
+      "away_team": "BAL",
+      "signal_team": "CLE",
+      "consensus_score": 1.349,
+      "tier": 1
+    },
+    {
+      "game_id": "178315",
+      "game_date": "2026-04-18",
+      "home_team": "WSH",
+      "away_team": "SFG",
+      "signal_team": "WSH",
+      "consensus_score": 1.024,
+      "tier": 1
+    }
+  ]
+}
