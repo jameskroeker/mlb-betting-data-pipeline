@@ -1,11 +1,11 @@
 game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result,home_1,away_1,home_2,away_2,home_3,away_3,home_4,away_4,home_5,away_5,home_6,away_6,home_7,away_7,home_8,away_8,home_9,away_9
-178566,2026-05-07,2026-05-07 12:35:00,New York Yankees,Texas Rangers,1.53,2.69,8.0,1.9,1.96,,,,,,,,,,,,,,,,,,,,,,,
-178569,2026-05-07,2026-05-07 13:05:00,Washington Nationals,Minnesota Twins,1.88,2.03,9.0,1.94,1.93,,,,,,,,,,,,,,,,,,,,,,,
-178572,2026-05-07,2026-05-07 14:10:00,Kansas City Royals,Cleveland Guardians,1.73,2.24,9.0,1.85,2.02,,,,,,,,,,,,,,,,,,,,,,,
-178573,2026-05-07,2026-05-07 14:20:00,Chicago Cubs,Cincinnati Reds,1.52,2.74,9.0,2.04,1.86,,,,,,,,,,,,,,,,,,,,,,,
-178547,2026-05-07,2026-05-07 15:10:00,Colorado Rockies,New York Mets,2.42,1.65,9.5,2.04,1.85,,,,,,,,,,,,,,,,,,,,,,,
-178571,2026-05-07,2026-05-07 15:40:00,Arizona Diamondbacks,Pittsburgh Pirates,2.0,1.91,9.0,1.9,1.97,,,,,,,,,,,,,,,,,,,,,,,
-178568,2026-05-07,2026-05-07 18:40:00,Philadelphia Phillies,Athletics,1.76,2.19,9.0,1.85,2.02,,,,,,,,,,,,,,,,,,,,,,,
-178570,2026-05-07,2026-05-07 18:40:00,Miami Marlins,Baltimore Orioles,1.85,2.07,8.5,1.94,1.93,,,,,,,,,,,,,,,,,,,,,,,
-178574,2026-05-07,2026-05-07 19:10:00,Boston Red Sox,Tampa Bay Rays,1.87,2.04,8.5,2.0,1.88,,,,,,,,,,,,,,,,,,,,,,,
-178567,2026-05-07,2026-05-07 22:10:00,San Diego Padres,St. Louis Cardinals,1.6,2.5,8.0,1.93,1.94,,,,,,,,,,,,,,,,,,,,,,,
+178566,2026-05-07,2026-05-07 12:35:00,New York Yankees,Texas Rangers,1.53,2.69,8.0,1.9,1.96,9,2,Finished,New York Yankees,Over,1,0,0,0,0,1,0,0,0,1,6,0,1,0,1,0,,0
+178569,2026-05-07,2026-05-07 13:05:00,Washington Nationals,Minnesota Twins,1.88,2.03,9.0,1.94,1.93,7,5,Finished,Washington Nationals,Over,0,0,0,2,2,0,0,0,3,1,0,1,2,1,0,0,,0
+178572,2026-05-07,2026-05-07 14:10:00,Kansas City Royals,Cleveland Guardians,1.73,2.24,9.0,1.85,2.02,5,8,Finished,Cleveland Guardians,Over,0,3,0,0,0,1,0,0,1,0,1,1,2,3,1,0,0.0,0
+178573,2026-05-07,2026-05-07 14:20:00,Chicago Cubs,Cincinnati Reds,1.52,2.74,9.0,2.04,1.86,8,3,Finished,Chicago Cubs,Over,0,0,1,0,0,0,7,0,0,0,0,1,0,0,0,1,,1
+178547,2026-05-07,2026-05-07 15:10:00,Colorado Rockies,New York Mets,2.42,1.65,9.5,2.04,1.85,6,2,Finished,Colorado Rockies,Under,0,0,0,2,0,0,1,0,0,0,1,0,0,0,4,0,,0
+178571,2026-05-07,2026-05-07 15:40:00,Arizona Diamondbacks,Pittsburgh Pirates,2.0,1.91,9.0,1.9,1.97,2,4,Finished,Pittsburgh Pirates,Under,1,1,0,0,1,0,0,0,0,2,0,1,0,0,0,0,0.0,0
+178568,2026-05-07,2026-05-07 18:40:00,Philadelphia Phillies,Athletics,1.76,2.19,9.0,1.85,2.02,1,12,Finished,Athletics,Over,0,4,0,0,0,3,1,1,0,2,0,0,0,2,0,0,0.0,0
+178570,2026-05-07,2026-05-07 18:40:00,Miami Marlins,Baltimore Orioles,1.85,2.07,8.5,1.94,1.93,4,3,Finished,Miami Marlins,Under,2,0,0,0,1,1,0,1,0,0,0,0,0,0,0,1,1.0,0
+178574,2026-05-07,2026-05-07 19:10:00,Boston Red Sox,Tampa Bay Rays,1.87,2.04,8.5,2.0,1.88,4,8,Finished,Tampa Bay Rays,Over,0,0,3,3,0,0,0,0,0,0,0,2,0,0,1,1,0.0,2
+178567,2026-05-07,2026-05-07 22:10:00,San Diego Padres,St. Louis Cardinals,1.6,2.5,8.0,1.93,1.94,1,2,Finished,St. Louis Cardinals,Under,1,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0.0,0
