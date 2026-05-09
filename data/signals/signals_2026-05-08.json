@@ -1,0 +1,25 @@
+{
+  "date": "2026-05-08",
+  "locked_at": "2026-05-09T19:43:41Z",
+  "t1_count": 2,
+  "signals": [
+    {
+      "game_id": "178581",
+      "game_date": "2026-05-08",
+      "home_team": "PHI",
+      "away_team": "COL",
+      "signal_team": "PHI",
+      "consensus_score": 1.336,
+      "tier": 1
+    },
+    {
+      "game_id": "178586",
+      "game_date": "2026-05-08",
+      "home_team": "BOS",
+      "away_team": "TBR",
+      "signal_team": "BOS",
+      "consensus_score": 1.155,
+      "tier": 1
+    }
+  ]
+}
