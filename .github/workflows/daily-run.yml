@@ -35,6 +35,7 @@ jobs:
         run: python scripts/update_master_data.py
 
       - name: 🔒 Lock today's signals
+        continue-on-error: true
         run: python scripts/lock_signals.py
         env:
           BACKEND_URL: https://strikes-and-downs.onrender.com
