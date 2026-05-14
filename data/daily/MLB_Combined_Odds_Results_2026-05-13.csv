@@ -1,16 +1,16 @@
 game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result,home_1,away_1,home_2,away_2,home_3,away_3,home_4,away_4,home_5,away_5,home_6,away_6,home_7,away_7,home_8,away_8,home_9,away_9
-178653,2026-05-13,2026-05-13 13:05:00,Baltimore Orioles,New York Yankees,2.36,1.59,8.5,1.85,1.93,,,,,,,,,,,,,,,,,,,,,,,
-178649,2026-05-13,2026-05-13 13:10:00,Cleveland Guardians,Los Angeles Angels,1.69,2.30,7.0,1.94,1.93,,,,,,,,,,,,,,,,,,,,,,,
-178643,2026-05-13,2026-05-13 18:40:00,Pittsburgh Pirates,Colorado Rockies,1.56,2.59,8.5,1.95,1.92,,,,,,,,,,,,,,,,,,,,,,,
-178650,2026-05-13,2026-05-13 18:40:00,Cincinnati Reds,Washington Nationals,1.63,2.42,9.5,2.01,1.86,,,,,,,,,,,,,,,,,,,,,,,
-178652,2026-05-13,2026-05-13 18:45:00,Boston Red Sox,Philadelphia Phillies,1.79,2.15,9.0,1.99,1.88,,,,,,,,,,,,,,,,,,,,,,,
-178641,2026-05-13,2026-05-13 19:07:00,Toronto Blue Jays,Tampa Bay Rays,1.65,2.39,7.5,1.93,1.93,,,,,,,,,,,,,,,,,,,,,,,
-178644,2026-05-13,2026-05-13 19:10:00,New York Mets,Detroit Tigers,1.92,1.88,8.0,1.9,1.86,,,,,,,,,,,,,,,,,,,,,,,
-178654,2026-05-13,2026-05-13 19:15:00,Atlanta Braves,Chicago Cubs,2.16,1.78,8.5,1.92,1.95,,,,,,,,,,,,,,,,,,,,,,,
-178645,2026-05-13,2026-05-13 19:40:00,Minnesota Twins,Miami Marlins,2.07,1.85,8.5,1.93,1.94,,,,,,,,,,,,,,,,,,,,,,,
-178646,2026-05-13,2026-05-13 19:40:00,Milwaukee Brewers,San Diego Padres,1.70,2.29,7.0,1.9,1.96,,,,,,,,,,,,,,,,,,,,,,,
-178651,2026-05-13,2026-05-13 19:40:00,Chicago White Sox,Kansas City Royals,2.00,1.91,8.0,1.93,1.93,,,,,,,,,,,,,,,,,,,,,,,
-178642,2026-05-13,2026-05-13 20:05:00,Texas Rangers,Arizona Diamondbacks,1.84,2.07,8.5,1.87,2.0,,,,,,,,,,,,,,,,,,,,,,,
-178648,2026-05-13,2026-05-13 20:10:00,Houston Astros,Seattle Mariners,2.10,1.83,9.0,1.84,2.03,,,,,,,,,,,,,,,,,,,,,,,
-178655,2026-05-13,2026-05-13 21:40:00,Athletics,St. Louis Cardinals,1.69,2.30,10.0,1.97,1.89,,,,,,,,,,,,,,,,,,,,,,,
-178647,2026-05-13,2026-05-13 22:10:00,Los Angeles Dodgers,San Francisco Giants,1.43,3.07,8.0,2.0,1.87,,,,,,,,,,,,,,,,,,,,,,,
+178653,2026-05-13,2026-05-13 13:05:00,Baltimore Orioles,New York Yankees,2.36,1.59,8.5,1.85,1.93,7,0,Finished,Baltimore Orioles,Under,0,0,1,0,2,0,0,0,2,0,2,0,0,0,0,0,,0
+178649,2026-05-13,2026-05-13 13:10:00,Cleveland Guardians,Los Angeles Angels,1.69,2.3,7.0,1.94,1.93,4,2,Finished,Cleveland Guardians,Under,2,0,0,0,1,0,0,0,0,2,1,0,0,0,0,0,,0
+178643,2026-05-13,2026-05-13 18:40:00,Pittsburgh Pirates,Colorado Rockies,1.56,2.59,8.5,1.95,1.92,4,10,Finished,Colorado Rockies,Over,0,0,2,0,1,0,0,0,0,6,1,0,0,0,0,1,0.0,3
+178650,2026-05-13,2026-05-13 18:40:00,Cincinnati Reds,Washington Nationals,1.63,2.42,9.5,2.01,1.86,7,8,Finished,Washington Nationals,Over,5,0,0,4,1,1,0,0,0,1,0,0,0,0,0,0,0.0,0
+178652,2026-05-13,2026-05-13 18:45:00,Boston Red Sox,Philadelphia Phillies,1.79,2.15,9.0,1.99,1.88,3,1,Finished,Boston Red Sox,Under,0,0,1,0,0,1,0,0,0,0,2,0,0,0,0,0,,0
+178641,2026-05-13,2026-05-13 19:07:00,Toronto Blue Jays,Tampa Bay Rays,1.65,2.39,7.5,1.93,1.93,5,3,Finished,Toronto Blue Jays,Over,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0.0,0
+178644,2026-05-13,2026-05-13 19:10:00,New York Mets,Detroit Tigers,1.92,1.88,8.0,1.9,1.86,3,2,Finished,New York Mets,Under,0,2,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0.0,0
+178654,2026-05-13,2026-05-13 19:15:00,Atlanta Braves,Chicago Cubs,2.16,1.78,8.5,1.92,1.95,4,1,Finished,Atlanta Braves,Under,0,0,0,0,0,0,1,0,0,1,0,0,0,0,3,0,,0
+178645,2026-05-13,2026-05-13 19:40:00,Minnesota Twins,Miami Marlins,2.07,1.85,8.5,1.93,1.94,5,9,Finished,Miami Marlins,Over,1,2,0,2,1,0,0,4,2,0,0,1,0,0,1,0,0.0,0
+178646,2026-05-13,2026-05-13 19:40:00,Milwaukee Brewers,San Diego Padres,1.7,2.29,7.0,1.9,1.96,1,3,Finished,San Diego Padres,Under,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0.0,3
+178651,2026-05-13,2026-05-13 19:40:00,Chicago White Sox,Kansas City Royals,2.0,1.91,8.0,1.93,1.93,6,5,Finished,Chicago White Sox,Over,0,0,2,0,1,0,0,3,2,0,0,0,1,0,0,0,,2
+178642,2026-05-13,2026-05-13 20:05:00,Texas Rangers,Arizona Diamondbacks,1.84,2.07,8.5,1.87,2.0,6,5,Finished,Texas Rangers,Over,0,0,0,0,0,0,0,0,3,0,0,1,0,1,0,0,3.0,3
+178648,2026-05-13,2026-05-13 20:10:00,Houston Astros,Seattle Mariners,2.1,1.83,9.0,1.84,2.03,4,3,Finished,Houston Astros,Under,0,1,0,0,0,0,0,0,0,0,2,1,0,0,1,0,0.0,1
+178655,2026-05-13,2026-05-13 21:40:00,Athletics,St. Louis Cardinals,1.69,2.3,10.0,1.97,1.89,6,2,Finished,Athletics,Under,0,0,0,0,0,0,0,1,4,0,0,0,1,1,1,0,,0
+178647,2026-05-13,2026-05-13 22:10:00,Los Angeles Dodgers,San Francisco Giants,1.43,3.07,8.0,2.0,1.87,4,0,Finished,Los Angeles Dodgers,Under,0,0,0,0,2,0,2,0,0,0,0,0,0,0,0,0,,0
