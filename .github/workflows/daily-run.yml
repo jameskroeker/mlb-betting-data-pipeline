@@ -34,13 +34,6 @@ jobs:
       - name: 🧠 Run transform and append to master
         run: python scripts/update_master_data.py
 
-      - name: 🔒 Lock today's signals
-        continue-on-error: true
-        run: python scripts/lock_signals.py
-        env:
-          BACKEND_URL: https://strikes-and-downs.onrender.com
-          FORCE_LOCK: "1"
-
       - name: 🧹 Archive files older than 7 days
         run: python scripts/archive_old_files.py
 
