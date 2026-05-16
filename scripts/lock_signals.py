@@ -62,3 +62,23 @@ for s in output["signals"]:
     print(f"  T1: {s['away_team']} @ {s['home_team']} | signal={s['signal_team']} | score={s['consensus_score']}")
 
 print(f"\nLocked {len(t1_signals)} T1 signals to {output_path}")
+
+# Also push to strikes-and-downs repo
+SAD_TOKEN = os.environ.get("SAD_TOKEN", "")
+if SAD_TOKEN:
+    import base64 as b64
+    sad_url = f"https://api.github.com/repos/jameskroeker/strikes-and-downs/contents/data/signals/signals_{target_date}.json"
+    sad_headers = {"Authorization": "token " + SAD_TOKEN, "Accept": "application/vnd.github.v3+json"}
+    file_content = b64.b64encode(json.dumps(output, indent=2).encode()).decode()
+    # Check if file exists
+    check = requests.get(sad_url, headers=sad_headers)
+    payload = {"message": f"Lock signals {target_date}", "content": file_content}
+    if check.status_code == 200:
+        payload["sha"] = check.json()["sha"]
+    push = requests.put(sad_url, headers=sad_headers, json=payload)
+    if push.status_code in (200, 201):
+        print(f"Pushed signals to strikes-and-downs repo")
+    else:
+        print(f"Failed to push to strikes-and-downs: {push.status_code} {push.text[:200]}")
+else:
+    print("SAD_TOKEN not set — skipping push to strikes-and-downs repo")
