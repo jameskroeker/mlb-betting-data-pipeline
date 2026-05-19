@@ -27,6 +27,7 @@ jobs:
         run: python scripts/lock_signals.py
         env:
           BACKEND_URL: https://strikes-and-downs.onrender.com
+          FORCE_LOCK: "1"
           SAD_TOKEN: ${{ secrets.SAD_TOKEN }}
       - name: Commit and Push
         run: |
