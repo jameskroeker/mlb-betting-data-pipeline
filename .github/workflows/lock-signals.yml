@@ -1,7 +1,7 @@
 name: Lock Daily Signals
 on:
   schedule:
-    - cron: "00 03 * * *"
+    - cron: "00 08 * * *"
   workflow_dispatch:
 jobs:
   lock-signals:
