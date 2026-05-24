@@ -1,0 +1,16 @@
+{
+  "date": "2026-05-24",
+  "locked_at": "2026-05-24T09:52:30Z",
+  "t1_count": 1,
+  "signals": [
+    {
+      "game_id": "178807",
+      "game_date": "2026-05-24",
+      "home_team": "ARI",
+      "away_team": "COL",
+      "signal_team": "ARI",
+      "consensus_score": 1.766,
+      "tier": 1
+    }
+  ]
+}
