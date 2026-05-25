@@ -1,0 +1,25 @@
+{
+  "date": "2026-05-25",
+  "locked_at": "2026-05-25T11:51:43Z",
+  "t1_count": 2,
+  "signals": [
+    {
+      "game_id": "178814",
+      "game_date": "2026-05-25",
+      "home_team": "MIL",
+      "away_team": "STL",
+      "signal_team": "MIL",
+      "consensus_score": 1.939,
+      "tier": 1
+    },
+    {
+      "game_id": "178816",
+      "game_date": "2026-05-25",
+      "home_team": "KCR",
+      "away_team": "NYY",
+      "signal_team": "NYY",
+      "consensus_score": -1.091,
+      "tier": 1
+    }
+  ]
+}
