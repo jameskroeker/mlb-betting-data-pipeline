@@ -1,0 +1,16 @@
+{
+  "date": "2026-05-27",
+  "locked_at": "2026-05-27T11:36:22Z",
+  "t1_count": 1,
+  "signals": [
+    {
+      "game_id": "178849",
+      "game_date": "2026-05-27",
+      "home_team": "BAL",
+      "away_team": "TBR",
+      "signal_team": "BAL",
+      "consensus_score": 1.38,
+      "tier": 1
+    }
+  ]
+}
