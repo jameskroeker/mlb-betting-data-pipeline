@@ -1,0 +1,34 @@
+{
+  "date": "2026-06-01",
+  "locked_at": "2026-06-01T13:34:35Z",
+  "t1_count": 3,
+  "signals": [
+    {
+      "game_id": "178904",
+      "game_date": "2026-06-01",
+      "home_team": "TBR",
+      "away_team": "DET",
+      "signal_team": "TBR",
+      "consensus_score": 3.037,
+      "tier": 1
+    },
+    {
+      "game_id": "178909",
+      "game_date": "2026-06-01",
+      "home_team": "CIN",
+      "away_team": "KCR",
+      "signal_team": "CIN",
+      "consensus_score": 2.814,
+      "tier": 1
+    },
+    {
+      "game_id": "178907",
+      "game_date": "2026-06-01",
+      "home_team": "MIL",
+      "away_team": "SFG",
+      "signal_team": "MIL",
+      "consensus_score": 2.005,
+      "tier": 1
+    }
+  ]
+}
