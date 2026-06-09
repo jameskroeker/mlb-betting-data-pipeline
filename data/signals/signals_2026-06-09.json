@@ -1,0 +1,16 @@
+{
+  "date": "2026-06-09",
+  "locked_at": "2026-06-09T10:58:28Z",
+  "t1_count": 1,
+  "signals": [
+    {
+      "game_id": "179011",
+      "game_date": "2026-06-09",
+      "home_team": "KCR",
+      "away_team": "TEX",
+      "signal_team": "TEX",
+      "consensus_score": -1.099,
+      "tier": 1
+    }
+  ]
+}
