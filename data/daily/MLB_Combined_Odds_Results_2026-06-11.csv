@@ -1,9 +1,9 @@
 game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result,home_1,away_1,home_2,away_2,home_3,away_3,home_4,away_4,home_5,away_5,home_6,away_6,home_7,away_7,home_8,away_8,home_9,away_9
-179033,2026-06-11,2026-06-11 13:10:00,Miami Marlins,Arizona Diamondbacks,1.91,1.99,8.5,1.9,1.97,,,,,,,,,,,,,,,,,,,,,,,
-179035,2026-06-11,2026-06-11 13:10:00,New York Mets,St. Louis Cardinals,1.73,2.24,9.0,1.99,1.88,,,,,,,,,,,,,,,,,,,,,,,
-179036,2026-06-11,2026-06-11 13:10:00,Detroit Tigers,Minnesota Twins,1.83,2.10,9.5,1.99,1.88,,,,,,,,,,,,,,,,,,,,,,,
-179037,2026-06-11,2026-06-11 14:10:00,Kansas City Royals,Texas Rangers,1.88,2.03,10.0,1.92,1.95,,,,,,,,,,,,,,,,,,,,,,,
-179038,2026-06-11,2026-06-11 15:10:00,Colorado Rockies,Chicago Cubs,2.28,1.71,11.0,1.88,2.0,,,,,,,,,,,,,,,,,,,,,,,
-179034,2026-06-11,2026-06-11 18:40:00,Pittsburgh Pirates,Los Angeles Dodgers,2.42,1.63,9.5,1.98,1.89,,,,,,,,,,,,,,,,,,,,,,,
-179040,2026-06-11,2026-06-11 19:05:00,Baltimore Orioles,Seattle Mariners,2.00,1.91,8.5,1.93,1.94,,,,,,,,,,,,,,,,,,,,,,,
+179033,2026-06-11,2026-06-11 13:10:00,Miami Marlins,Arizona Diamondbacks,1.91,1.99,8.5,1.9,1.97,2.0,0.0,Finished,Miami Marlins,Under,1.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,0.0
+179035,2026-06-11,2026-06-11 13:10:00,New York Mets,St. Louis Cardinals,1.73,2.24,9.0,1.99,1.88,5.0,4.0,Finished,New York Mets,Push,3.0,1.0,0.0,3.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,,0.0
+179036,2026-06-11,2026-06-11 13:10:00,Detroit Tigers,Minnesota Twins,1.83,2.1,9.5,1.99,1.88,11.0,0.0,Finished,Detroit Tigers,Over,1.0,0.0,0.0,0.0,0.0,0.0,3.0,0.0,1.0,0.0,2.0,0.0,1.0,0.0,3.0,0.0,,0.0
+179037,2026-06-11,2026-06-11 14:10:00,Kansas City Royals,Texas Rangers,1.88,2.03,10.0,1.92,1.95,2.0,4.0,Finished,Texas Rangers,Under,0.0,1.0,0.0,1.0,0.0,1.0,2.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+179038,2026-06-11,2026-06-11 15:10:00,Colorado Rockies,Chicago Cubs,2.28,1.71,11.0,1.88,2.0,3.0,9.0,Finished,Chicago Cubs,Over,0.0,0.0,0.0,0.0,1.0,0.0,1.0,4.0,0.0,2.0,0.0,0.0,0.0,2.0,0.0,1.0,1.0,0.0
+179034,2026-06-11,2026-06-11 18:40:00,Pittsburgh Pirates,Los Angeles Dodgers,2.42,1.63,9.5,1.98,1.89,6.0,8.0,Finished,Los Angeles Dodgers,Over,0.0,0.0,0.0,0.0,0.0,3.0,0.0,2.0,4.0,0.0,0.0,0.0,0.0,2.0,2.0,1.0,0.0,0.0
+179040,2026-06-11,2026-06-11 19:05:00,Baltimore Orioles,Seattle Mariners,2.0,1.91,8.5,1.93,1.94,7.0,5.0,Finished,Baltimore Orioles,Over,0.0,1.0,0.0,0.0,6.0,0.0,0.0,4.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,0.0
 179039,2026-06-11,2026-06-11 19:40:00,Chicago White Sox,Atlanta Braves,2.07,1.85,8.5,1.88,1.98,,,,,,,,,,,,,,,,,,,,,,,
