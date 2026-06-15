@@ -1,0 +1,16 @@
+{
+  "date": "2026-06-15",
+  "locked_at": "2026-06-15T13:52:58Z",
+  "t1_count": 1,
+  "signals": [
+    {
+      "game_id": "179093",
+      "game_date": "2026-06-15",
+      "home_team": "CHC",
+      "away_team": "COL",
+      "signal_team": "CHC",
+      "consensus_score": 4.611,
+      "tier": 1
+    }
+  ]
+}
