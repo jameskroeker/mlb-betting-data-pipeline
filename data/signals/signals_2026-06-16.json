@@ -1,0 +1,25 @@
+{
+  "date": "2026-06-16",
+  "locked_at": "2026-06-16T12:51:34Z",
+  "t1_count": 2,
+  "signals": [
+    {
+      "game_id": "179106",
+      "game_date": "2026-06-16",
+      "home_team": "CHC",
+      "away_team": "COL",
+      "signal_team": "CHC",
+      "consensus_score": 3.664,
+      "tier": 1
+    },
+    {
+      "game_id": "179108",
+      "game_date": "2026-06-16",
+      "home_team": "ATL",
+      "away_team": "SFG",
+      "signal_team": "ATL",
+      "consensus_score": 1.25,
+      "tier": 1
+    }
+  ]
+}
