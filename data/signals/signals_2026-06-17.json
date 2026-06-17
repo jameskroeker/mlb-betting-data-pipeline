@@ -1,0 +1,34 @@
+{
+  "date": "2026-06-17",
+  "locked_at": "2026-06-17T12:14:32Z",
+  "t1_count": 3,
+  "signals": [
+    {
+      "game_id": "179120",
+      "game_date": "2026-06-17",
+      "home_team": "CHC",
+      "away_team": "COL",
+      "signal_team": "CHC",
+      "consensus_score": 3.809,
+      "tier": 1
+    },
+    {
+      "game_id": "179118",
+      "game_date": "2026-06-17",
+      "home_team": "LAD",
+      "away_team": "TBR",
+      "signal_team": "LAD",
+      "consensus_score": 1.242,
+      "tier": 1
+    },
+    {
+      "game_id": "179116",
+      "game_date": "2026-06-17",
+      "home_team": "NYY",
+      "away_team": "CWS",
+      "signal_team": "NYY",
+      "consensus_score": 1.21,
+      "tier": 1
+    }
+  ]
+}
