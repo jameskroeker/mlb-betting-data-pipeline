@@ -1,0 +1,10 @@
+game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result,home_1,away_1,home_2,away_2,home_3,away_3,home_4,away_4,home_5,away_5,home_6,away_6,home_7,away_7,home_8,away_8,home_9,away_9
+179131,2026-06-18,2026-06-18 13:35:00,Boston Red Sox,Toronto Blue Jays,1.82,2.11,8.5,1.92,1.95,,,,,,,,,,,,,,,,,,,,,,,
+179129,2026-06-18,2026-06-18 14:10:00,Milwaukee Brewers,Cleveland Guardians,1.68,2.33,7.5,1.98,1.89,,,,,,,,,,,,,,,,,,,,,,,
+179126,2026-06-18,2026-06-18 14:35:00,Texas Rangers,Minnesota Twins,2.11,1.81,7.5,1.92,1.95,,,,,,,,,,,,,,,,,,,,,,,
+179127,2026-06-18,2026-06-18 16:10:00,Seattle Mariners,Baltimore Orioles,1.68,2.32,7.5,1.88,2.0,,,,,,,,,,,,,,,,,,,,,,,
+179125,2026-06-18,2026-06-18 18:40:00,Philadelphia Phillies,New York Mets,1.84,2.07,9.5,1.99,1.88,,,,,,,,,,,,,,,,,,,,,,,
+179128,2026-06-18,2026-06-18 19:05:00,New York Yankees,Chicago White Sox,1.66,2.37,9.5,1.95,1.92,,,,,,,,,,,,,,,,,,,,,,,
+179132,2026-06-18,2026-06-18 19:15:00,Atlanta Braves,San Francisco Giants,1.72,2.25,8.0,1.95,1.92,,,,,,,,,,,,,,,,,,,,,,,
+179130,2026-06-18,2026-06-18 19:40:00,Kansas City Royals,St. Louis Cardinals,1.88,2.02,9.0,2.02,1.85,,,,,,,,,,,,,,,,,,,,,,,
+179133,2026-06-18,2026-06-18 21:40:00,Athletics,Los Angeles Angels,1.75,2.08,10.0,1.89,1.87,,,,,,,,,,,,,,,,,,,,,,,
