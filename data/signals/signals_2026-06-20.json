@@ -1,0 +1,25 @@
+{
+  "date": "2026-06-20",
+  "locked_at": "2026-06-20T10:30:54Z",
+  "t1_count": 2,
+  "signals": [
+    {
+      "game_id": "179154",
+      "game_date": "2026-06-20",
+      "home_team": "LAD",
+      "away_team": "BAL",
+      "signal_team": "LAD",
+      "consensus_score": 2.077,
+      "tier": 1
+    },
+    {
+      "game_id": "179153",
+      "game_date": "2026-06-20",
+      "home_team": "ATH",
+      "away_team": "LAA",
+      "signal_team": "ATH",
+      "consensus_score": 1.768,
+      "tier": 1
+    }
+  ]
+}
