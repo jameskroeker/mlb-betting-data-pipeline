@@ -1,15 +1,15 @@
 game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result,home_1,away_1,home_2,away_2,home_3,away_3,home_4,away_4,home_5,away_5,home_6,away_6,home_7,away_7,home_8,away_8,home_9,away_9
-179156,2026-06-20,2026-06-20 13:10:00,Detroit Tigers,Chicago White Sox,1.74,2.22,8.5,1.89,1.98,,,,,,,,,,,,,,,,,,,,,,,
-179152,2026-06-20,2026-06-20 13:35:00,New York Yankees,Cincinnati Reds,1.53,2.69,9.5,2.0,1.87,,,,,,,,,,,,,,,,,,,,,,,
-179158,2026-06-20,2026-06-20 14:20:00,Chicago Cubs,Toronto Blue Jays,1.82,2.11,9.0,1.83,2.04,,,,,,,,,,,,,,,,,,,,,,,
-179148,2026-06-20,2026-06-20 16:05:00,Texas Rangers,San Diego Padres,1.79,2.15,7.5,1.95,1.92,,,,,,,,,,,,,,,,,,,,,,,
-179147,2026-06-20,2026-06-20 16:10:00,Miami Marlins,San Francisco Giants,1.77,2.18,8.0,2.01,1.86,,,,,,,,,,,,,,,,,,,,,,,
-179149,2026-06-20,2026-06-20 16:10:00,Tampa Bay Rays,Washington Nationals,1.84,2.08,8.5,2.0,1.88,,,,,,,,,,,,,,,,,,,,,,,
-179159,2026-06-20,2026-06-20 16:10:00,Atlanta Braves,Milwaukee Brewers,1.79,2.14,7.0,1.85,2.02,,,,,,,,,,,,,,,,,,,,,,,
-179151,2026-06-20,2026-06-20 19:15:00,Philadelphia Phillies,New York Mets,1.55,2.62,7.5,2.0,1.88,,,,,,,,,,,,,,,,,,,,,,,
-179155,2026-06-20,2026-06-20 19:15:00,Houston Astros,Cleveland Guardians,1.72,2.26,8.5,1.98,1.88,,,,,,,,,,,,,,,,,,,,,,,
-179157,2026-06-20,2026-06-20 21:10:00,Colorado Rockies,Pittsburgh Pirates,2.68,1.53,10.5,2.0,1.87,,,,,,,,,,,,,,,,,,,,,,,
-179153,2026-06-20,2026-06-20 22:05:00,Athletics,Los Angeles Angels,1.67,2.37,10.0,2.0,1.89,,,,,,,,,,,,,,,,,,,,,,,
-179154,2026-06-20,2026-06-20 22:10:00,Los Angeles Dodgers,Baltimore Orioles,1.41,2.91,8.5,1.89,1.89,,,,,,,,,,,,,,,,,,,,,,,
-179160,2026-06-20,2026-06-20 22:10:00,Arizona Diamondbacks,Minnesota Twins,1.78,2.16,9.0,1.84,2.03,,,,,,,,,,,,,,,,,,,,,,,
-179164,2026-06-20,2026-06-20 22:10:00,Seattle Mariners,Boston Red Sox,1.81,2.11,7.5,2.05,1.83,,,,,,,,,,,,,,,,,,,,,,,
+179156,2026-06-20,2026-06-20 13:10:00,Detroit Tigers,Chicago White Sox,1.74,2.22,8.5,1.89,1.98,4,1,Finished,Detroit Tigers,Under,0,1,0,0,0,0,0,0,1,0,2,0,1,0,0,0,,0
+179152,2026-06-20,2026-06-20 13:35:00,New York Yankees,Cincinnati Reds,1.53,2.69,9.5,2.0,1.87,2,10,Finished,Cincinnati Reds,Over,1,0,0,0,0,2,0,0,0,4,0,0,0,0,1,4,0.0,0
+179158,2026-06-20,2026-06-20 14:20:00,Chicago Cubs,Toronto Blue Jays,1.82,2.11,9.0,1.83,2.04,6,8,Finished,Toronto Blue Jays,Over,0,0,3,0,0,0,0,0,0,0,2,0,0,3,1,5,0.0,0
+179148,2026-06-20,2026-06-20 16:05:00,Texas Rangers,San Diego Padres,1.79,2.15,7.5,1.95,1.92,4,6,Finished,San Diego Padres,Over,0,0,0,0,0,1,0,0,0,0,1,0,2,0,0,2,0.0,0
+179147,2026-06-20,2026-06-20 16:10:00,Miami Marlins,San Francisco Giants,1.77,2.18,8.0,2.01,1.86,6,3,Finished,Miami Marlins,Over,1,0,1,1,0,0,4,1,0,0,0,0,0,0,0,1,,0
+179149,2026-06-20,2026-06-20 16:10:00,Tampa Bay Rays,Washington Nationals,1.84,2.08,8.5,2.0,1.88,3,4,Finished,Washington Nationals,Under,1,0,0,2,1,0,0,0,0,1,0,0,0,0,0,0,1.0,1
+179159,2026-06-20,2026-06-20 16:10:00,Atlanta Braves,Milwaukee Brewers,1.79,2.14,7.0,1.85,2.02,4,3,Finished,Atlanta Braves,Push,0,0,0,0,0,0,0,0,1,0,0,2,1,1,0,0,2.0,0
+179151,2026-06-20,2026-06-20 19:15:00,Philadelphia Phillies,New York Mets,1.55,2.62,7.5,2.0,1.88,15,3,Finished,Philadelphia Phillies,Over,1,0,2,0,8,0,0,1,2,0,0,0,2,2,0,0,,0
+179155,2026-06-20,2026-06-20 19:15:00,Houston Astros,Cleveland Guardians,1.72,2.26,8.5,1.98,1.88,1,8,Finished,Cleveland Guardians,Over,0,1,1,0,0,2,0,0,0,3,0,0,0,2,0,0,0.0,0
+179157,2026-06-20,2026-06-20 21:10:00,Colorado Rockies,Pittsburgh Pirates,2.68,1.53,10.5,2.0,1.87,2,1,Finished,Colorado Rockies,Under,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,,0
+179153,2026-06-20,2026-06-20 22:05:00,Athletics,Los Angeles Angels,1.67,2.37,10.0,2.0,1.89,0,7,Finished,Los Angeles Angels,Under,0,0,0,2,0,0,0,0,0,0,0,4,0,1,0,0,0.0,0
+179154,2026-06-20,2026-06-20 22:10:00,Los Angeles Dodgers,Baltimore Orioles,1.41,2.91,8.5,1.89,1.89,2,3,Finished,Baltimore Orioles,Under,0,0,0,1,0,0,0,2,0,0,0,0,0,0,0,0,2.0,0
+179160,2026-06-20,2026-06-20 22:10:00,Arizona Diamondbacks,Minnesota Twins,1.78,2.16,9.0,1.84,2.03,8,16,Finished,Minnesota Twins,Over,0,2,0,0,0,0,0,4,2,10,0,0,5,0,1,0,0.0,0
+179164,2026-06-20,2026-06-20 22:10:00,Seattle Mariners,Boston Red Sox,1.81,2.11,7.5,2.05,1.83,1,5,Finished,Boston Red Sox,Under,1,0,0,0,0,0,0,2,0,0,0,3,0,0,0,0,0.0,0
