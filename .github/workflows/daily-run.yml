@@ -45,6 +45,9 @@ jobs:
       - name: 🧠 Run transform and append to master
         run: python scripts/update_master_data.py
 
+      - name: 🎯 Backfill signal results
+        run: python scripts/update_signal_results.py
+
       - name: 🧹 Archive files older than 7 days
         run: python scripts/archive_old_files.py
 
