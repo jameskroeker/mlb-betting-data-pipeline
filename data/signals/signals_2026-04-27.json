@@ -10,7 +10,8 @@
       "away_team": "LAA",
       "signal_team": "CWS",
       "consensus_score": 1.857,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     },
     {
       "game_id": "178434",
@@ -19,7 +20,8 @@
       "away_team": "NYY",
       "signal_team": "NYY",
       "consensus_score": -1.412,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     }
   ]
 }

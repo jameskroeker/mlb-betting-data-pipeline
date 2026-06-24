@@ -10,7 +10,8 @@
       "away_team": "KCR",
       "signal_team": "NYY",
       "consensus_score": 5.146,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     },
     {
       "game_id": "178335",
@@ -19,7 +20,8 @@
       "away_team": "NYM",
       "signal_team": "CHC",
       "consensus_score": 4.171,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     },
     {
       "game_id": "178336",
@@ -28,7 +30,8 @@
       "away_team": "DET",
       "signal_team": "DET",
       "consensus_score": -2.282,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     },
     {
       "game_id": "178328",
@@ -37,7 +40,8 @@
       "away_team": "ATL",
       "signal_team": "ATL",
       "consensus_score": -2.26,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     }
   ]
 }

@@ -10,7 +10,8 @@
       "away_team": "PHI",
       "signal_team": "ATL",
       "consensus_score": 3.843,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     },
     {
       "game_id": "178424",
@@ -19,7 +20,8 @@
       "away_team": "NYY",
       "signal_team": "NYY",
       "consensus_score": -3.799,
-      "tier": 1
+      "tier": 1,
+      "result": "L"
     },
     {
       "game_id": "178419",
@@ -28,7 +30,8 @@
       "away_team": "MIN",
       "signal_team": "TBR",
       "consensus_score": 1.651,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     }
   ]
 }

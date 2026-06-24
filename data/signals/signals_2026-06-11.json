@@ -10,7 +10,8 @@
       "away_team": "MIN",
       "signal_team": "DET",
       "consensus_score": 0.863,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     }
   ]
 }

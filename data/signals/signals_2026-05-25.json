@@ -10,7 +10,8 @@
       "away_team": "STL",
       "signal_team": "MIL",
       "consensus_score": 1.939,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     },
     {
       "game_id": "178816",
@@ -19,7 +20,8 @@
       "away_team": "NYY",
       "signal_team": "NYY",
       "consensus_score": -1.091,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     }
   ]
 }

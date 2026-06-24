@@ -10,7 +10,8 @@
       "away_team": "SFG",
       "signal_team": "MIL",
       "consensus_score": 3.661,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     },
     {
       "game_id": "178917",
@@ -19,7 +20,8 @@
       "away_team": "CLE",
       "signal_team": "NYY",
       "consensus_score": 1.991,
-      "tier": 1
+      "tier": 1,
+      "result": "L"
     },
     {
       "game_id": "178912",
@@ -28,7 +30,8 @@
       "away_team": "DET",
       "signal_team": "TBR",
       "consensus_score": 1.774,
-      "tier": 1
+      "tier": 1,
+      "result": "L"
     }
   ]
 }

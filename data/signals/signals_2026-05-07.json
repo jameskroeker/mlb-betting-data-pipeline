@@ -10,7 +10,8 @@
       "away_team": "TBR",
       "signal_team": "BOS",
       "consensus_score": 1.155,
-      "tier": 1
+      "tier": 1,
+      "result": "L"
     },
     {
       "game_id": "178566",
@@ -19,7 +20,8 @@
       "away_team": "TEX",
       "signal_team": "NYY",
       "consensus_score": 1.067,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     }
   ]
 }

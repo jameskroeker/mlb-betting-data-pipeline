@@ -10,7 +10,8 @@
       "away_team": "COL",
       "signal_team": "ARI",
       "consensus_score": 1.766,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     }
   ]
 }

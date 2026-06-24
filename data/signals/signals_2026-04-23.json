@@ -10,7 +10,8 @@
       "away_team": "SDP",
       "signal_team": "SDP",
       "consensus_score": -4.513,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     },
     {
       "game_id": "178380",
@@ -19,7 +20,8 @@
       "away_team": "ATL",
       "signal_team": "ATL",
       "consensus_score": -3.736,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     },
     {
       "game_id": "178386",
@@ -28,7 +30,8 @@
       "away_team": "NYY",
       "signal_team": "NYY",
       "consensus_score": -3.592,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     },
     {
       "game_id": "178385",
@@ -37,7 +40,8 @@
       "away_team": "PHI",
       "signal_team": "CHC",
       "consensus_score": 3.199,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     },
     {
       "game_id": "178382",
@@ -46,7 +50,8 @@
       "away_team": "LAD",
       "signal_team": "LAD",
       "consensus_score": -2.104,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     },
     {
       "game_id": "178387",
@@ -55,7 +60,8 @@
       "away_team": "CWS",
       "signal_team": "ARI",
       "consensus_score": 1.232,
-      "tier": 1
+      "tier": 1,
+      "result": "L"
     }
   ]
 }

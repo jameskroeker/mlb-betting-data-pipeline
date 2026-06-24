@@ -10,7 +10,8 @@
       "away_team": "LAD",
       "signal_team": "LAD",
       "consensus_score": -5.227,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     },
     {
       "game_id": "178339",
@@ -19,7 +20,8 @@
       "away_team": "ATL",
       "signal_team": "ATL",
       "consensus_score": -4.677,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     },
     {
       "game_id": "178347",
@@ -28,7 +30,8 @@
       "away_team": "PHI",
       "signal_team": "CHC",
       "consensus_score": 3.199,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     },
     {
       "game_id": "178343",
@@ -37,7 +40,8 @@
       "away_team": "BAL",
       "signal_team": "BAL",
       "consensus_score": -2.3,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     },
     {
       "game_id": "178348",
@@ -46,7 +50,8 @@
       "away_team": "DET",
       "signal_team": "DET",
       "consensus_score": -1.449,
-      "tier": 1
+      "tier": 1,
+      "result": "L"
     }
   ]
 }

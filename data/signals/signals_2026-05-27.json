@@ -10,7 +10,8 @@
       "away_team": "TBR",
       "signal_team": "BAL",
       "consensus_score": 1.38,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     }
   ]
 }
