@@ -150,6 +150,7 @@ def enrich_results_for_games(games):
     """Enrich game data with scores and innings for finished games."""
     print(f"Attempting to enrich {len(games)} games...")
     enriched_count = 0
+    skipped = []  # CHANGED: track every skip with a reason for visibility
     for game_id, game in games.items():
         try:
             url = f"https://v1.baseball.api-sports.io/games?id={game_id}"
@@ -158,11 +159,18 @@ def enrich_results_for_games(games):
             data = response.json()
 
             if not data or not data.get("response"):
+                print(f"⚠️ No API response for game {game_id} ({game.get('home_team','?')} vs {game.get('away_team','?')}) — skipping")
+                skipped.append((game_id, "no_api_response"))
                 continue
 
             g = data["response"][0]
 
-            if g["status"]["long"] != "Finished":
+            status = g["status"]["long"]
+            if status != "Finished":
+                # CHANGED: Postponed/Suspended are expected occasionally (rainouts, weather delays)
+                # but still worth a visible log line so they don't vanish silently
+                print(f"ℹ️ Game {game_id} ({game.get('home_team','?')} vs {game.get('away_team','?')}) status='{status}', not yet Finished — skipping for now")
+                skipped.append((game_id, status))
                 continue
 
             scores = g.get("scores", {})
@@ -198,9 +206,18 @@ def enrich_results_for_games(games):
             enriched_count += 1
         except requests.exceptions.RequestException as e:
             print(f"❌ HTTP Error enriching game {game_id}: {e}")
+            skipped.append((game_id, f"http_error: {e}"))
         except Exception as e:
             print(f"⚠️ Error enriching game {game_id}: {e}")
+            skipped.append((game_id, f"exception: {e}"))
     print(f"Finished enriching. Successfully enriched {enriched_count} games.")
+    # CHANGED: Always print a clear summary of anything that didn't enrich,
+    # so gaps are visible in the Actions log instead of silently vanishing
+    if skipped:
+        print(f"⚠️ {len(skipped)} game(s) did not enrich this run:")
+        for gid, reason in skipped:
+            print(f"   - game {gid}: {reason}")
+        print("   These will be retried on the next scheduled run via re-enrichment.")
 
 def pull_games_and_odds(target_date):
     """Pull game schedules and odds for a target date."""
@@ -316,3 +333,4 @@ if __name__ == "__main__":
             print(f"✅ Saved today's file with re-enriched odds: {today_filename}")
 
     print("\n--- Daily Pull and Enrichment Script Complete ---")
+
