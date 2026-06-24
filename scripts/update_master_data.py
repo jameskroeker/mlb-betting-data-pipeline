@@ -238,13 +238,27 @@ def process_daily_update():
 
     new_rows = []
     games_processed = 0
+    suspended_game_flags = []  # CHANGED: track game_ids already in master (likely suspended/resumed)
     template_row = master_df.iloc[0].copy()
+    existing_game_ids = set(master_df['game_id'].unique())  # CHANGED: for duplicate/suspended-game detection
 
     for _, game in finished_games.iterrows():
         home_team = map_team_name(game['home_team'], team_mapping)
         away_team = map_team_name(game['away_team'], team_mapping)
 
         if not home_team or not away_team:
+            continue
+
+        # === CHANGED: Guard against suspended games being double-counted ===
+        # If this game_id already exists in master, the API likely marked an
+        # earlier suspension point as "Finished" and this is the real completion
+        # (or vice versa). Flag loudly and skip — requires manual review, since
+        # blindly appending would double-count both teams' records.
+        game_id_check = game.get('game_id')
+        if game_id_check in existing_game_ids:
+            print(f"🚨 SUSPENDED GAME ALERT: game_id {game_id_check} ({home_team} vs {away_team}) "
+                  f"already exists in master. Skipping to avoid duplicate. Needs manual review.")
+            suspended_game_flags.append(game_id_check)
             continue
 
         # === CHANGED: Guard against teams not in stats dict (e.g. expansion/rename edge cases) ===
@@ -283,6 +297,9 @@ def process_daily_update():
         updated_master.to_parquet(master_parquet, index=False)
         print(f"💾 Saved parquet: {len(updated_master):,} total rows")
         print(f"✅ Added {games_processed} games ({games_processed * 2} rows) from {yesterday}")
+        # CHANGED: Surface any suspended-game flags clearly at the end, not just buried mid-log
+        if suspended_game_flags:
+            print(f"🚨 {len(suspended_game_flags)} suspected suspended game(s) were SKIPPED and need manual review: {suspended_game_flags}")
         return True
     except Exception as e:
         print(f"❌ Error saving parquet: {e}")
@@ -292,3 +309,4 @@ if __name__ == "__main__":
     success = process_daily_update()
     if not success:
         exit(1)
+
