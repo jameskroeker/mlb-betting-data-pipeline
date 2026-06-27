@@ -1,0 +1,16 @@
+{
+  "date": "2026-06-27",
+  "locked_at": "2026-06-27T10:04:35Z",
+  "t1_count": 1,
+  "signals": [
+    {
+      "game_id": "179250",
+      "game_date": "2026-06-27",
+      "home_team": "TOR",
+      "away_team": "TEX",
+      "signal_team": "TOR",
+      "consensus_score": 2.359,
+      "tier": 1
+    }
+  ]
+}
