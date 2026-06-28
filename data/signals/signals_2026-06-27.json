@@ -10,7 +10,8 @@
       "away_team": "TEX",
       "signal_team": "TOR",
       "consensus_score": 2.359,
-      "tier": 1
+      "tier": 1,
+      "result": "L"
     }
   ]
 }
