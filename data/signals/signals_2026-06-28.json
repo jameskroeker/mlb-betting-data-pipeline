@@ -10,7 +10,8 @@
       "away_team": "CHC",
       "signal_team": "MIL",
       "consensus_score": 2.021,
-      "tier": 1
+      "tier": 1,
+      "result": "L"
     }
   ]
 }
