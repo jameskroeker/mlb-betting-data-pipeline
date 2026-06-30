@@ -1,0 +1,25 @@
+{
+  "date": "2026-06-30",
+  "locked_at": "2026-06-30T10:54:38Z",
+  "t1_count": 2,
+  "signals": [
+    {
+      "game_id": "179291",
+      "game_date": "2026-06-30",
+      "home_team": "MIL",
+      "away_team": "CIN",
+      "signal_team": "MIL",
+      "consensus_score": 1.478,
+      "tier": 1
+    },
+    {
+      "game_id": "179299",
+      "game_date": "2026-06-30",
+      "home_team": "ATH",
+      "away_team": "LAD",
+      "signal_team": "LAD",
+      "consensus_score": -1.025,
+      "tier": 1
+    }
+  ]
+}
