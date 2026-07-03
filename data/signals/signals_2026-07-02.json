@@ -10,7 +10,8 @@
       "away_team": "CIN",
       "signal_team": "MIL",
       "consensus_score": 1.649,
-      "tier": 1
+      "tier": 1,
+      "result": "L"
     }
   ]
 }
