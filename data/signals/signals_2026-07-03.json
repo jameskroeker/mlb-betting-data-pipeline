@@ -10,7 +10,8 @@
       "away_team": "SDP",
       "signal_team": "LAD",
       "consensus_score": 1.475,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     }
   ]
 }
