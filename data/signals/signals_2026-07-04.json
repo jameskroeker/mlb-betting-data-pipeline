@@ -1,0 +1,25 @@
+{
+  "date": "2026-07-04",
+  "locked_at": "2026-07-04T10:06:35Z",
+  "t1_count": 2,
+  "signals": [
+    {
+      "game_id": "179342",
+      "game_date": "2026-07-04",
+      "home_team": "LAD",
+      "away_team": "SDP",
+      "signal_team": "LAD",
+      "consensus_score": 1.475,
+      "tier": 1
+    },
+    {
+      "game_id": "179350",
+      "game_date": "2026-07-04",
+      "home_team": "ARI",
+      "away_team": "MIL",
+      "signal_team": "MIL",
+      "consensus_score": -1.345,
+      "tier": 1
+    }
+  ]
+}
