@@ -1,0 +1,16 @@
+{
+  "date": "2026-07-05",
+  "locked_at": "2026-07-05T10:09:22Z",
+  "t1_count": 1,
+  "signals": [
+    {
+      "game_id": "179353",
+      "game_date": "2026-07-05",
+      "home_team": "KCR",
+      "away_team": "PHI",
+      "signal_team": "PHI",
+      "consensus_score": -1.296,
+      "tier": 1
+    }
+  ]
+}
