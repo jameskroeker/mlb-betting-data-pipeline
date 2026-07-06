@@ -10,7 +10,8 @@
       "away_team": "PHI",
       "signal_team": "PHI",
       "consensus_score": -1.296,
-      "tier": 1
+      "tier": 1,
+      "result": "L"
     }
   ]
 }
