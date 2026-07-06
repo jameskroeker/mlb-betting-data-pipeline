@@ -1,0 +1,16 @@
+{
+  "date": "2026-07-06",
+  "locked_at": "2026-07-06T12:01:52Z",
+  "t1_count": 1,
+  "signals": [
+    {
+      "game_id": "179373",
+      "game_date": "2026-07-06",
+      "home_team": "LAD",
+      "away_team": "COL",
+      "signal_team": "LAD",
+      "consensus_score": 1.758,
+      "tier": 1
+    }
+  ]
+}
