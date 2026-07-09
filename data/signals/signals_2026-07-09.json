@@ -1,0 +1,16 @@
+{
+  "date": "2026-07-09",
+  "locked_at": "2026-07-09T10:56:37Z",
+  "t1_count": 1,
+  "signals": [
+    {
+      "game_id": "179415",
+      "game_date": "2026-07-09",
+      "home_team": "DET",
+      "away_team": "ATH",
+      "signal_team": "DET",
+      "consensus_score": 1.175,
+      "tier": 1
+    }
+  ]
+}
