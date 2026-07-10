@@ -10,7 +10,8 @@
       "away_team": "ATH",
       "signal_team": "DET",
       "consensus_score": 1.175,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     }
   ]
 }
