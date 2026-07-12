@@ -1,0 +1,16 @@
+{
+  "date": "2026-07-12",
+  "locked_at": "2026-07-12T09:48:21Z",
+  "t1_count": 1,
+  "signals": [
+    {
+      "game_id": "179462",
+      "game_date": "2026-07-12",
+      "home_team": "LAD",
+      "away_team": "ARI",
+      "signal_team": "LAD",
+      "consensus_score": 1.375,
+      "tier": 1
+    }
+  ]
+}
