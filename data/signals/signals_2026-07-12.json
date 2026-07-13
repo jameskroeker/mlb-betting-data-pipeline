@@ -10,7 +10,8 @@
       "away_team": "ARI",
       "signal_team": "LAD",
       "consensus_score": 1.375,
-      "tier": 1
+      "tier": 1,
+      "result": "L"
     }
   ]
 }

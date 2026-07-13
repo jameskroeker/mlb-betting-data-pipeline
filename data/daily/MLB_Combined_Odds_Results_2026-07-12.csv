@@ -1,16 +1,16 @@
 game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result,home_1,away_1,home_2,away_2,home_3,away_3,home_4,away_4,home_5,away_5,home_6,away_6,home_7,away_7,home_8,away_8,home_9,away_9
-179450,2026-07-12,2026-07-12 12:15:00,Pittsburgh Pirates,Milwaukee Brewers,1.80,2.01,7.5,1.84,1.94,,,,,,,,,,,,,,,,,,,,,,,
-179449,2026-07-12,2026-07-12 13:35:00,Washington Nationals,New York Yankees,1.99,1.92,9.0,1.83,2.05,,,,,,,,,,,,,,,,,,,,,,,
-179459,2026-07-12,2026-07-12 13:35:00,Baltimore Orioles,Kansas City Royals,1.69,2.31,9.5,1.97,1.9,,,,,,,,,,,,,,,,,,,,,,,
-179452,2026-07-12,2026-07-12 13:40:00,Tampa Bay Rays,Seattle Mariners,1.79,2.14,7.5,1.89,1.97,,,,,,,,,,,,,,,,,,,,,,,
-179457,2026-07-12,2026-07-12 13:40:00,New York Mets,Boston Red Sox,1.94,1.86,8.0,1.82,1.94,,,,,,,,,,,,,,,,,,,,,,,
-179458,2026-07-12,2026-07-12 13:40:00,Cincinnati Reds,Chicago Cubs,2.11,1.82,9.5,2.01,1.86,,,,,,,,,,,,,,,,,,,,,,,
-179461,2026-07-12,2026-07-12 13:40:00,Detroit Tigers,Philadelphia Phillies,1.89,2.02,7.0,1.86,2.02,,,,,,,,,,,,,,,,,,,,,,,
-179463,2026-07-12,2026-07-12 13:40:00,Miami Marlins,Cleveland Guardians,1.91,2.00,8.0,1.88,1.99,,,,,,,,,,,,,,,,,,,,,,,
-179456,2026-07-12,2026-07-12 14:10:00,Chicago White Sox,Athletics,1.92,1.99,8.5,1.85,2.02,,,,,,,,,,,,,,,,,,,,,,,
-179460,2026-07-12,2026-07-12 14:10:00,Minnesota Twins,Los Angeles Angels,1.78,2.16,8.5,1.86,2.01,,,,,,,,,,,,,,,,,,,,,,,
-179453,2026-07-12,2026-07-12 14:15:00,St. Louis Cardinals,Atlanta Braves,1.84,2.08,8.5,2.0,1.87,,,,,,,,,,,,,,,,,,,,,,,
-179451,2026-07-12,2026-07-12 14:35:00,Texas Rangers,Houston Astros,1.75,2.08,8.5,1.91,1.87,,,,,,,,,,,,,,,,,,,,,,,
-179454,2026-07-12,2026-07-12 16:05:00,San Francisco Giants,Colorado Rockies,1.78,2.17,8.5,1.83,2.04,,,,,,,,,,,,,,,,,,,,,,,
-179455,2026-07-12,2026-07-12 16:10:00,San Diego Padres,Toronto Blue Jays,2.09,1.83,8.5,2.0,1.87,,,,,,,,,,,,,,,,,,,,,,,
-179462,2026-07-12,2026-07-12 16:10:00,Los Angeles Dodgers,Arizona Diamondbacks,1.45,2.75,9.5,1.89,1.89,,,,,,,,,,,,,,,,,,,,,,,
+179450,2026-07-12,2026-07-12 12:15:00,Pittsburgh Pirates,Milwaukee Brewers,1.8,2.01,7.5,1.84,1.94,14,5,Finished,Pittsburgh Pirates,Over,0,0,4,0,0,0,10,2,0,0,0,0,0,0,0,3,,0
+179449,2026-07-12,2026-07-12 13:35:00,Washington Nationals,New York Yankees,1.99,1.92,9.0,1.83,2.05,3,5,Finished,New York Yankees,Under,1,0,0,0,0,0,0,0,0,2,1,0,1,0,0,2,0.0,1
+179459,2026-07-12,2026-07-12 13:35:00,Baltimore Orioles,Kansas City Royals,1.69,2.31,9.5,1.97,1.9,8,2,Finished,Baltimore Orioles,Over,0,0,2,1,0,1,0,0,0,0,5,0,1,0,0,0,,0
+179452,2026-07-12,2026-07-12 13:40:00,Tampa Bay Rays,Seattle Mariners,1.79,2.14,7.5,1.89,1.97,2,8,Finished,Seattle Mariners,Over,0,0,0,3,0,0,0,4,0,0,0,0,0,0,2,0,0.0,1
+179457,2026-07-12,2026-07-12 13:40:00,New York Mets,Boston Red Sox,1.94,1.86,8.0,1.82,1.94,2,3,Finished,Boston Red Sox,Under,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0.0,2
+179458,2026-07-12,2026-07-12 13:40:00,Cincinnati Reds,Chicago Cubs,2.11,1.82,9.5,2.01,1.86,4,8,Finished,Chicago Cubs,Over,0,2,0,0,4,0,0,2,0,0,0,0,0,4,0,0,0.0,0
+179461,2026-07-12,2026-07-12 13:40:00,Detroit Tigers,Philadelphia Phillies,1.89,2.02,7.0,1.86,2.02,0,5,Finished,Philadelphia Phillies,Under,0,0,0,0,0,1,0,0,0,0,0,4,0,0,0,0,0.0,0
+179463,2026-07-12,2026-07-12 13:40:00,Miami Marlins,Cleveland Guardians,1.91,2.0,8.0,1.88,1.99,2,5,Finished,Cleveland Guardians,Under,0,2,0,0,1,0,0,0,0,1,0,0,0,1,0,0,1.0,1
+179456,2026-07-12,2026-07-12 14:10:00,Chicago White Sox,Athletics,1.92,1.99,8.5,1.85,2.02,9,1,Finished,Chicago White Sox,Over,6,1,0,0,0,0,0,0,3,0,0,0,0,0,0,0,,0
+179460,2026-07-12,2026-07-12 14:10:00,Minnesota Twins,Los Angeles Angels,1.78,2.16,8.5,1.86,2.01,4,2,Finished,Minnesota Twins,Under,0,0,0,1,3,0,0,0,0,0,0,0,0,1,1,0,,0
+179453,2026-07-12,2026-07-12 14:15:00,St. Louis Cardinals,Atlanta Braves,1.84,2.08,8.5,2.0,1.87,3,4,Finished,Atlanta Braves,Under,1,0,0,1,0,0,0,1,0,0,2,1,0,0,0,0,0.0,1
+179451,2026-07-12,2026-07-12 14:35:00,Texas Rangers,Houston Astros,1.75,2.08,8.5,1.91,1.87,6,5,Finished,Texas Rangers,Over,0,0,3,0,0,0,0,1,1,0,0,0,0,3,1,1,1.0,0
+179454,2026-07-12,2026-07-12 16:05:00,San Francisco Giants,Colorado Rockies,1.78,2.17,8.5,1.83,2.04,3,1,Finished,San Francisco Giants,Under,0,1,0,0,0,0,1,0,0,0,0,0,0,0,2,0,,0
+179455,2026-07-12,2026-07-12 16:10:00,San Diego Padres,Toronto Blue Jays,2.09,1.83,8.5,2.0,1.87,5,4,Finished,San Diego Padres,Over,0,1,3,0,0,0,0,2,0,0,0,0,0,0,2,1,,0
+179462,2026-07-12,2026-07-12 16:10:00,Los Angeles Dodgers,Arizona Diamondbacks,1.45,2.75,9.5,1.89,1.89,3,5,Finished,Arizona Diamondbacks,Under,1,0,0,0,2,0,0,0,0,2,0,2,0,0,0,0,0.0,1
