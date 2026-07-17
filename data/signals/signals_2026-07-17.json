@@ -1,0 +1,16 @@
+{
+  "date": "2026-07-17",
+  "locked_at": "2026-07-17T09:54:05Z",
+  "t1_count": 1,
+  "signals": [
+    {
+      "game_id": "178601",
+      "game_date": "2026-07-17",
+      "home_team": "BOS",
+      "away_team": "TBR",
+      "signal_team": "BOS",
+      "consensus_score": 0.844,
+      "tier": 1
+    }
+  ]
+}
