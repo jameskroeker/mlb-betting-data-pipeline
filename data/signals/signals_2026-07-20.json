@@ -10,7 +10,8 @@
       "away_team": "NYM",
       "signal_team": "MIL",
       "consensus_score": 1.914,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     }
   ]
 }
