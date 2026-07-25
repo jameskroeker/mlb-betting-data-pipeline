@@ -1,0 +1,34 @@
+{
+  "date": "2026-07-25",
+  "locked_at": "2026-07-25T09:43:06Z",
+  "t1_count": 3,
+  "signals": [
+    {
+      "game_id": "179582",
+      "game_date": "2026-07-25",
+      "home_team": "MIL",
+      "away_team": "COL",
+      "signal_team": "MIL",
+      "consensus_score": 4.216,
+      "tier": 1
+    },
+    {
+      "game_id": "179581",
+      "game_date": "2026-07-25",
+      "home_team": "NYM",
+      "away_team": "LAD",
+      "signal_team": "LAD",
+      "consensus_score": -1.367,
+      "tier": 1
+    },
+    {
+      "game_id": "179580",
+      "game_date": "2026-07-25",
+      "home_team": "WSH",
+      "away_team": "ARI",
+      "signal_team": "WSH",
+      "consensus_score": 1.037,
+      "tier": 1
+    }
+  ]
+}
