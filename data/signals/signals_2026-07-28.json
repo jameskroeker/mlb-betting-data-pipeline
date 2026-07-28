@@ -1,0 +1,25 @@
+{
+  "date": "2026-07-28",
+  "locked_at": "2026-07-28T10:31:02Z",
+  "t1_count": 2,
+  "signals": [
+    {
+      "game_id": "179620",
+      "game_date": "2026-07-28",
+      "home_team": "SDP",
+      "away_team": "COL",
+      "signal_team": "SDP",
+      "consensus_score": 2.202,
+      "tier": 1
+    },
+    {
+      "game_id": "179616",
+      "game_date": "2026-07-28",
+      "home_team": "NYM",
+      "away_team": "ATL",
+      "signal_team": "ATL",
+      "consensus_score": -1.481,
+      "tier": 1
+    }
+  ]
+}
