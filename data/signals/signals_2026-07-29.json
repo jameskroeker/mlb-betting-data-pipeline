@@ -1,0 +1,16 @@
+{
+  "date": "2026-07-29",
+  "locked_at": "2026-07-29T10:35:22Z",
+  "t1_count": 1,
+  "signals": [
+    {
+      "game_id": "179616",
+      "game_date": "2026-07-29",
+      "home_team": "NYM",
+      "away_team": "ATL",
+      "signal_team": "ATL",
+      "consensus_score": -1.481,
+      "tier": 1
+    }
+  ]
+}
