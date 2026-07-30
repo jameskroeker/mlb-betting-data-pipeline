@@ -10,7 +10,8 @@
       "away_team": "ATL",
       "signal_team": "ATL",
       "consensus_score": -1.481,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     }
   ]
 }
