@@ -10,7 +10,8 @@
       "away_team": "KCR",
       "signal_team": "MIN",
       "consensus_score": 1.016,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     }
   ]
 }
