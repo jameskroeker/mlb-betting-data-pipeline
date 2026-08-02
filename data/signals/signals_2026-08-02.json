@@ -1,0 +1,16 @@
+{
+  "date": "2026-08-02",
+  "locked_at": "2026-08-02T09:53:27Z",
+  "t1_count": 1,
+  "signals": [
+    {
+      "game_id": "179686",
+      "game_date": "2026-08-02",
+      "home_team": "LAA",
+      "away_team": "MIL",
+      "signal_team": "MIL",
+      "consensus_score": -1.989,
+      "tier": 1
+    }
+  ]
+}
