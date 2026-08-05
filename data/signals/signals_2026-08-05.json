@@ -1,0 +1,16 @@
+{
+  "date": "2026-08-05",
+  "locked_at": "2026-08-05T10:31:21Z",
+  "t1_count": 1,
+  "signals": [
+    {
+      "game_id": "179737",
+      "game_date": "2026-08-05",
+      "home_team": "BAL",
+      "away_team": "LAA",
+      "signal_team": "BAL",
+      "consensus_score": 1.856,
+      "tier": 1
+    }
+  ]
+}
