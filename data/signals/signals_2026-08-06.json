@@ -10,7 +10,8 @@
       "away_team": "LAA",
       "signal_team": "BAL",
       "consensus_score": 1.604,
-      "tier": 1
+      "tier": 1,
+      "result": "L"
     },
     {
       "game_id": "179743",
@@ -19,7 +20,8 @@
       "away_team": "ATH",
       "signal_team": "CIN",
       "consensus_score": 1.237,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     },
     {
       "game_id": "179747",
@@ -28,7 +30,8 @@
       "away_team": "MIA",
       "signal_team": "ATL",
       "consensus_score": 1.018,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     }
   ]
 }
