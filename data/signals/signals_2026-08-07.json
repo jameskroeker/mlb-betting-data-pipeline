@@ -1,0 +1,34 @@
+{
+  "date": "2026-08-07",
+  "locked_at": "2026-08-07T08:55:29Z",
+  "t1_count": 3,
+  "signals": [
+    {
+      "game_id": "179763",
+      "game_date": "2026-08-07",
+      "home_team": "BOS",
+      "away_team": "ATH",
+      "signal_team": "BOS",
+      "consensus_score": 4.06,
+      "tier": 1
+    },
+    {
+      "game_id": "179757",
+      "game_date": "2026-08-07",
+      "home_team": "PHI",
+      "away_team": "TOR",
+      "signal_team": "PHI",
+      "consensus_score": 1.421,
+      "tier": 1
+    },
+    {
+      "game_id": "179752",
+      "game_date": "2026-08-07",
+      "home_team": "STL",
+      "away_team": "COL",
+      "signal_team": "STL",
+      "consensus_score": 1.051,
+      "tier": 1
+    }
+  ]
+}
