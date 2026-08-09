@@ -1,0 +1,61 @@
+{
+  "date": "2026-08-09",
+  "locked_at": "2026-08-09T08:37:44Z",
+  "t1_count": 6,
+  "signals": [
+    {
+      "game_id": "179792",
+      "game_date": "2026-08-09",
+      "home_team": "BOS",
+      "away_team": "ATH",
+      "signal_team": "BOS",
+      "consensus_score": 4.261,
+      "tier": 1
+    },
+    {
+      "game_id": "179788",
+      "game_date": "2026-08-09",
+      "home_team": "MIL",
+      "away_team": "MIN",
+      "signal_team": "MIL",
+      "consensus_score": 2.261,
+      "tier": 1
+    },
+    {
+      "game_id": "179790",
+      "game_date": "2026-08-09",
+      "home_team": "KCR",
+      "away_team": "CHC",
+      "signal_team": "CHC",
+      "consensus_score": -2.092,
+      "tier": 1
+    },
+    {
+      "game_id": "179787",
+      "game_date": "2026-08-09",
+      "home_team": "PHI",
+      "away_team": "TOR",
+      "signal_team": "PHI",
+      "consensus_score": 1.411,
+      "tier": 1
+    },
+    {
+      "game_id": "179789",
+      "game_date": "2026-08-09",
+      "home_team": "ARI",
+      "away_team": "LAD",
+      "signal_team": "LAD",
+      "consensus_score": -1.355,
+      "tier": 1
+    },
+    {
+      "game_id": "179782",
+      "game_date": "2026-08-09",
+      "home_team": "STL",
+      "away_team": "COL",
+      "signal_team": "STL",
+      "consensus_score": 1.077,
+      "tier": 1
+    }
+  ]
+}
