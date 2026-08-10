@@ -1,0 +1,25 @@
+{
+  "date": "2026-08-10",
+  "locked_at": "2026-08-10T09:15:50Z",
+  "t1_count": 2,
+  "signals": [
+    {
+      "game_id": "179803",
+      "game_date": "2026-08-10",
+      "home_team": "ARI",
+      "away_team": "COL",
+      "signal_team": "ARI",
+      "consensus_score": 1.449,
+      "tier": 1
+    },
+    {
+      "game_id": "179795",
+      "game_date": "2026-08-10",
+      "home_team": "TOR",
+      "away_team": "BOS",
+      "signal_team": "BOS",
+      "consensus_score": -1.26,
+      "tier": 1
+    }
+  ]
+}
