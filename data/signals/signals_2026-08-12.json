@@ -1,0 +1,43 @@
+{
+  "date": "2026-08-12",
+  "locked_at": "2026-08-12T09:07:59Z",
+  "t1_count": 4,
+  "signals": [
+    {
+      "game_id": "179827",
+      "game_date": "2026-08-12",
+      "home_team": "LAD",
+      "away_team": "KCR",
+      "signal_team": "LAD",
+      "consensus_score": 3.616,
+      "tier": 1
+    },
+    {
+      "game_id": "179832",
+      "game_date": "2026-08-12",
+      "home_team": "ATH",
+      "away_team": "TBR",
+      "signal_team": "TBR",
+      "consensus_score": -2.552,
+      "tier": 1
+    },
+    {
+      "game_id": "179833",
+      "game_date": "2026-08-12",
+      "home_team": "ARI",
+      "away_team": "COL",
+      "signal_team": "ARI",
+      "consensus_score": 2.034,
+      "tier": 1
+    },
+    {
+      "game_id": "179820",
+      "game_date": "2026-08-12",
+      "home_team": "WSH",
+      "away_team": "CHC",
+      "signal_team": "CHC",
+      "consensus_score": -1.052,
+      "tier": 1
+    }
+  ]
+}
