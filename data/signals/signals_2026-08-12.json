@@ -10,7 +10,8 @@
       "away_team": "KCR",
       "signal_team": "LAD",
       "consensus_score": 3.616,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     },
     {
       "game_id": "179832",
@@ -19,7 +20,8 @@
       "away_team": "TBR",
       "signal_team": "TBR",
       "consensus_score": -2.552,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     },
     {
       "game_id": "179833",
@@ -28,7 +30,8 @@
       "away_team": "COL",
       "signal_team": "ARI",
       "consensus_score": 2.034,
-      "tier": 1
+      "tier": 1,
+      "result": "L"
     },
     {
       "game_id": "179820",
@@ -37,7 +40,8 @@
       "away_team": "CHC",
       "signal_team": "CHC",
       "consensus_score": -1.052,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     }
   ]
 }
