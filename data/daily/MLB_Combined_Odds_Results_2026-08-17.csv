@@ -1,8 +1,8 @@
 game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result,home_1,away_1,home_2,away_2,home_3,away_3,home_4,away_4,home_5,away_5,home_6,away_6,home_7,away_7,home_8,away_8,home_9,away_9
-178802,2026-08-17,2026-08-17 13:40:00,Cincinnati Reds,St. Louis Cardinals,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+178802,2026-08-17,2026-08-17 13:40:00,Cincinnati Reds,St. Louis Cardinals,1.95,1.95,9.5,2.02,1.85,,,,,,,,,,,,,,,,,,,,,,,
 179888,2026-08-17,2026-08-17 18:05:00,Tampa Bay Rays,Baltimore Orioles,1.62,2.44,7.5,1.87,2.01,,,,,,,,,,,,,,,,,,,,,,,
 179890,2026-08-17,2026-08-17 18:40:00,Philadelphia Phillies,Miami Marlins,1.42,3.11,8.0,1.95,1.92,,,,,,,,,,,,,,,,,,,,,,,
-179893,2026-08-17,2026-08-17 18:40:00,Cincinnati Reds,St. Louis Cardinals,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+179893,2026-08-17,2026-08-17 18:40:00,Cincinnati Reds,St. Louis Cardinals,2.07,1.87,9.0,1.91,1.98,,,,,,,,,,,,,,,,,,,,,,,
 179889,2026-08-17,2026-08-17 19:05:00,Pittsburgh Pirates,Detroit Tigers,2.07,1.85,8.0,1.93,1.94,,,,,,,,,,,,,,,,,,,,,,,
 179887,2026-08-17,2026-08-17 19:10:00,New York Mets,San Diego Padres,1.85,2.07,8.0,1.93,1.94,,,,,,,,,,,,,,,,,,,,,,,
 179895,2026-08-17,2026-08-17 19:10:00,Boston Red Sox,Arizona Diamondbacks,1.71,2.26,9.0,2.0,1.87,,,,,,,,,,,,,,,,,,,,,,,
