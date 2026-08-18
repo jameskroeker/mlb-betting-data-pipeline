@@ -1,0 +1,25 @@
+{
+  "date": "2026-08-18",
+  "locked_at": "2026-08-18T08:32:21Z",
+  "t1_count": 2,
+  "signals": [
+    {
+      "game_id": "179906",
+      "game_date": "2026-08-18",
+      "home_team": "COL",
+      "away_team": "LAD",
+      "signal_team": "LAD",
+      "consensus_score": -3.667,
+      "tier": 1
+    },
+    {
+      "game_id": "179905",
+      "game_date": "2026-08-18",
+      "home_team": "HOU",
+      "away_team": "LAA",
+      "signal_team": "HOU",
+      "consensus_score": 1.286,
+      "tier": 1
+    }
+  ]
+}
