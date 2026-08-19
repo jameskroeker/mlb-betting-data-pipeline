@@ -10,7 +10,8 @@
       "away_team": "LAD",
       "signal_team": "LAD",
       "consensus_score": -3.667,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     },
     {
       "game_id": "179905",
@@ -19,7 +20,8 @@
       "away_team": "LAA",
       "signal_team": "HOU",
       "consensus_score": 1.286,
-      "tier": 1
+      "tier": 1,
+      "result": "L"
     }
   ]
 }
