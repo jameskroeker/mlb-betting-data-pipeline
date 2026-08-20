@@ -10,7 +10,8 @@
       "away_team": "LAD",
       "signal_team": "LAD",
       "consensus_score": -3.667,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     },
     {
       "game_id": "179913",
@@ -19,7 +20,8 @@
       "away_team": "TOR",
       "signal_team": "TBR",
       "consensus_score": 1.946,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     },
     {
       "game_id": "179911",
@@ -28,7 +30,8 @@
       "away_team": "SEA",
       "signal_team": "MIL",
       "consensus_score": 1.163,
-      "tier": 1
+      "tier": 1,
+      "result": "L"
     },
     {
       "game_id": "179922",
@@ -37,7 +40,8 @@
       "away_team": "STL",
       "signal_team": "CIN",
       "consensus_score": 1.069,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     }
   ]
 }
