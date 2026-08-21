@@ -10,7 +10,8 @@
       "away_team": "LAA",
       "signal_team": "HOU",
       "consensus_score": 1.851,
-      "tier": 1
+      "tier": 1,
+      "result": "L"
     }
   ]
 }
