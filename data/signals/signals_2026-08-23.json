@@ -1,0 +1,43 @@
+{
+  "date": "2026-08-23",
+  "locked_at": "2026-08-23T08:24:42Z",
+  "t1_count": 4,
+  "signals": [
+    {
+      "game_id": "179977",
+      "game_date": "2026-08-23",
+      "home_team": "BOS",
+      "away_team": "SFG",
+      "signal_team": "BOS",
+      "consensus_score": 3.965,
+      "tier": 1
+    },
+    {
+      "game_id": "179974",
+      "game_date": "2026-08-23",
+      "home_team": "HOU",
+      "away_team": "ATH",
+      "signal_team": "HOU",
+      "consensus_score": 1.597,
+      "tier": 1
+    },
+    {
+      "game_id": "179966",
+      "game_date": "2026-08-23",
+      "home_team": "TEX",
+      "away_team": "LAA",
+      "signal_team": "TEX",
+      "consensus_score": 1.225,
+      "tier": 1
+    },
+    {
+      "game_id": "179979",
+      "game_date": "2026-08-23",
+      "home_team": "ARI",
+      "away_team": "CIN",
+      "signal_team": "ARI",
+      "consensus_score": 1.011,
+      "tier": 1
+    }
+  ]
+}
