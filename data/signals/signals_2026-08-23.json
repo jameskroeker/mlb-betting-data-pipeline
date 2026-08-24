@@ -10,7 +10,8 @@
       "away_team": "SFG",
       "signal_team": "BOS",
       "consensus_score": 3.965,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     },
     {
       "game_id": "179974",
@@ -19,7 +20,8 @@
       "away_team": "ATH",
       "signal_team": "HOU",
       "consensus_score": 1.597,
-      "tier": 1
+      "tier": 1,
+      "result": "L"
     },
     {
       "game_id": "179966",
@@ -28,7 +30,8 @@
       "away_team": "LAA",
       "signal_team": "TEX",
       "consensus_score": 1.225,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     },
     {
       "game_id": "179979",
@@ -37,7 +40,8 @@
       "away_team": "CIN",
       "signal_team": "ARI",
       "consensus_score": 1.011,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     }
   ]
 }
