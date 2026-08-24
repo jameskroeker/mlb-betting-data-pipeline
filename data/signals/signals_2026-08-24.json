@@ -1,0 +1,16 @@
+{
+  "date": "2026-08-24",
+  "locked_at": "2026-08-24T08:43:11Z",
+  "t1_count": 1,
+  "signals": [
+    {
+      "game_id": "179980",
+      "game_date": "2026-08-24",
+      "home_team": "WSH",
+      "away_team": "COL",
+      "signal_team": "WSH",
+      "consensus_score": 0.98,
+      "tier": 1
+    }
+  ]
+}
