@@ -68,9 +68,37 @@ def fetch_bets(game_id, bookmaker_id):
         print(f"  ⚠️ Error from bookmaker {bookmaker_id} for game {game_id}: {e}")
         return None
 
+# Build a lookup of API game IDs by home+away team name for today
+# The stored game_id in the CSV may differ from what the odds API expects
+import requests as _requests
+api_game_id_lookup = {}
+try:
+    lookup_url = f"https://v1.baseball.api-sports.io/games?league=1&season={today[:4]}&date={today}"
+    lookup_resp = _requests.get(lookup_url, headers=HEADERS, timeout=10)
+    lookup_data = lookup_resp.json()
+    for g in lookup_data.get("response", []):
+        key = (g["teams"]["home"]["name"].lower(), g["teams"]["away"]["name"].lower())
+        api_game_id_lookup[key] = g["id"]
+    print(f"📋 Built game ID lookup: {len(api_game_id_lookup)} games from API")
+except Exception as e:
+    print(f"⚠️ Could not build game ID lookup: {e}")
+
 for idx, row in missing.iterrows():
     game_id = int(row['game_id'])
     try:
+        # Try to find the correct API game ID by matching home+away team name
+        home_key = row['home_team'].lower()
+        away_key = row['away_team'].lower()
+        api_id = None
+        for (h, a), gid in api_game_id_lookup.items():
+            if h in home_key or home_key in h:
+                if a in away_key or away_key in a:
+                    api_id = gid
+                    break
+        if api_id and api_id != game_id:
+            print(f"  🔄 Remapped game_id {game_id} → {api_id} for {row['home_team']} vs {row['away_team']}")
+            game_id = api_id
+
         # Try Pinnacle first, Marathon as fallback
         bets = None
         bookmaker_used = None
