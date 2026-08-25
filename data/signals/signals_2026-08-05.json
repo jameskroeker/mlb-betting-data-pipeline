@@ -10,7 +10,8 @@
       "away_team": "LAA",
       "signal_team": "BAL",
       "consensus_score": 1.856,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     }
   ]
 }
