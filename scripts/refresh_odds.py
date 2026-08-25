@@ -43,7 +43,8 @@ if not filename:
 df = pd.read_csv(filename)
 
 # Find games with missing moneyline OR total
-missing = df[df['moneyline_home'].isna() | df['total_line'].isna()]
+# Catch both NaN and empty string — CSV stores missing values as empty strings
+missing = df[df['moneyline_home'].isna() | (df['moneyline_home'] == '') | df['total_line'].isna() | (df['total_line'] == '')]
 
 if len(missing) == 0:
     print(f"✅ All odds present for {today} — nothing to refresh")
