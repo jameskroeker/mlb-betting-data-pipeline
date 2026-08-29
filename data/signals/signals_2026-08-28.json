@@ -10,7 +10,8 @@
       "away_team": "COL",
       "signal_team": "ATL",
       "consensus_score": 3.322,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     },
     {
       "game_id": "180036",
@@ -19,7 +20,8 @@
       "away_team": "TEX",
       "signal_team": "MIL",
       "consensus_score": 1.596,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     },
     {
       "game_id": "180034",
@@ -28,7 +30,8 @@
       "away_team": "KCR",
       "signal_team": "CLE",
       "consensus_score": 1.024,
-      "tier": 1
+      "tier": 1,
+      "result": "L"
     }
   ]
 }
