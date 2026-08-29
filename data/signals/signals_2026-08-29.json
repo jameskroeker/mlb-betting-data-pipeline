@@ -1,0 +1,16 @@
+{
+  "date": "2026-08-29",
+  "locked_at": "2026-08-29T13:35:20Z",
+  "t1_count": 1,
+  "signals": [
+    {
+      "game_id": "180054",
+      "game_date": "2026-08-29",
+      "home_team": "ATL",
+      "away_team": "COL",
+      "signal_team": "ATL",
+      "consensus_score": 3.322,
+      "tier": 1
+    }
+  ]
+}
