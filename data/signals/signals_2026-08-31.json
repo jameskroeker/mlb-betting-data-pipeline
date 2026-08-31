@@ -1,0 +1,25 @@
+{
+  "date": "2026-08-31",
+  "locked_at": "2026-08-31T15:48:22Z",
+  "t1_count": 2,
+  "signals": [
+    {
+      "game_id": "180076",
+      "game_date": "2026-08-31",
+      "home_team": "TEX",
+      "away_team": "ATH",
+      "signal_team": "TEX",
+      "consensus_score": 3.694,
+      "tier": 1
+    },
+    {
+      "game_id": "179132",
+      "game_date": "2026-08-31",
+      "home_team": "ATL",
+      "away_team": "SFG",
+      "signal_team": "ATL",
+      "consensus_score": 2.012,
+      "tier": 1
+    }
+  ]
+}
