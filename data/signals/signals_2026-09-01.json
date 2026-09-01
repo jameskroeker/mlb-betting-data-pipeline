@@ -1,0 +1,34 @@
+{
+  "date": "2026-09-01",
+  "locked_at": "2026-09-01T13:02:27Z",
+  "t1_count": 3,
+  "signals": [
+    {
+      "game_id": "180085",
+      "game_date": "2026-09-01",
+      "home_team": "TEX",
+      "away_team": "ATH",
+      "signal_team": "TEX",
+      "consensus_score": 2.03,
+      "tier": 1
+    },
+    {
+      "game_id": "180088",
+      "game_date": "2026-09-01",
+      "home_team": "LAD",
+      "away_team": "STL",
+      "signal_team": "LAD",
+      "consensus_score": 1.831,
+      "tier": 1
+    },
+    {
+      "game_id": "180092",
+      "game_date": "2026-09-01",
+      "home_team": "CLE",
+      "away_team": "TOR",
+      "signal_team": "CLE",
+      "consensus_score": 1.584,
+      "tier": 1
+    }
+  ]
+}
