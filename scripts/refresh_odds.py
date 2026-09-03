@@ -90,11 +90,19 @@ for idx, row in missing.iterrows():
         home_key = row['home_team'].lower()
         away_key = row['away_team'].lower()
         api_id = None
+        # Normalize team names for matching — remove punctuation and extra spaces
+        def normalize(name):
+            return name.lower().replace('.', '').replace('  ', ' ').strip()
+        norm_home = normalize(home_key)
+        norm_away = normalize(away_key)
         for (h, a), gid in api_game_id_lookup.items():
-            if h in home_key or home_key in h:
-                if a in away_key or away_key in a:
-                    api_id = gid
-                    break
+            nh, na = normalize(h), normalize(a)
+            # Check if any significant word matches (at least 3 chars)
+            home_match = nh in norm_home or norm_home in nh or any(w in norm_home for w in nh.split() if len(w) > 3)
+            away_match = na in norm_away or norm_away in na or any(w in norm_away for w in na.split() if len(w) > 3)
+            if home_match and away_match:
+                api_id = gid
+                break
         if api_id and api_id != game_id:
             print(f"  🔄 Remapped game_id {game_id} → {api_id} for {row['home_team']} vs {row['away_team']}")
             game_id = api_id
