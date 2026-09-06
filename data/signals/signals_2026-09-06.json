@@ -1,0 +1,16 @@
+{
+  "date": "2026-09-06",
+  "locked_at": "2026-09-06T11:55:28Z",
+  "t1_count": 1,
+  "signals": [
+    {
+      "game_id": "184961",
+      "game_date": "2026-09-06",
+      "home_team": "PIT",
+      "away_team": "LAA",
+      "signal_team": "PIT",
+      "consensus_score": 1.581,
+      "tier": 1
+    }
+  ]
+}
