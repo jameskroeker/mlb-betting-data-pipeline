@@ -269,10 +269,63 @@ def pull_games_and_odds(target_date):
         except Exception as e:
             print(f"❌ Unexpected error for {api_date}: {e}")
 
-    # Pull odds for all games using shared function
+    # Build odds API game ID lookup by querying /odds endpoint directly
+    # The /games API and /odds API use different game ID systems for the same games
+    print("🔍 Building odds API game ID lookup...")
+    odds_id_lookup = {}
+    
+    def normalize(name):
+        return name.lower().replace('.', '').replace('  ', ' ').strip()
+    
+    for api_date in api_dates:
+        for bk_id in [4, 10]:  # Pinnacle then Marathon
+            try:
+                odds_list_url = f"https://v1.baseball.api-sports.io/odds?league=1&season={CURRENT_SEASON}&date={api_date}&bookmaker={bk_id}"
+                r = requests.get(odds_list_url, headers=HEADERS, timeout=10)
+                r.raise_for_status()
+                odds_list = r.json()
+                for item in odds_list.get("response", []):
+                    odds_game_id = item.get("id")
+                    home = normalize(item.get("teams", {}).get("home", {}).get("name", ""))
+                    away = normalize(item.get("teams", {}).get("away", {}).get("name", ""))
+                    if odds_game_id and home and away:
+                        odds_id_lookup[(home, away)] = odds_game_id
+                if odds_id_lookup:
+                    break
+            except Exception as e:
+                print(f"⚠️ Could not build odds ID lookup for {api_date} bk {bk_id}: {e}")
+    
+    print(f"📋 Odds ID lookup built: {len(odds_id_lookup)} games found")
+    
+    # Remap game IDs to odds API IDs where available
+    remapped = 0
+    for game_id, game in games.items():
+        home_norm = normalize(game.get("home_team", ""))
+        away_norm = normalize(game.get("away_team", ""))
+        # Try exact match first
+        odds_id = odds_id_lookup.get((home_norm, away_norm))
+        if not odds_id:
+            # Fuzzy match on significant words
+            for (h, a), oid in odds_id_lookup.items():
+                home_match = h in home_norm or home_norm in h or any(w in home_norm for w in h.split() if len(w) > 3)
+                away_match = a in away_norm or away_norm in a or any(w in away_norm for w in a.split() if len(w) > 3)
+                if home_match and away_match:
+                    odds_id = oid
+                    break
+        if odds_id and odds_id != game_id:
+            game["odds_api_id"] = odds_id
+            remapped += 1
+        else:
+            game["odds_api_id"] = game_id
+    
+    if remapped:
+        print(f"🔄 Remapped {remapped} game IDs to odds API IDs")
+
+    # Pull odds for all games using the odds API ID
     odds_success = 0
     for game_id, game in games.items():
-        if pull_odds_for_game(game_id, game):
+        odds_id = game.get("odds_api_id", game_id)
+        if pull_odds_for_game(odds_id, game):
             odds_success += 1
 
     print(f"📊 Odds pulled for {odds_success}/{len(games)} games")
