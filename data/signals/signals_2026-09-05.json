@@ -10,7 +10,8 @@
       "away_team": "LAA",
       "signal_team": "PIT",
       "consensus_score": 1.656,
-      "tier": 1
+      "tier": 1,
+      "result": "L"
     }
   ]
 }
