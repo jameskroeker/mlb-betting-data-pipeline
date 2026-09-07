@@ -1,0 +1,25 @@
+{
+  "date": "2026-09-07",
+  "locked_at": "2026-09-07T13:57:02Z",
+  "t1_count": 2,
+  "signals": [
+    {
+      "game_id": "185631",
+      "game_date": "2026-09-07",
+      "home_team": "ATH",
+      "away_team": "TOR",
+      "signal_team": "TOR",
+      "consensus_score": -1.837,
+      "tier": 1
+    },
+    {
+      "game_id": "184977",
+      "game_date": "2026-09-07",
+      "home_team": "BOS",
+      "away_team": "LAA",
+      "signal_team": "BOS",
+      "consensus_score": 1.631,
+      "tier": 1
+    }
+  ]
+}
