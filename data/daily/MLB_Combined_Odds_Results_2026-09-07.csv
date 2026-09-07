@@ -1,0 +1,12 @@
+game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result,home_1,away_1,home_2,away_2,home_3,away_3,home_4,away_4,home_5,away_5,home_6,away_6,home_7,away_7,home_8,away_8,home_9,away_9,odds_api_id
+184973,2026-09-07,2026-09-07 13:05:00,Philadelphia Phillies,Atlanta Braves,1.61,2.46,8.0,1.93,1.93,,,,,,,,,,,,,,,,,,,,,,,,184973
+184975,2026-09-07,2026-09-07 13:10:00,Miami Marlins,New York Mets,1.88,2.02,8.0,1.96,1.91,,,,,,,,,,,,,,,,,,,,,,,,184975
+184976,2026-09-07,2026-09-07 13:35:00,Baltimore Orioles,Cleveland Guardians,1.82,2.11,8.0,1.87,2.0,,,,,,,,,,,,,,,,,,,,,,,,184976
+184977,2026-09-07,2026-09-07 13:35:00,Boston Red Sox,Los Angeles Angels,1.58,2.54,8.5,1.92,1.95,,,,,,,,,,,,,,,,,,,,,,,,184977
+184978,2026-09-07,2026-09-07 14:10:00,Kansas City Royals,Arizona Diamondbacks,,,,,,,,,,,,,,,,,,,,,,,,,,,,,184978
+184979,2026-09-07,2026-09-07 14:10:00,Milwaukee Brewers,Chicago Cubs,1.79,2.14,8.5,1.97,1.9,,,,,,,,,,,,,,,,,,,,,,,,184979
+184974,2026-09-07,2026-09-07 15:10:00,Detroit Tigers,Minnesota Twins,,,,,,,,,,,,,,,,,,,,,,,,,,,,,184974
+184980,2026-09-07,2026-09-07 17:10:00,San Diego Padres,Washington Nationals,1.52,2.72,8.0,1.93,1.94,,,,,,,,,,,,,,,,,,,,,,,,184980
+185629,2026-09-07,2026-09-07 20:10:00,San Francisco Giants,St. Louis Cardinals,,,,,,,,,,,,,,,,,,,,,,,,,,,,,185629
+185630,2026-09-07,2026-09-07 21:10:00,Los Angeles Dodgers,Cincinnati Reds,,,,,,,,,,,,,,,,,,,,,,,,,,,,,185630
+185631,2026-09-07,2026-09-07 22:05:00,Athletics,Toronto Blue Jays,2.74,1.51,8.5,1.97,1.9,,,,,,,,,,,,,,,,,,,,,,,,185631
