@@ -10,7 +10,8 @@
       "away_team": "TOR",
       "signal_team": "TOR",
       "consensus_score": -1.837,
-      "tier": 1
+      "tier": 1,
+      "result": "L"
     },
     {
       "game_id": "184977",
@@ -19,7 +20,8 @@
       "away_team": "LAA",
       "signal_team": "BOS",
       "consensus_score": 1.631,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     }
   ]
 }
