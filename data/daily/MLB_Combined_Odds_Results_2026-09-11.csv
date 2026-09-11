@@ -1,0 +1,16 @@
+game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result,home_1,away_1,home_2,away_2,home_3,away_3,home_4,away_4,home_5,away_5,home_6,away_6,home_7,away_7,home_8,away_8,home_9,away_9,odds_api_id
+185716,2026-09-11,2026-09-11 14:20:00,Chicago Cubs,Pittsburgh Pirates,,,,,,,,,,,,,,,,,,,,,,,,,,,,,185716
+185717,2026-09-11,2026-09-11 18:40:00,Detroit Tigers,Colorado Rockies,1.55,2.63,8.0,1.93,1.93,,,,,,,,,,,,,,,,,,,,,,,,185717
+185718,2026-09-11,2026-09-11 18:45:00,Washington Nationals,Los Angeles Angels,1.69,2.30,8.5,2.0,1.87,,,,,,,,,,,,,,,,,,,,,,,,185718
+185719,2026-09-11,2026-09-11 19:05:00,New York Yankees,New York Mets,1.75,2.21,7.5,1.87,2.01,,,,,,,,,,,,,,,,,,,,,,,,185719
+185720,2026-09-11,2026-09-11 19:07:00,Toronto Blue Jays,Baltimore Orioles,1.83,2.10,8.5,1.93,1.93,,,,,,,,,,,,,,,,,,,,,,,,185720
+185721,2026-09-11,2026-09-11 19:10:00,Boston Red Sox,Kansas City Royals,1.50,2.78,8.5,2.01,1.87,,,,,,,,,,,,,,,,,,,,,,,,185721
+185722,2026-09-11,2026-09-11 19:10:00,Miami Marlins,Los Angeles Dodgers,,,,,,,,,,,,,,,,,,,,,,,,,,,,,185722
+185723,2026-09-11,2026-09-11 19:10:00,Tampa Bay Rays,Houston Astros,1.60,2.49,7.5,1.87,2.0,,,,,,,,,,,,,,,,,,,,,,,,185723
+185724,2026-09-11,2026-09-11 19:15:00,Atlanta Braves,Philadelphia Phillies,1.55,2.62,7.5,1.92,1.95,,,,,,,,,,,,,,,,,,,,,,,,185724
+185725,2026-09-11,2026-09-11 19:45:00,Milwaukee Brewers,Cincinnati Reds,1.55,2.64,8.0,1.97,1.89,,,,,,,,,,,,,,,,,,,,,,,,185725
+185726,2026-09-11,2026-09-11 20:10:00,Minnesota Twins,Cleveland Guardians,,,,,,,,,,,,,,,,,,,,,,,,,,,,,185726
+185727,2026-09-11,2026-09-11 20:15:00,St. Louis Cardinals,Chicago White Sox,,,,,,,,,,,,,,,,,,,,,,,,,,,,,185727
+185728,2026-09-11,2026-09-11 21:40:00,Arizona Diamondbacks,Texas Rangers,,,,,,,,,,,,,,,,,,,,,,,,,,,,,185728
+185729,2026-09-11,2026-09-11 21:40:00,Athletics,Seattle Mariners,,,,,,,,,,,,,,,,,,,,,,,,,,,,,185729
+185730,2026-09-11,2026-09-11 22:15:00,San Francisco Giants,San Diego Padres,,,,,,,,,,,,,,,,,,,,,,,,,,,,,185730
