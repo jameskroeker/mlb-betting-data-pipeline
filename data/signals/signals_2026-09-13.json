@@ -1,0 +1,34 @@
+{
+  "date": "2026-09-13",
+  "locked_at": "2026-09-13T13:05:09Z",
+  "t1_count": 3,
+  "signals": [
+    {
+      "game_id": "185824",
+      "game_date": "2026-09-13",
+      "home_team": "MIA",
+      "away_team": "LAD",
+      "signal_team": "LAD",
+      "consensus_score": -1.451,
+      "tier": 1
+    },
+    {
+      "game_id": "185826",
+      "game_date": "2026-09-13",
+      "home_team": "MIL",
+      "away_team": "CIN",
+      "signal_team": "MIL",
+      "consensus_score": 1.376,
+      "tier": 1
+    },
+    {
+      "game_id": "185819",
+      "game_date": "2026-09-13",
+      "home_team": "WSH",
+      "away_team": "LAA",
+      "signal_team": "LAA",
+      "consensus_score": -0.833,
+      "tier": 1
+    }
+  ]
+}
