@@ -1,0 +1,16 @@
+{
+  "date": "2026-09-14",
+  "locked_at": "2026-09-14T14:41:57Z",
+  "t1_count": 1,
+  "signals": [
+    {
+      "game_id": "185833",
+      "game_date": "2026-09-14",
+      "home_team": "CIN",
+      "away_team": "LAD",
+      "signal_team": "LAD",
+      "consensus_score": -0.808,
+      "tier": 1
+    }
+  ]
+}
