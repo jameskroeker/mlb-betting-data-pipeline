@@ -1,0 +1,25 @@
+{
+  "date": "2026-09-15",
+  "locked_at": "2026-09-15T13:06:41Z",
+  "t1_count": 2,
+  "signals": [
+    {
+      "game_id": "185844",
+      "game_date": "2026-09-15",
+      "home_team": "TBR",
+      "away_team": "ATH",
+      "signal_team": "TBR",
+      "consensus_score": 3.296,
+      "tier": 1
+    },
+    {
+      "game_id": "185855",
+      "game_date": "2026-09-15",
+      "home_team": "COL",
+      "away_team": "SDP",
+      "signal_team": "SDP",
+      "consensus_score": -1.365,
+      "tier": 1
+    }
+  ]
+}
