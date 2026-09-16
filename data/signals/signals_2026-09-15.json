@@ -10,7 +10,8 @@
       "away_team": "ATH",
       "signal_team": "TBR",
       "consensus_score": 3.296,
-      "tier": 1
+      "tier": 1,
+      "result": null
     },
     {
       "game_id": "185855",
@@ -19,7 +20,8 @@
       "away_team": "SDP",
       "signal_team": "SDP",
       "consensus_score": -1.365,
-      "tier": 1
+      "tier": 1,
+      "result": "L"
     }
   ]
 }
