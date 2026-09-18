@@ -1,10 +1,10 @@
 game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result,home_1,away_1,home_2,away_2,home_3,away_3,home_4,away_4,home_5,away_5,home_6,away_6,home_7,away_7,home_8,away_8,home_9,away_9,odds_api_id
-186579,2026-09-17,2026-09-17 12:35:00,Pittsburgh Pirates,Milwaukee Brewers,2.26,1.71,9.0,1.98,1.89,,,,,,,,,,,,,,,,,,,,,,,,186579
-186580,2026-09-17,2026-09-17 12:40:00,Cincinnati Reds,Los Angeles Dodgers,2.46,1.61,10.0,1.93,1.93,,,,,,,,,,,,,,,,,,,,,,,,186580
-186581,2026-09-17,2026-09-17 13:10:00,Tampa Bay Rays,Athletics,1.38,3.38,7.5,1.88,2.01,,,,,,,,,,,,,,,,,,,,,,,,186581
-186582,2026-09-17,2026-09-17 15:10:00,Colorado Rockies,San Diego Padres,2.49,1.62,11.0,2.03,1.87,,,,,,,,,,,,,,,,,,,,,,,,186582
-186583,2026-09-17,2026-09-17 19:15:00,Houston Astros,Kansas City Royals,1.68,2.33,9.0,2.0,1.87,,,,,,,,,,,,,,,,,,,,,,,,186583
-186584,2026-09-17,2026-09-17 19:15:00,New York Mets,Philadelphia Phillies,1.81,2.14,8.0,1.88,2.0,,,,,,,,,,,,,,,,,,,,,,,,186584
-186585,2026-09-17,2026-09-17 19:40:00,Chicago White Sox,Detroit Tigers,1.92,2.01,8.5,1.97,1.92,,,,,,,,,,,,,,,,,,,,,,,,186585
-186586,2026-09-17,2026-09-17 20:05:00,Texas Rangers,Boston Red Sox,1.99,1.93,8.0,1.94,1.94,,,,,,,,,,,,,,,,,,,,,,,,186586
-186587,2026-09-17,2026-09-17 21:38:00,Los Angeles Angels,Minnesota Twins,1.93,1.99,7.0,1.85,2.05,,,,,,,,,,,,,,,,,,,,,,,,186587
+186579,2026-09-17,2026-09-17 12:35:00,Pittsburgh Pirates,Milwaukee Brewers,2.26,1.71,9.0,1.98,1.89,7,4,Finished,Pittsburgh Pirates,Over,0,0,5,1,0,0,0,0,0,0,0,1,0,0,2,2,,0,186579
+186580,2026-09-17,2026-09-17 12:40:00,Cincinnati Reds,Los Angeles Dodgers,2.46,1.61,10.0,1.93,1.93,2,8,Finished,Los Angeles Dodgers,Push,0,2,0,2,0,0,1,3,0,0,0,0,0,0,0,0,1.0,1,186580
+186581,2026-09-17,2026-09-17 13:10:00,Tampa Bay Rays,Athletics,1.38,3.38,7.5,1.88,2.01,10,1,Finished,Tampa Bay Rays,Over,0,0,0,0,0,0,6,0,0,0,2,1,0,0,2,0,,0,186581
+186582,2026-09-17,2026-09-17 15:10:00,Colorado Rockies,San Diego Padres,2.49,1.62,11.0,2.03,1.87,2,9,Finished,San Diego Padres,Push,1,0,0,7,0,0,0,0,0,2,1,0,0,0,0,0,0.0,0,186582
+186583,2026-09-17,2026-09-17 19:15:00,Houston Astros,Kansas City Royals,1.68,2.33,9.0,2.0,1.87,6,2,Finished,Houston Astros,Under,1,1,1,0,0,0,0,0,2,0,1,0,0,0,1,1,,0,186583
+186584,2026-09-17,2026-09-17 19:15:00,New York Mets,Philadelphia Phillies,1.81,2.14,8.0,1.88,2.0,0,3,Finished,Philadelphia Phillies,Under,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,1,0.0,0,186584
+186585,2026-09-17,2026-09-17 19:40:00,Chicago White Sox,Detroit Tigers,1.92,2.01,8.5,1.97,1.92,3,1,Finished,Chicago White Sox,Under,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,,0,186585
+186586,2026-09-17,2026-09-17 20:05:00,Texas Rangers,Boston Red Sox,1.99,1.93,8.0,1.94,1.94,3,4,Finished,Boston Red Sox,Under,1,0,2,0,0,0,0,0,0,0,0,0,0,1,0,3,0.0,0,186586
+186587,2026-09-17,2026-09-17 21:38:00,Los Angeles Angels,Minnesota Twins,1.93,1.99,7.0,1.85,2.05,5,4,Finished,Los Angeles Angels,Over,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0.0,2,186587
