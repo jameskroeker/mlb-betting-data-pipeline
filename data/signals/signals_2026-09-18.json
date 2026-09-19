@@ -10,7 +10,8 @@
       "away_team": "ATH",
       "signal_team": "CLE",
       "consensus_score": 1.626,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     }
   ]
 }
