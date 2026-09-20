@@ -1,14 +1,14 @@
 game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result,home_1,away_1,home_2,away_2,home_3,away_3,home_4,away_4,home_5,away_5,home_6,away_6,home_7,away_7,home_8,away_8,home_9,away_9,odds_api_id
-187287,2026-09-19,2026-09-19 14:10:00,Chicago White Sox,Detroit Tigers,,,,,,,,,,,,,,,,,,,,,,,,,,,,,187287
-187280,2026-09-19,2026-09-19 16:05:00,Baltimore Orioles,Milwaukee Brewers,,,,,,,,,,,,,,,,,,,,,,,,,,,,,187280
-187281,2026-09-19,2026-09-19 16:10:00,Tampa Bay Rays,Boston Red Sox,,,,,,,,,,,,,,,,,,,,,,,,,,,,,187281
-187282,2026-09-19,2026-09-19 16:10:00,New York Mets,Philadelphia Phillies,,,,,,,,,,,,,,,,,,,,,,,,,,,,,187282
-187283,2026-09-19,2026-09-19 18:10:00,Cleveland Guardians,Athletics,,,,,,,,,,,,,,,,,,,,,,,,,,,,,187283
-187284,2026-09-19,2026-09-19 18:40:00,Cincinnati Reds,Chicago Cubs,,,,,,,,,,,,,,,,,,,,,,,,,,,,,187284
-187285,2026-09-19,2026-09-19 18:40:00,Pittsburgh Pirates,Kansas City Royals,,,,,,,,,,,,,,,,,,,,,,,,,,,,,187285
-187286,2026-09-19,2026-09-19 19:05:00,Texas Rangers,Toronto Blue Jays,,,,,,,,,,,,,,,,,,,,,,,,,,,,,187286
-187288,2026-09-19,2026-09-19 19:10:00,Houston Astros,Atlanta Braves,,,,,,,,,,,,,,,,,,,,,,,,,,,,,187288
-187289,2026-09-19,2026-09-19 19:15:00,St. Louis Cardinals,Washington Nationals,,,,,,,,,,,,,,,,,,,,,,,,,,,,,187289
+187287,2026-09-19,2026-09-19 14:10:00,Chicago White Sox,Detroit Tigers,1.83,2.12,8.0,2.0,1.89,,,,,,,,,,,,,,,,,,,,,,,,187287
+187280,2026-09-19,2026-09-19 16:05:00,Baltimore Orioles,Milwaukee Brewers,1.94,1.98,7.5,1.93,1.95,,,,,,,,,,,,,,,,,,,,,,,,187280
+187281,2026-09-19,2026-09-19 16:10:00,Tampa Bay Rays,Boston Red Sox,1.71,2.3,7.5,2.0,1.88,,,,,,,,,,,,,,,,,,,,,,,,187281
+187282,2026-09-19,2026-09-19 16:10:00,New York Mets,Philadelphia Phillies,1.84,2.1,8.0,1.95,1.93,,,,,,,,,,,,,,,,,,,,,,,,187282
+187283,2026-09-19,2026-09-19 18:10:00,Cleveland Guardians,Athletics,1.57,2.6,7.5,1.88,2.0,,,,,,,,,,,,,,,,,,,,,,,,187283
+187284,2026-09-19,2026-09-19 18:40:00,Cincinnati Reds,Chicago Cubs,2.3,1.71,9.0,1.85,2.05,,,,,,,,,,,,,,,,,,,,,,,,187284
+187285,2026-09-19,2026-09-19 18:40:00,Pittsburgh Pirates,Kansas City Royals,1.89,2.04,8.0,1.99,1.89,,,,,,,,,,,,,,,,,,,,,,,,187285
+187286,2026-09-19,2026-09-19 19:05:00,Texas Rangers,Toronto Blue Jays,1.92,2.01,7.5,1.93,1.96,,,,,,,,,,,,,,,,,,,,,,,,187286
+187288,2026-09-19,2026-09-19 19:10:00,Houston Astros,Atlanta Braves,1.78,2.19,8.5,1.84,2.06,,,,,,,,,,,,,,,,,,,,,,,,187288
+187289,2026-09-19,2026-09-19 19:15:00,St. Louis Cardinals,Washington Nationals,1.99,1.93,8.5,1.87,2.02,,,,,,,,,,,,,,,,,,,,,,,,187289
 187290,2026-09-19,2026-09-19 20:10:00,Arizona Diamondbacks,New York Yankees,2.18,1.77,8.0,1.89,1.98,,,,,,,,,,,,,,,,,,,,,,,,187290
 187291,2026-09-19,2026-09-19 20:10:00,Colorado Rockies,Seattle Mariners,,,,,,,,,,,,,,,,,,,,,,,,,,,,,187291
 187292,2026-09-19,2026-09-19 20:40:00,San Diego Padres,Miami Marlins,1.52,2.7,7.5,1.93,1.93,,,,,,,,,,,,,,,,,,,,,,,,187292
