@@ -1,0 +1,16 @@
+{
+  "date": "2026-09-20",
+  "locked_at": "2026-09-20T12:50:20Z",
+  "t1_count": 1,
+  "signals": [
+    {
+      "game_id": "187298",
+      "game_date": "2026-09-20",
+      "home_team": "CLE",
+      "away_team": "ATH",
+      "signal_team": "CLE",
+      "consensus_score": 3.367,
+      "tier": 1
+    }
+  ]
+}
