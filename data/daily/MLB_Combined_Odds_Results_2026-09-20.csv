@@ -1,16 +1,16 @@
 game_id,game_date,start_time_et,home_team,away_team,moneyline_home,moneyline_away,total_line,over_odds,under_odds,home_score,away_score,status,winner,total_result,home_1,away_1,home_2,away_2,home_3,away_3,home_4,away_4,home_5,away_5,home_6,away_6,home_7,away_7,home_8,away_8,home_9,away_9,odds_api_id
-187295,2026-09-20,2026-09-20 13:10:00,New York Mets,Philadelphia Phillies,2.51,1.6,8.0,1.93,1.94,2.0,7.0,Finished,Philadelphia Phillies,Over,0.0,2.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0,0.0,3.0,0.0,0.0,187295
-187296,2026-09-20,2026-09-20 13:35:00,Pittsburgh Pirates,Kansas City Royals,1.98,1.83,8.5,1.92,1.86,4.0,3.0,Finished,Pittsburgh Pirates,Under,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,2.0,2.0,0.0,,0.0,187296
-187297,2026-09-20,2026-09-20 13:40:00,Cincinnati Reds,Chicago Cubs,2.26,1.64,10.0,1.92,1.84,1.0,9.0,Finished,Chicago Cubs,Push,0.0,1.0,0.0,0.0,0.0,4.0,1.0,0.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,187297
-187298,2026-09-20,2026-09-20 13:40:00,Cleveland Guardians,Athletics,1.44,3.01,7.5,2.07,1.81,1.0,0.0,Finished,Cleveland Guardians,Under,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,0.0,187298
-187299,2026-09-20,2026-09-20 13:40:00,Tampa Bay Rays,Boston Red Sox,1.71,2.27,8.0,1.87,2.01,5.0,1.0,Finished,Tampa Bay Rays,Under,4.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,1.0,187299
-187300,2026-09-20,2026-09-20 14:10:00,Chicago White Sox,Detroit Tigers,1.88,2.04,8.0,1.96,1.91,,,,,,,,,,,,,,,,,,,,,,,,187300
-187301,2026-09-20,2026-09-20 14:10:00,Houston Astros,Atlanta Braves,1.74,2.22,8.0,1.9,1.97,2.0,4.0,Finished,Atlanta Braves,Under,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,4.0,0.0,0.0,1.0,0.0,0.0,0.0,187301
-187302,2026-09-20,2026-09-20 14:15:00,St. Louis Cardinals,Washington Nationals,1.71,2.27,9.0,1.92,1.95,5.0,3.0,Finished,St. Louis Cardinals,Under,1.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,3.0,0.0,,0.0,187302
-187303,2026-09-20,2026-09-20 14:35:00,Texas Rangers,Toronto Blue Jays,1.61,2.32,8.0,1.88,1.88,2.0,7.0,Finished,Toronto Blue Jays,Over,0.0,1.0,0.0,0.0,0.0,1.0,2.0,0.0,0.0,1.0,0.0,0.0,0.0,4.0,0.0,0.0,0.0,0.0,187303
-187304,2026-09-20,2026-09-20 15:10:00,Colorado Rockies,Seattle Mariners,2.4,1.65,10.5,1.85,2.03,1.0,2.0,Finished,Seattle Mariners,Under,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,187304
-187305,2026-09-20,2026-09-20 16:07:00,Los Angeles Angels,Minnesota Twins,2.04,1.87,8.5,1.91,1.96,0.0,8.0,Finished,Minnesota Twins,Under,0.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,1.0,0.0,2.0,0.0,3.0,0.0,0.0,0.0,0.0,187305
-187306,2026-09-20,2026-09-20 16:10:00,Arizona Diamondbacks,New York Yankees,1.99,1.91,8.5,1.98,1.89,8.0,4.0,Finished,Arizona Diamondbacks,Over,1.0,0.0,0.0,0.0,0.0,4.0,0.0,0.0,5.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,,0.0,187306
-187307,2026-09-20,2026-09-20 16:10:00,Los Angeles Dodgers,San Francisco Giants,1.36,3.15,8.0,1.89,1.87,3.0,1.0,Finished,Los Angeles Dodgers,Under,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0,1.0,0.0,,0.0,187307
-187308,2026-09-20,2026-09-20 16:10:00,San Diego Padres,Miami Marlins,1.76,2.19,8.0,1.95,1.92,7.0,3.0,Finished,San Diego Padres,Over,0.0,0.0,2.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,1.0,3.0,2.0,0.0,,0.0,187308
-187309,2026-09-20,2026-09-20 19:20:00,Baltimore Orioles,Milwaukee Brewers,2.81,1.49,7.5,1.87,2.0,0.0,3.0,Finished,Milwaukee Brewers,Under,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,187309
+187295,2026-09-20,2026-09-20 13:10:00,New York Mets,Philadelphia Phillies,2.51,1.6,8.0,1.93,1.94,2,7,Finished,Philadelphia Phillies,Over,0,2,0,0,0,2,0,0,0,0,1,0,1,0,0,3,0.0,0,187295
+187296,2026-09-20,2026-09-20 13:35:00,Pittsburgh Pirates,Kansas City Royals,1.98,1.83,8.5,1.92,1.86,4,3,Finished,Pittsburgh Pirates,Under,0,1,0,0,0,0,1,0,0,0,1,0,0,2,2,0,,0,187296
+187297,2026-09-20,2026-09-20 13:40:00,Cincinnati Reds,Chicago Cubs,2.26,1.64,10.0,1.92,1.84,1,9,Finished,Chicago Cubs,Push,0,1,0,0,0,4,1,0,0,3,0,0,0,0,0,1,0.0,0,187297
+187298,2026-09-20,2026-09-20 13:40:00,Cleveland Guardians,Athletics,1.44,3.01,7.5,2.07,1.81,1,0,Finished,Cleveland Guardians,Under,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,,0,187298
+187299,2026-09-20,2026-09-20 13:40:00,Tampa Bay Rays,Boston Red Sox,1.71,2.27,8.0,1.87,2.01,5,1,Finished,Tampa Bay Rays,Under,4,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,,1,187299
+187300,2026-09-20,2026-09-20 14:10:00,Chicago White Sox,Detroit Tigers,1.88,2.04,8.0,1.96,1.91,8,1,Finished,Chicago White Sox,Over,0,0,1,0,0,0,3,0,2,0,0,0,0,0,2,1,,0,187300
+187301,2026-09-20,2026-09-20 14:10:00,Houston Astros,Atlanta Braves,1.74,2.22,8.0,1.9,1.97,2,4,Finished,Atlanta Braves,Under,0,0,0,0,0,0,1,0,0,0,0,4,0,0,1,0,0.0,0,187301
+187302,2026-09-20,2026-09-20 14:15:00,St. Louis Cardinals,Washington Nationals,1.71,2.27,9.0,1.92,1.95,5,3,Finished,St. Louis Cardinals,Under,1,0,0,1,1,0,0,0,0,0,0,2,0,0,3,0,,0,187302
+187303,2026-09-20,2026-09-20 14:35:00,Texas Rangers,Toronto Blue Jays,1.61,2.32,8.0,1.88,1.88,2,7,Finished,Toronto Blue Jays,Over,0,1,0,0,0,1,2,0,0,1,0,0,0,4,0,0,0.0,0,187303
+187304,2026-09-20,2026-09-20 15:10:00,Colorado Rockies,Seattle Mariners,2.4,1.65,10.5,1.85,2.03,1,2,Finished,Seattle Mariners,Under,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,1.0,0,187304
+187305,2026-09-20,2026-09-20 16:07:00,Los Angeles Angels,Minnesota Twins,2.04,1.87,8.5,1.91,1.96,0,8,Finished,Minnesota Twins,Under,0,0,0,0,0,2,0,0,0,1,0,2,0,3,0,0,0.0,0,187305
+187306,2026-09-20,2026-09-20 16:10:00,Arizona Diamondbacks,New York Yankees,1.99,1.91,8.5,1.98,1.89,8,4,Finished,Arizona Diamondbacks,Over,1,0,0,0,0,4,0,0,5,0,0,0,2,0,0,0,,0,187306
+187307,2026-09-20,2026-09-20 16:10:00,Los Angeles Dodgers,San Francisco Giants,1.36,3.15,8.0,1.89,1.87,3,1,Finished,Los Angeles Dodgers,Under,0,1,0,0,0,0,0,0,0,0,1,0,1,0,1,0,,0,187307
+187308,2026-09-20,2026-09-20 16:10:00,San Diego Padres,Miami Marlins,1.76,2.19,8.0,1.95,1.92,7,3,Finished,San Diego Padres,Over,0,0,2,0,0,0,2,0,0,0,0,0,1,3,2,0,,0,187308
+187309,2026-09-20,2026-09-20 19:20:00,Baltimore Orioles,Milwaukee Brewers,2.81,1.49,7.5,1.87,2.0,0,3,Finished,Milwaukee Brewers,Under,0,0,0,1,0,0,0,1,0,0,0,0,0,1,0,0,0.0,0,187309
