@@ -1,0 +1,34 @@
+{
+  "date": "2026-09-22",
+  "locked_at": "2026-09-22T13:03:31Z",
+  "t1_count": 3,
+  "signals": [
+    {
+      "game_id": "187497",
+      "game_date": "2026-09-22",
+      "home_team": "COL",
+      "away_team": "ARI",
+      "signal_team": "ARI",
+      "consensus_score": -2.219,
+      "tier": 1
+    },
+    {
+      "game_id": "187493",
+      "game_date": "2026-09-22",
+      "home_team": "ATL",
+      "away_team": "CIN",
+      "signal_team": "ATL",
+      "consensus_score": 1.076,
+      "tier": 1
+    },
+    {
+      "game_id": "187500",
+      "game_date": "2026-09-22",
+      "home_team": "SFG",
+      "away_team": "MIN",
+      "signal_team": "MIN",
+      "consensus_score": -1.014,
+      "tier": 1
+    }
+  ]
+}
