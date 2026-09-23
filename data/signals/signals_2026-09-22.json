@@ -10,7 +10,8 @@
       "away_team": "ARI",
       "signal_team": "ARI",
       "consensus_score": -2.219,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     },
     {
       "game_id": "187493",
@@ -19,7 +20,8 @@
       "away_team": "CIN",
       "signal_team": "ATL",
       "consensus_score": 1.076,
-      "tier": 1
+      "tier": 1,
+      "result": "L"
     },
     {
       "game_id": "187500",
@@ -28,7 +30,8 @@
       "away_team": "MIN",
       "signal_team": "MIN",
       "consensus_score": -1.014,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     }
   ]
 }
