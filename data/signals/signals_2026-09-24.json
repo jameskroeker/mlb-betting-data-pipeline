@@ -1,0 +1,25 @@
+{
+  "date": "2026-09-24",
+  "locked_at": "2026-09-24T13:08:48Z",
+  "t1_count": 2,
+  "signals": [
+    {
+      "game_id": "187521",
+      "game_date": "2026-09-24",
+      "home_team": "COL",
+      "away_team": "ARI",
+      "signal_team": "ARI",
+      "consensus_score": -1.777,
+      "tier": 1
+    },
+    {
+      "game_id": "187541",
+      "game_date": "2026-09-24",
+      "home_team": "ATL",
+      "away_team": "CIN",
+      "signal_team": "ATL",
+      "consensus_score": 1.514,
+      "tier": 1
+    }
+  ]
+}
