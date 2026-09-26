@@ -1,0 +1,25 @@
+{
+  "date": "2026-09-26",
+  "locked_at": "2026-09-26T12:38:56Z",
+  "t1_count": 2,
+  "signals": [
+    {
+      "game_id": "187567",
+      "game_date": "2026-09-26",
+      "home_team": "CWS",
+      "away_team": "COL",
+      "signal_team": "CWS",
+      "consensus_score": 4.615,
+      "tier": 1
+    },
+    {
+      "game_id": "187566",
+      "game_date": "2026-09-26",
+      "home_team": "MIL",
+      "away_team": "STL",
+      "signal_team": "MIL",
+      "consensus_score": 1.712,
+      "tier": 1
+    }
+  ]
+}
