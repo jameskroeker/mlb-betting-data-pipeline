@@ -1,0 +1,34 @@
+{
+  "date": "2026-09-27",
+  "locked_at": "2026-09-27T13:30:40Z",
+  "t1_count": 3,
+  "signals": [
+    {
+      "game_id": "187581",
+      "game_date": "2026-09-27",
+      "home_team": "CWS",
+      "away_team": "COL",
+      "signal_team": "CWS",
+      "consensus_score": 2.869,
+      "tier": 1
+    },
+    {
+      "game_id": "187579",
+      "game_date": "2026-09-27",
+      "home_team": "ATH",
+      "away_team": "HOU",
+      "signal_team": "HOU",
+      "consensus_score": -2.548,
+      "tier": 1
+    },
+    {
+      "game_id": "187585",
+      "game_date": "2026-09-27",
+      "home_team": "MIL",
+      "away_team": "STL",
+      "signal_team": "MIL",
+      "consensus_score": 2.212,
+      "tier": 1
+    }
+  ]
+}
