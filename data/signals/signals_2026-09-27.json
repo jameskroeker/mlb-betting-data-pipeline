@@ -10,7 +10,8 @@
       "away_team": "COL",
       "signal_team": "CWS",
       "consensus_score": 2.869,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     },
     {
       "game_id": "187579",
@@ -19,7 +20,8 @@
       "away_team": "HOU",
       "signal_team": "HOU",
       "consensus_score": -2.548,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     },
     {
       "game_id": "187585",
@@ -28,7 +30,8 @@
       "away_team": "STL",
       "signal_team": "MIL",
       "consensus_score": 2.212,
-      "tier": 1
+      "tier": 1,
+      "result": "W"
     }
   ]
 }
